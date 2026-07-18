@@ -1,6 +1,6 @@
 # Subarna Karki — Portfolio
 
-A single-file, animated portfolio/resume site for **Subarna Karki**, Senior / Staff Quality Engineer.
+A single-file, animated portfolio/resume site for **Subarna Karki**, Quality Engineer.
 
 Built with HTML5, Tailwind CSS (CDN), custom CSS animations, and vanilla JavaScript — no build step.
 
