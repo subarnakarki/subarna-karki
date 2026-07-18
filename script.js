@@ -205,7 +205,7 @@
 
       /* ---- photography lightbox ---- */
       (function () {
-        const figures = Array.prototype.slice.call(document.querySelectorAll('#photo-grid .photo'));
+        const figures = Array.prototype.slice.call(document.querySelectorAll('#photo-track .photo'));
         const lb = document.getElementById('lightbox');
         if (!figures.length || !lb) return;
         const lbImg = lb.querySelector('.lb-img');
@@ -248,5 +248,31 @@
           else if (e.key === 'ArrowLeft') show(current - 1);
           else if (e.key === 'ArrowRight') show(current + 1);
         });
+      })();
+
+      /* ---- photography carousel controls ---- */
+      (function () {
+        const track = document.getElementById('photo-track');
+        if (!track) return;
+        const prev = document.querySelector('.car-prev');
+        const next = document.querySelector('.car-next');
+        if (!prev || !next) return;
+
+        function step() {
+          const first = track.querySelector('.photo');
+          if (!first) return track.clientWidth * 0.8;
+          const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || '20') || 20;
+          return first.getBoundingClientRect().width + gap;
+        }
+        function updateButtons() {
+          const maxScroll = track.scrollWidth - track.clientWidth - 8;
+          prev.disabled = track.scrollLeft <= 8;
+          next.disabled = track.scrollLeft >= maxScroll;
+        }
+        prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+        next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+        track.addEventListener('scroll', updateButtons, { passive: true });
+        window.addEventListener('resize', updateButtons);
+        updateButtons();
       })();
     })();

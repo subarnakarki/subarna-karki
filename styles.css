@@ -254,17 +254,24 @@
       #bg-canvas { display: none; }
     }
 
-/* ---------- Photography gallery (masonry) ---------- */
-.gallery {
-  column-count: 1;
-  column-gap: 1.25rem;
+/* ---------- Photography carousel ---------- */
+.carousel { position: relative; }
+.carousel-track {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.25rem 0.25rem 0.75rem;
+  scrollbar-width: none;
 }
-@media (min-width: 640px) { .gallery { column-count: 2; } }
-@media (min-width: 1024px) { .gallery { column-count: 3; } }
+.carousel-track::-webkit-scrollbar { display: none; }
 
 .photo {
-  break-inside: avoid;
-  margin: 0 0 1.25rem;
+  flex: 0 0 86%;
+  scroll-snap-align: center;
+  margin: 0;
   border-radius: 14px;
   overflow: hidden;
   position: relative;
@@ -272,12 +279,42 @@
   border: 1px solid rgba(148, 163, 184, 0.12);
   background: #0f223b;
 }
+@media (min-width: 640px)  { .photo { flex-basis: 46%; scroll-snap-align: start; } }
+@media (min-width: 1024px) { .photo { flex-basis: 31.5%; } }
+
 .photo img {
   display: block;
   width: 100%;
-  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
   transition: transform .6s cubic-bezier(.2,.7,.2,1);
 }
+
+/* carousel arrows */
+.car-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: rgba(15, 34, 59, 0.82);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  color: #e2e8f0;
+  display: grid;
+  place-items: center;
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 5;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background .25s ease, color .25s ease, border-color .25s ease, opacity .25s ease;
+}
+.car-btn:hover { background: rgba(15, 34, 59, 0.96); border-color: var(--mint); color: var(--mint); }
+.car-btn[disabled] { opacity: 0.25; cursor: default; pointer-events: none; }
+.car-prev { left: -10px; }
+.car-next { right: -10px; }
+@media (max-width: 700px) { .car-prev { left: 4px; } .car-next { right: 4px; } }
 .photo::after {
   content: attr(data-caption);
   position: absolute;
