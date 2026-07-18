@@ -68,6 +68,7 @@
 
         <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
           <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
           <a href="#expertise" class="nav-link">Expertise</a>
           <a href="#experience" class="nav-link">Experience</a>
           <a href="#education" class="nav-link">Education</a>
@@ -84,6 +85,7 @@
     <div id="mobile-menu" class="md:hidden mx-4 rounded-2xl glass">
       <div class="flex flex-col p-4 gap-1 text-slate-200">
         <a href="#home" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Home</a>
+        <a href="#about" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">About</a>
         <a href="#expertise" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Expertise</a>
         <a href="#experience" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Experience</a>
         <a href="#education" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Education</a>
@@ -175,16 +177,85 @@
     </div>
 
     <!-- scroll hint -->
-    <a href="#expertise" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-slate-500 hover:text-mint transition-colors" aria-label="Scroll down">
+    <a href="#about" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-slate-500 hover:text-mint transition-colors" aria-label="Scroll down">
       <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
     </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="relative py-24 sm:py-28">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="reveal mb-12">
+        <p class="kicker text-xs text-cyan mb-3">/ 01 — ABOUT ME</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Hi, I'm Subarna <span class="inline-block">👋</span></h2>
+        <p class="mt-6 max-w-3xl text-slate-300 text-base sm:text-lg leading-relaxed">
+          I'm a Senior Software Development Engineer in Test (SDET) with a passion for building
+          high-quality software, developer tooling, and AI-powered engineering solutions. My background
+          spans test automation, CI/CD, observability, and scalable testing frameworks, and I enjoy
+          exploring how AI can improve developer productivity and software quality.
+        </p>
+        <p class="mt-4 max-w-3xl text-slate-400 leading-relaxed">
+          I believe the best engineers never stop learning — I'm always excited to collaborate, build,
+          and explore new ideas.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Passionate about -->
+        <article class="expertise-card reveal from-left glass rounded-2xl p-7">
+          <h3 class="font-display font-semibold text-lg text-slate-100 mb-4 flex items-center gap-2"><span>🚀</span> What I'm Passionate About</h3>
+          <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Building AI agents and developer tools that solve real engineering problems.</li>
+            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Creating reliable, scalable automation frameworks that empower engineering teams.</li>
+            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Exploring the intersection of software engineering, testing, and artificial intelligence.</li>
+            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Learning new technologies and continuously improving as an engineer.</li>
+            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Sharing knowledge through open-source projects and practical examples.</li>
+          </ul>
+        </article>
+
+        <!-- What I work on -->
+        <article class="expertise-card reveal from-right glass rounded-2xl p-7">
+          <h3 class="font-display font-semibold text-lg text-slate-100 mb-4 flex items-center gap-2"><span>💻</span> What I Work On</h3>
+          <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>AI-powered developer tools and automation.</li>
+            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Test automation frameworks (Playwright, Cypress, API testing).</li>
+            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>CI/CD pipelines and engineering productivity.</li>
+            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Observability and quality engineering.</li>
+            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Full-stack engineering projects and cloud technologies.</li>
+          </ul>
+        </article>
+
+        <!-- What I'm learning -->
+        <article class="expertise-card reveal from-left glass rounded-2xl p-7">
+          <h3 class="font-display font-semibold text-lg text-slate-100 mb-4 flex items-center gap-2"><span>🌱</span> What I'm Learning</h3>
+          <p class="text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+            I enjoy learning about AI engineering, large language models, agentic systems, distributed
+            systems, cloud architecture, and quantitative trading — building software that blends
+            intelligent automation with great developer experiences. I'm always exploring new
+            technologies, experimenting with ideas, and expanding my skills.
+          </p>
+        </article>
+
+        <!-- Outside of tech -->
+        <article class="expertise-card reveal from-right glass rounded-2xl p-7">
+          <h3 class="font-display font-semibold text-lg text-slate-100 mb-4 flex items-center gap-2"><span>🎯</span> Outside of Tech</h3>
+          <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+            <li class="relative pl-6"><span class="absolute left-0 top-0">📈</span>Following the stock market and quantitative trading strategies.</li>
+            <li class="relative pl-6"><span class="absolute left-0 top-0">🎮</span>Playing video games.</li>
+            <li class="relative pl-6"><span class="absolute left-0 top-0">📸</span>Traveling and capturing new places through photography.</li>
+            <li class="relative pl-6"><span class="absolute left-0 top-0">🐶</span>Spending time with my miniature dachshund, Momo.</li>
+            <li class="relative pl-6"><span class="absolute left-0 top-0">👨‍👩‍👧</span>Enjoying life with my wife and our daughter, Saanvi — who reminds me the best engineering challenge is learning to be a great dad.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
   </section>
 
   <!-- ============ EXPERTISE ============ -->
   <section id="expertise" class="relative py-24 sm:py-28">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <div class="reveal mb-14">
-        <p class="kicker text-xs text-cyan mb-3">/ 01 — WHAT I WORK WITH</p>
+        <p class="kicker text-xs text-cyan mb-3">/ 02 — WHAT I WORK WITH</p>
         <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Technical Expertise</h2>
         <p class="mt-4 max-w-2xl text-slate-400">A toolkit spanning automation, AI engineering, languages &amp; data, and the CI/CD &amp; cloud infrastructure that ties it all together.</p>
       </div>
@@ -275,7 +346,7 @@
   <section id="experience" class="relative py-24 sm:py-28">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <div class="reveal mb-16">
-        <p class="kicker text-xs text-cyan mb-3">/ 02 — WHERE I'VE BEEN</p>
+        <p class="kicker text-xs text-cyan mb-3">/ 03 — WHERE I'VE BEEN</p>
         <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Professional Experience</h2>
         <p class="mt-4 max-w-2xl text-slate-400">Eight years of shipping quality tooling and test infrastructure across mortgage-tech, low-code platforms, edtech, and media.</p>
       </div>
@@ -362,7 +433,7 @@
   <section id="education" class="relative py-24 sm:py-28">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <div class="reveal mb-14">
-        <p class="kicker text-xs text-cyan mb-3">/ 03 — FOUNDATIONS</p>
+        <p class="kicker text-xs text-cyan mb-3">/ 04 — FOUNDATIONS</p>
         <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Education &amp; Credentials</h2>
       </div>
 
@@ -422,7 +493,7 @@
   <section id="contact" class="relative py-24 sm:py-28">
     <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
       <div class="reveal">
-        <p class="kicker text-xs text-cyan mb-3">/ 04 — LET'S CONNECT</p>
+        <p class="kicker text-xs text-cyan mb-3">/ 05 — LET'S CONNECT</p>
         <h2 class="font-display font-bold text-3xl sm:text-5xl text-slate-50">Let's build quality<br class="hidden sm:block" /> <span class="text-gradient">at scale.</span></h2>
         <p class="mt-6 max-w-xl mx-auto text-slate-400">Open to conversations about test infrastructure, developer tooling, and AI-assisted engineering workflows.</p>
 

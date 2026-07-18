@@ -73,7 +73,7 @@
       }
 
       /* ---- active nav link on scroll (scrollspy) ---- */
-      const sections = ['home', 'expertise', 'experience', 'education', 'contact'];
+      const sections = ['home', 'about', 'expertise', 'experience', 'education', 'contact'];
       const linkMap = {};
       document.querySelectorAll('.nav-link').forEach(function (l) {
         const id = (l.getAttribute('href') || '').replace('#', '');
