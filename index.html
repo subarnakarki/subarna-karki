@@ -72,6 +72,7 @@
           <a href="#expertise" class="nav-link">Expertise</a>
           <a href="#experience" class="nav-link">Experience</a>
           <a href="#education" class="nav-link">Education</a>
+          <a href="#photography" class="nav-link">Photos</a>
           <a href="#contact" class="btn-ghost rounded-full px-5 py-2 text-slate-100">Get in touch</a>
         </div>
 
@@ -89,6 +90,7 @@
         <a href="#expertise" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Expertise</a>
         <a href="#experience" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Experience</a>
         <a href="#education" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Education</a>
+        <a href="#photography" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Photos</a>
         <a href="#contact" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Get in touch</a>
       </div>
     </div>
@@ -488,11 +490,64 @@
     </div>
   </section>
 
+  <!-- ============ PHOTOGRAPHY ============ -->
+  <section id="photography" class="relative py-24 sm:py-28">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="reveal mb-12">
+        <p class="kicker text-xs text-cyan mb-3">/ 05 — THROUGH THE LENS</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Photography</h2>
+        <p class="mt-4 max-w-2xl text-slate-400">A few frames from places I've wandered through. Click any photo to view it larger.</p>
+      </div>
+
+      <div id="photo-grid" class="gallery gap-4 sm:gap-5">
+        <figure class="photo reveal" data-caption="Lawson storefront beneath Mount Fuji, Japan">
+          <img src="images/photo-01.jpg" alt="Lawson storefront beneath Mount Fuji, Japan" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="photo reveal" data-caption="Cherry blossoms and the Washington Monument in morning fog">
+          <img src="images/photo-03.jpg" alt="Cherry blossoms and the Washington Monument in morning fog" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="photo reveal" data-caption="Sunset over the water through golden foliage">
+          <img src="images/photo-02.jpg" alt="Sunset over the water through golden foliage" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="photo reveal" data-caption="The Manhattan Bridge framed by brick buildings in DUMBO">
+          <img src="images/photo-05.jpg" alt="The Manhattan Bridge framed by brick buildings in DUMBO" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="photo reveal" data-caption="City skyline at night beside a red pavilion">
+          <img src="images/photo-04.jpg" alt="City skyline at night beside a red pavilion" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="photo reveal" data-caption="Snow-dusted mountains along an open road">
+          <img src="images/photo-07.jpg" alt="Snow-dusted mountains along an open road" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="photo reveal" data-caption="A stairway railing against the skyline, in black and white">
+          <img src="images/photo-06.jpg" alt="A stairway railing against the skyline, in black and white" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="photo reveal" data-caption="Manhattan skyline from above at dusk">
+          <img src="images/photo-09.jpg" alt="Manhattan skyline from above at dusk" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="photo reveal" data-caption="Shea's Buffalo theatre on a quiet night street">
+          <img src="images/photo-08.jpg" alt="Shea's Buffalo theatre on a quiet night street" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="photo reveal" data-caption="Waterfront promenade beneath a bridge at sunset">
+          <img src="images/photo-10.jpg" alt="Waterfront promenade beneath a bridge at sunset" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Photo viewer">
+    <button class="lb-close" aria-label="Close">&times;</button>
+    <button class="lb-nav lb-prev" aria-label="Previous photo">&#8249;</button>
+    <img class="lb-img" src="" alt="" />
+    <button class="lb-nav lb-next" aria-label="Next photo">&#8250;</button>
+    <p class="lb-caption"></p>
+  </div>
+
   <!-- ============ CONTACT / FOOTER ============ -->
   <section id="contact" class="relative py-24 sm:py-28">
     <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
       <div class="reveal">
-        <p class="kicker text-xs text-cyan mb-3">/ 05 — LET'S CONNECT</p>
+        <p class="kicker text-xs text-cyan mb-3">/ 06 — LET'S CONNECT</p>
         <h2 class="font-display font-bold text-3xl sm:text-5xl text-slate-50">Let's build quality<br class="hidden sm:block" /> <span class="text-gradient">at scale.</span></h2>
         <p class="mt-6 max-w-xl mx-auto text-slate-400">Open to conversations about test infrastructure, developer tooling, and AI-assisted engineering workflows.</p>
 
