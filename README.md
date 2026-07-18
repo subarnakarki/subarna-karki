@@ -6,6 +6,14 @@ Built with HTML5, Tailwind CSS (CDN), custom CSS animations, and vanilla JavaScr
 
 **Live site:** https://subarnakarki.github.io/subarna-karki/
 
+## Project structure
+```
+index.html    Markup + Tailwind CDN
+styles.css    Custom styles, animations, and theming
+script.js     Nav, scroll reveals, typing role, stat counters, particle canvas
+.nojekyll     Serve static files as-is on GitHub Pages
+```
+
 ## Run locally
 Open `index.html` in any modern browser, or serve the folder:
 ```
