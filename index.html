@@ -1,0 +1,918 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Subarna Karki — Senior / Staff Quality Engineer</title>
+  <meta name="description" content="Subarna Karki — Senior / Staff Quality Engineer. 8+ years building automated test frameworks, developer tooling, AI-assisted workflows, and CI/CD infrastructure." />
+  <meta name="author" content="Subarna Karki" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Subarna Karki — Senior / Staff Quality Engineer" />
+  <meta property="og:description" content="8+ years building automated test frameworks, developer tooling, and AI-assisted QA workflows at scale." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              DEFAULT: '#1a365d',
+              900: '#0a1626',
+              800: '#0f223b',
+              700: '#132c4d',
+              600: '#1a365d',
+              500: '#254977',
+            },
+            slate: {
+              muted: '#94a3b8',
+            },
+            mint: '#5eead4',
+            cyan: '#22d3ee',
+          },
+          fontFamily: {
+            display: ['Sora', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    :root {
+      --navy-900: #0a1626;
+      --navy-800: #0f223b;
+      --navy-700: #132c4d;
+      --navy: #1a365d;
+      --mint: #5eead4;
+      --cyan: #22d3ee;
+      --slate: #94a3b8;
+    }
+
+    * { scroll-behavior: smooth; }
+
+    html, body { -webkit-font-smoothing: antialiased; }
+
+    body {
+      background-color: var(--navy-900);
+      color: #e2e8f0;
+      font-family: 'Inter', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ---------- Animated gradient aurora backdrop ---------- */
+    .aurora {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(60% 55% at 15% 10%, rgba(34, 211, 238, 0.14), transparent 60%),
+        radial-gradient(55% 50% at 85% 20%, rgba(94, 234, 212, 0.12), transparent 60%),
+        radial-gradient(60% 60% at 50% 100%, rgba(37, 73, 119, 0.55), transparent 65%),
+        linear-gradient(180deg, #0a1626 0%, #0c1c33 50%, #0a1626 100%);
+      background-size: 200% 200%, 200% 200%, 100% 100%, 100% 100%;
+      animation: auroraShift 24s ease-in-out infinite;
+    }
+
+    @keyframes auroraShift {
+      0%   { background-position: 0% 0%, 100% 0%, 50% 100%, 0 0; }
+      50%  { background-position: 100% 50%, 0% 50%, 50% 100%, 0 0; }
+      100% { background-position: 0% 0%, 100% 0%, 50% 100%, 0 0; }
+    }
+
+    /* circuit / particle canvas sits above aurora, below content */
+    #bg-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    /* subtle grid overlay */
+    .grid-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image:
+        linear-gradient(to right, rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(circle at 50% 30%, black, transparent 85%);
+      -webkit-mask-image: radial-gradient(circle at 50% 30%, black, transparent 85%);
+    }
+
+    /* ---------- Gradient text ---------- */
+    .text-gradient {
+      background: linear-gradient(120deg, var(--mint), var(--cyan) 55%, #7dd3fc);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* ---------- Entrance animations ---------- */
+    @keyframes riseIn {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    .anim-rise { opacity: 0; animation: riseIn 0.9s cubic-bezier(.2,.7,.2,1) forwards; }
+    .d1 { animation-delay: .15s; }
+    .d2 { animation-delay: .3s; }
+    .d3 { animation-delay: .45s; }
+    .d4 { animation-delay: .6s; }
+    .d5 { animation-delay: .75s; }
+    .d6 { animation-delay: .9s; }
+
+    /* ---------- Scroll reveal ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1);
+      will-change: opacity, transform;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal.from-left  { transform: translateX(-48px); }
+    .reveal.from-right { transform: translateX(48px); }
+    .reveal.from-left.visible, .reveal.from-right.visible { transform: translateX(0); }
+
+    /* ---------- Nav ---------- */
+    .nav-link {
+      position: relative;
+      transition: color .3s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -4px;
+      width: 100%; height: 2px;
+      background: linear-gradient(90deg, var(--mint), var(--cyan));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .3s ease;
+      border-radius: 2px;
+    }
+    .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
+    .nav-link.active { color: var(--mint); }
+
+    /* ---------- Cards ---------- */
+    .glass {
+      background: linear-gradient(160deg, rgba(26, 54, 93, 0.45), rgba(15, 34, 59, 0.55));
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+    }
+
+    .expertise-card {
+      position: relative;
+      transition: transform .4s cubic-bezier(.2,.7,.2,1), border-color .4s ease, box-shadow .4s ease;
+      overflow: hidden;
+    }
+    .expertise-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 0%), rgba(94, 234, 212, 0.12), transparent 45%);
+      opacity: 0;
+      transition: opacity .4s ease;
+      pointer-events: none;
+    }
+    .expertise-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(94, 234, 212, 0.45);
+      box-shadow: 0 20px 45px -20px rgba(34, 211, 238, 0.4);
+    }
+    .expertise-card:hover::before { opacity: 1; }
+
+    /* skill pills */
+    .pill {
+      transition: transform .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease, box-shadow .25s ease;
+      cursor: default;
+    }
+    .pill:hover {
+      transform: translateY(-3px) scale(1.04);
+      background-color: rgba(94, 234, 212, 0.14);
+      border-color: var(--mint);
+      color: var(--mint);
+      box-shadow: 0 8px 20px -10px rgba(94, 234, 212, 0.7);
+    }
+
+    /* timeline */
+    .timeline-line {
+      background: linear-gradient(180deg, transparent, rgba(94,234,212,.5) 8%, rgba(34,211,238,.5) 92%, transparent);
+    }
+    .timeline-dot {
+      box-shadow: 0 0 0 4px rgba(10, 22, 38, 1), 0 0 20px 2px rgba(94, 234, 212, 0.6);
+      transition: transform .4s ease, box-shadow .4s ease;
+    }
+    .timeline-item:hover .timeline-dot {
+      transform: scale(1.35);
+      box-shadow: 0 0 0 4px rgba(10, 22, 38, 1), 0 0 28px 4px rgba(34, 211, 238, 0.9);
+    }
+    .exp-card {
+      transition: transform .4s cubic-bezier(.2,.7,.2,1), border-color .4s ease, box-shadow .4s ease;
+    }
+    .exp-card:hover {
+      transform: translateX(6px);
+      border-color: rgba(94, 234, 212, 0.4);
+      box-shadow: 0 18px 40px -22px rgba(34, 211, 238, 0.5);
+    }
+
+    .btn-primary {
+      background: linear-gradient(120deg, var(--mint), var(--cyan));
+      color: #06121f;
+      transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 32px -14px rgba(34, 211, 238, 0.8);
+      filter: brightness(1.05);
+    }
+    .btn-ghost {
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      transition: transform .3s ease, border-color .3s ease, color .3s ease, background-color .3s ease;
+    }
+    .btn-ghost:hover {
+      transform: translateY(-3px);
+      border-color: var(--mint);
+      color: var(--mint);
+      background-color: rgba(94, 234, 212, 0.06);
+    }
+
+    /* blinking cursor for hero role */
+    .cursor {
+      display: inline-block;
+      width: 3px;
+      height: 1em;
+      background: var(--mint);
+      margin-left: 4px;
+      vertical-align: -2px;
+      animation: blink 1s steps(2, start) infinite;
+    }
+    @keyframes blink { 0%,50% { opacity: 1; } 50.01%,100% { opacity: 0; } }
+
+    /* floating orb near hero */
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50%     { transform: translateY(-16px); }
+    }
+    .float-slow { animation: float 7s ease-in-out infinite; }
+
+    /* section heading kicker */
+    .kicker {
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: .2em;
+    }
+
+    /* scrollbar */
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #0a1626; }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(var(--navy-700), var(--navy));
+      border-radius: 8px;
+      border: 2px solid #0a1626;
+    }
+    ::-webkit-scrollbar-thumb:hover { background: var(--mint); }
+
+    /* mobile menu */
+    #mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease;
+    }
+    #mobile-menu.open { max-height: 340px; }
+
+    /* stat counter */
+    .stat-value { font-variant-numeric: tabular-nums; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .aurora, .float-slow, .cursor { animation: none !important; }
+      .anim-rise, .reveal { opacity: 1 !important; transform: none !important; animation: none !important; }
+      #bg-canvas { display: none; }
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased selection:bg-mint/30 selection:text-white">
+
+  <!-- backdrop layers -->
+  <div class="aurora"></div>
+  <canvas id="bg-canvas"></canvas>
+  <div class="grid-overlay"></div>
+
+  <!-- ============ NAV ============ -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <nav class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="#home" class="group flex items-center gap-2.5">
+          <span class="grid place-items-center w-9 h-9 rounded-lg border border-mint/40 bg-navy-700/60 font-display font-bold text-mint text-sm group-hover:bg-mint group-hover:text-navy-900 transition-colors duration-300">SK</span>
+          <span class="font-display font-semibold tracking-tight text-slate-100 hidden sm:block">Subarna<span class="text-mint">.</span>Karki</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#expertise" class="nav-link">Expertise</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#contact" class="btn-ghost rounded-full px-5 py-2 text-slate-100">Get in touch</a>
+        </div>
+
+        <button id="menu-btn" aria-label="Toggle menu" class="md:hidden grid place-items-center w-10 h-10 rounded-lg border border-slate-500/30 text-slate-200">
+          <svg id="icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg id="icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="md:hidden mx-4 rounded-2xl glass">
+      <div class="flex flex-col p-4 gap-1 text-slate-200">
+        <a href="#home" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Home</a>
+        <a href="#expertise" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Expertise</a>
+        <a href="#experience" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Experience</a>
+        <a href="#education" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Education</a>
+        <a href="#contact" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="home" class="relative min-h-screen flex items-center pt-24 pb-16">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 w-full">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-8">
+          <p class="anim-rise d1 kicker text-xs sm:text-sm text-mint mb-5 flex items-center gap-3">
+            <span class="inline-block w-8 h-px bg-mint/60"></span>
+            QUALITY · TOOLING · AI-ASSISTED ENGINEERING
+          </p>
+
+          <h1 class="anim-rise d2 font-display font-extrabold leading-[1.05] tracking-tight text-4xl sm:text-6xl lg:text-7xl text-slate-50">
+            Subarna <span class="text-gradient">Karki</span>
+          </h1>
+
+          <p class="anim-rise d3 mt-5 text-lg sm:text-2xl font-display font-medium text-slate-200">
+            <span id="role"></span><span class="cursor" aria-hidden="true"></span>
+          </p>
+
+          <p class="anim-rise d4 mt-6 max-w-2xl text-base sm:text-lg text-slate-400 leading-relaxed">
+            Senior / Staff Quality Engineer with <span class="text-mint font-semibold">8+ years</span>
+            building automated test frameworks, developer tooling, and test-data infrastructure —
+            reducing engineering overhead through reusable tooling, optimized CI/CD pipelines,
+            and AI-assisted workflows.
+          </p>
+
+          <div class="anim-rise d5 mt-9 flex flex-wrap gap-4">
+            <a href="#experience" class="btn-primary rounded-full px-7 py-3 font-semibold text-sm sm:text-base">View my work</a>
+            <a href="https://github.com/subarnakarki" target="_blank" rel="noopener" class="btn-ghost rounded-full px-7 py-3 font-semibold text-sm sm:text-base text-slate-100 flex items-center gap-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+              GitHub
+            </a>
+          </div>
+
+          <!-- stats -->
+          <div class="anim-rise d6 mt-12 grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-2xl">
+            <div class="glass rounded-xl px-4 py-4">
+              <div class="stat-value font-display font-bold text-2xl sm:text-3xl text-gradient" data-count="8" data-suffix="+">0</div>
+              <div class="text-xs text-slate-400 mt-1">Years experience</div>
+            </div>
+            <div class="glass rounded-xl px-4 py-4">
+              <div class="stat-value font-display font-bold text-2xl sm:text-3xl text-gradient" data-count="30" data-suffix="+">0</div>
+              <div class="text-xs text-slate-400 mt-1">Seed scenarios built</div>
+            </div>
+            <div class="glass rounded-xl px-4 py-4">
+              <div class="stat-value font-display font-bold text-2xl sm:text-3xl text-gradient" data-count="85" data-suffix="%">0</div>
+              <div class="text-xs text-slate-400 mt-1">Faster regression</div>
+            </div>
+            <div class="glass rounded-xl px-4 py-4">
+              <div class="stat-value font-display font-bold text-2xl sm:text-3xl text-gradient" data-count="20" data-suffix="+">0</div>
+              <div class="text-xs text-slate-400 mt-1">Micro front-ends</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- decorative code panel -->
+        <div class="hidden lg:block lg:col-span-4 anim-rise d4">
+          <div class="float-slow glass rounded-2xl p-5 font-mono text-[13px] leading-relaxed shadow-2xl">
+            <div class="flex gap-1.5 mb-4">
+              <span class="w-3 h-3 rounded-full bg-red-400/70"></span>
+              <span class="w-3 h-3 rounded-full bg-yellow-400/70"></span>
+              <span class="w-3 h-3 rounded-full bg-mint/80"></span>
+            </div>
+<pre class="text-slate-300 whitespace-pre-wrap"><span class="text-slate-500">// engineer.ts</span>
+<span class="text-cyan">const</span> engineer = {
+  role: <span class="text-mint">'Staff QE'</span>,
+  focus: [<span class="text-mint">'tooling'</span>,
+          <span class="text-mint">'CI/CD'</span>,
+          <span class="text-mint">'AI workflows'</span>],
+  stack: [<span class="text-mint">'Playwright'</span>,
+          <span class="text-mint">'Python'</span>,
+          <span class="text-mint">'TypeScript'</span>],
+  shipsCleanCode: <span class="text-cyan">true</span>,
+};</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- scroll hint -->
+    <a href="#expertise" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-slate-500 hover:text-mint transition-colors" aria-label="Scroll down">
+      <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+    </a>
+  </section>
+
+  <!-- ============ EXPERTISE ============ -->
+  <section id="expertise" class="relative py-24 sm:py-28">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="reveal mb-14">
+        <p class="kicker text-xs text-cyan mb-3">/ 01 — WHAT I WORK WITH</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Technical Expertise</h2>
+        <p class="mt-4 max-w-2xl text-slate-400">A toolkit spanning automation, AI engineering, languages &amp; data, and the CI/CD &amp; cloud infrastructure that ties it all together.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-6" id="expertise-grid">
+        <!-- cards injected below (static for reliability) -->
+        <article class="expertise-card reveal glass rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="grid place-items-center w-11 h-11 rounded-xl bg-mint/10 border border-mint/30 text-mint">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </span>
+            <h3 class="font-display font-semibold text-lg text-slate-100">Automation Tools</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Playwright</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Cypress</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Selenium</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Jest</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Applitools</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Postman</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Artillery</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Axios</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Cucumber</span>
+          </div>
+        </article>
+
+        <article class="expertise-card reveal glass rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="grid place-items-center w-11 h-11 rounded-xl bg-cyan/10 border border-cyan/30 text-cyan">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.3 24.3 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
+            </span>
+            <h3 class="font-display font-semibold text-lg text-slate-100">AI Engineering</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Claude Code (CLI)</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">MCP Servers</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Context Engineering (CLAUDE.md)</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">LLM-as-Judge Eval</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Prompt Engineering</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Agentic Workflows</span>
+          </div>
+        </article>
+
+        <article class="expertise-card reveal glass rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="grid place-items-center w-11 h-11 rounded-xl bg-mint/10 border border-mint/30 text-mint">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+            </span>
+            <h3 class="font-display font-semibold text-lg text-slate-100">Languages &amp; Data</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Python</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">TypeScript</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">JavaScript</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">HTML5</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">CSS3</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">GraphQL</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">REST APIs</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">MySQL</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">PostgreSQL</span>
+          </div>
+        </article>
+
+        <article class="expertise-card reveal glass rounded-2xl p-7">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="grid place-items-center w-11 h-11 rounded-xl bg-cyan/10 border border-cyan/30 text-cyan">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/></svg>
+            </span>
+            <h3 class="font-display font-semibold text-lg text-slate-100">CI/CD &amp; Cloud</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">GitHub Actions</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Jenkins</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Harness</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">CircleCI</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Docker</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">SonarQube</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Node-Vault</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">AWS (S3 · EC2 · Lambda · Secrets Mgr)</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Grafana</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE / TIMELINE ============ -->
+  <section id="experience" class="relative py-24 sm:py-28">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="reveal mb-16">
+        <p class="kicker text-xs text-cyan mb-3">/ 02 — WHERE I'VE BEEN</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Professional Experience</h2>
+        <p class="mt-4 max-w-2xl text-slate-400">Eight years of shipping quality tooling and test infrastructure across mortgage-tech, low-code platforms, edtech, and media.</p>
+      </div>
+
+      <div class="relative pl-8 sm:pl-12">
+        <!-- vertical line -->
+        <div class="timeline-line absolute left-2 sm:left-3 top-2 bottom-2 w-0.5"></div>
+
+        <!-- Pollyex -->
+        <div class="timeline-item reveal from-right relative mb-12">
+          <span class="timeline-dot absolute -left-[26px] sm:-left-[38px] top-2 w-3.5 h-3.5 rounded-full bg-mint"></span>
+          <div class="exp-card glass rounded-2xl p-6 sm:p-7">
+            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+              <h3 class="font-display font-semibold text-xl text-slate-50">Pollyex</h3>
+              <span class="kicker text-xs text-mint">SEP 2024 – PRESENT</span>
+            </div>
+            <p class="text-cyan font-medium text-sm">Senior SDET / Quality Platform Architect</p>
+            <p class="text-slate-400 text-xs mb-4">San Francisco, CA (Remote)</p>
+            <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Led a continuous-delivery program to migrate a core regression-test monolith from Cypress to a sharded Playwright architecture.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Designed a multi-phase framework re-architecture plan — building the baseline configuration, chained fixture modules, domain layouts, and automated code pattern-drift audits.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Created custom Claude skills, prompt files, and AI review tools (<code class="font-mono text-mint text-[13px]">playwright-migration-pr-review</code>) to enforce standards and check for code drift during the migration.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Created Claude skills, prompt files, and AI agents to automatically triage nightly failures, paired with an automated triage dashboard surfacing errors and embedded screenshots.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Configured MCP servers (Playwright, Jira, GitHub) within Claude Code for browser inspection, ticket lookups, and PR tracing; wrote an 8-file Claude skill to help engineers migrate tests.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Wrote end-to-end Cypress and Playwright automation for 6+ major product features including PE Counter Offers, MI Rate Cards, Bulk Product Changes, and Dynamic Sourcing.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Stabilized nightly CI pipelines across multiple sprint cycles by replacing dynamic runtime lookups with static deterministic values, resolving a critical pagination bug causing widespread suite failures.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Optimized CI pipeline architectures to merge sharded reports into a single unified artifact with cross-shard caching, accelerating overall failure-feedback loops.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Built a Python seed-data platform that provisions fully-configured mortgage environments on demand across <span class="text-slate-100 font-medium">30+ scenario types</span>, removing manual test-data setup.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Infinite Blue -->
+        <div class="timeline-item reveal from-right relative mb-12">
+          <span class="timeline-dot absolute -left-[26px] sm:-left-[38px] top-2 w-3.5 h-3.5 rounded-full bg-cyan"></span>
+          <div class="exp-card glass rounded-2xl p-6 sm:p-7">
+            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+              <h3 class="font-display font-semibold text-xl text-slate-50">Infinite Blue</h3>
+              <span class="kicker text-xs text-mint">SEP 2022 – SEP 2024</span>
+            </div>
+            <p class="text-cyan font-medium text-sm">Senior SDET</p>
+            <p class="text-slate-400 text-xs mb-4">Audubon, PA (Remote)</p>
+            <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Integrated Cypress Cloud with Harness CI/CD, cutting nightly regression execution by <span class="text-slate-100 font-medium">85%</span> (2.5 hours → 20 minutes) via distributed test execution.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Scaled a Cypress automation framework for a React application on Single-SPA architecture, covering 10+ micro front-ends and 10+ microservices.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Wrote customized API test frameworks using Jest, Axios, and Node-Vault to securely manage test credentials, API keys, and environment data seeding.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Developed Postman collections for programmatic security validation of GraphQL endpoints, identifying and fixing critical vulnerabilities like XSS and access-control bugs.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Ran performance and load testing with Artillery to evaluate scalability and responsiveness of public REST APIs.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Mentored new SDET hires through onboarding, and ran workshops for Customer Support and Product teams to improve testing practices company-wide.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Everfi -->
+        <div class="timeline-item reveal from-right relative mb-12">
+          <span class="timeline-dot absolute -left-[26px] sm:-left-[38px] top-2 w-3.5 h-3.5 rounded-full bg-mint"></span>
+          <div class="exp-card glass rounded-2xl p-6 sm:p-7">
+            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+              <h3 class="font-display font-semibold text-xl text-slate-50">Everfi</h3>
+              <span class="kicker text-xs text-mint">MAR 2021 – SEP 2022</span>
+            </div>
+            <p class="text-cyan font-medium text-sm">Quality Engineer</p>
+            <p class="text-slate-400 text-xs mb-4">Washington, DC (Remote)</p>
+            <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Created a shared NPM package with 20+ functions for common Cypress interactions, reducing course development and testing time from three days to half a day.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Developed CLI tools to make test automation faster, wrote framework documentation, and set best practices for code and model organization.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Used Test Modeller to map and automate 13+ platform courses, integrating all suites into CI within the first quarter.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Acted as an engineering mentor for new team members and interns, helping them onboard onto course modeling and framework tools.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Gannett -->
+        <div class="timeline-item reveal from-right relative">
+          <span class="timeline-dot absolute -left-[26px] sm:-left-[38px] top-2 w-3.5 h-3.5 rounded-full bg-cyan"></span>
+          <div class="exp-card glass rounded-2xl p-6 sm:p-7">
+            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+              <h3 class="font-display font-semibold text-xl text-slate-50">Gannett | USA Today Network</h3>
+              <span class="kicker text-xs text-mint">JAN 2018 – MAR 2021</span>
+            </div>
+            <p class="text-cyan font-medium text-sm">Software Developer in Test</p>
+            <p class="text-slate-400 text-xs mb-4">McLean, VA</p>
+            <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Trained developers to use Simulato (a model-based testing tool) to generate Selenium tests during development and catch bugs early.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Created testing models to reduce manual QA overhead, catch regressions early, and clear technical debt.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Wrote static mock datasets and fixtures to override API calls, ensuring consistent data profiles for visual and integration testing.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Integrated automated security testing into GitHub Actions pipelines using SonarQube CLI to scan for vulnerabilities, bugs, and outdated dependencies.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Containerized test-execution environments using Docker to run automated visual test steps smoothly inside Jenkins pipelines.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section id="education" class="relative py-24 sm:py-28">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="reveal mb-14">
+        <p class="kicker text-xs text-cyan mb-3">/ 03 — FOUNDATIONS</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Education &amp; Credentials</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="exp-card reveal from-left glass rounded-2xl p-7">
+          <div class="flex items-start gap-4">
+            <span class="grid place-items-center w-12 h-12 rounded-xl bg-mint/10 border border-mint/30 text-mint shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg>
+            </span>
+            <div>
+              <h3 class="font-display font-semibold text-lg text-slate-50 leading-snug">B.S. in Software Development</h3>
+              <p class="text-cyan text-sm mt-1">Western Governors University</p>
+              <p class="text-slate-400 text-sm">Salt Lake City, UT</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-card reveal from-right glass rounded-2xl p-7">
+          <div class="flex items-start gap-4">
+            <span class="grid place-items-center w-12 h-12 rounded-xl bg-cyan/10 border border-cyan/30 text-cyan shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443"/></svg>
+            </span>
+            <div>
+              <h3 class="font-display font-semibold text-lg text-slate-50 leading-snug">A.A.S. in Information Systems Technology</h3>
+              <p class="text-cyan text-sm mt-1">Northern Virginia Community College</p>
+              <p class="text-slate-400 text-sm">Manassas, VA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal mt-6 glass rounded-2xl p-7">
+        <div class="flex items-center gap-3 mb-4">
+          <svg class="w-5 h-5 text-mint" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0"/></svg>
+          <h3 class="font-display font-semibold text-lg text-slate-100">Certifications</h3>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <span class="pill px-4 py-2 rounded-lg border border-slate-500/25 text-slate-200 bg-navy-700/40 text-sm">ISTQB Certified Tester — Foundation Level (CTFL)</span>
+          <span class="pill px-4 py-2 rounded-lg border border-slate-500/25 text-slate-200 bg-navy-700/40 text-sm">ITIL V3 Foundation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT / FOOTER ============ -->
+  <section id="contact" class="relative py-24 sm:py-28">
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+      <div class="reveal">
+        <p class="kicker text-xs text-cyan mb-3">/ 04 — LET'S CONNECT</p>
+        <h2 class="font-display font-bold text-3xl sm:text-5xl text-slate-50">Let's build quality<br class="hidden sm:block" /> <span class="text-gradient">at scale.</span></h2>
+        <p class="mt-6 max-w-xl mx-auto text-slate-400">Open to conversations about test infrastructure, developer tooling, and AI-assisted engineering workflows.</p>
+
+        <div class="mt-9 flex flex-wrap justify-center gap-4">
+          <a href="mailto:subarna.karki13@gmail.com" class="btn-primary rounded-full px-7 py-3 font-semibold text-sm flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+            subarna.karki13@gmail.com
+          </a>
+          <a href="https://github.com/subarnakarki" target="_blank" rel="noopener" class="btn-ghost rounded-full px-7 py-3 font-semibold text-sm text-slate-100 flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+            github.com/subarnakarki
+          </a>
+        </div>
+
+        <p class="mt-8 text-slate-500 text-sm flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+          Concord, NC
+        </p>
+      </div>
+    </div>
+
+    <footer class="mt-20 border-t border-slate-500/15">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+        <p>© <span id="year"></span> Subarna Karki — Senior / Staff Quality Engineer</p>
+        <p class="font-mono text-xs">Built with HTML · Tailwind · Vanilla JS</p>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    (function () {
+      'use strict';
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* ---- year ---- */
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      /* ---- mobile menu ---- */
+      const menuBtn = document.getElementById('menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const iconOpen = document.getElementById('icon-open');
+      const iconClose = document.getElementById('icon-close');
+      function closeMenu() {
+        menu.classList.remove('open');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      }
+      menuBtn.addEventListener('click', function () {
+        const open = menu.classList.toggle('open');
+        iconOpen.classList.toggle('hidden', open);
+        iconClose.classList.toggle('hidden', !open);
+      });
+      document.querySelectorAll('.mobile-link').forEach(function (l) {
+        l.addEventListener('click', closeMenu);
+      });
+
+      /* ---- navbar bg on scroll ---- */
+      const navbar = document.getElementById('navbar');
+      function onScroll() {
+        if (window.scrollY > 20) {
+          navbar.classList.add('bg-navy-900/80', 'backdrop-blur-lg', 'border-b', 'border-slate-500/10', 'shadow-lg', 'shadow-navy-900/50');
+        } else {
+          navbar.classList.remove('bg-navy-900/80', 'backdrop-blur-lg', 'border-b', 'border-slate-500/10', 'shadow-lg', 'shadow-navy-900/50');
+        }
+      }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      /* ---- animated role text ---- */
+      const roles = ['Senior / Staff Quality Engineer', 'Test Automation Architect', 'AI-Assisted Engineering', 'Developer Tooling & CI/CD'];
+      const roleEl = document.getElementById('role');
+      if (reduceMotion) {
+        roleEl.textContent = roles[0];
+      } else {
+        let ri = 0, ci = 0, deleting = false;
+        function type() {
+          const word = roles[ri];
+          roleEl.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
+          let delay = deleting ? 40 : 75;
+          if (!deleting && ci === word.length + 1) { deleting = false; delay = 1900; setTimeout(function () { deleting = true; type(); }, delay); return; }
+          if (deleting && ci === 0) { deleting = false; ri = (ri + 1) % roles.length; delay = 350; }
+          setTimeout(type, delay);
+        }
+        type();
+      }
+
+      /* ---- scroll reveal ---- */
+      const revealEls = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window && !reduceMotion) {
+        const io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              // stagger siblings a touch
+              e.target.style.transitionDelay = (e.target.dataset.delay || '0') + 'ms';
+              e.target.classList.add('visible');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        revealEls.forEach(function (el, i) { io.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('visible'); });
+      }
+
+      /* ---- active nav link on scroll (scrollspy) ---- */
+      const sections = ['home', 'expertise', 'experience', 'education', 'contact'];
+      const linkMap = {};
+      document.querySelectorAll('.nav-link').forEach(function (l) {
+        const id = (l.getAttribute('href') || '').replace('#', '');
+        if (id) linkMap[id] = l;
+      });
+      if ('IntersectionObserver' in window) {
+        const spy = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              Object.values(linkMap).forEach(function (l) { l.classList.remove('active'); });
+              const active = linkMap[e.target.id];
+              if (active) active.classList.add('active');
+            }
+          });
+        }, { threshold: 0.4 });
+        sections.forEach(function (id) { const s = document.getElementById(id); if (s) spy.observe(s); });
+      }
+
+      /* ---- animated stat counters ---- */
+      function animateCount(el) {
+        const target = parseFloat(el.dataset.count);
+        const suffix = el.dataset.suffix || '';
+        const dur = 1400;
+        let start = null;
+        function step(ts) {
+          if (!start) start = ts;
+          const p = Math.min((ts - start) / dur, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(target * eased) + suffix;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+      const counters = document.querySelectorAll('[data-count]');
+      if ('IntersectionObserver' in window && !reduceMotion) {
+        const cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { animateCount(e.target); cio.unobserve(e.target); }
+          });
+        }, { threshold: 0.6 });
+        counters.forEach(function (c) { cio.observe(c); });
+      } else {
+        counters.forEach(function (c) { c.textContent = c.dataset.count + (c.dataset.suffix || ''); });
+      }
+
+      /* ---- expertise card spotlight ---- */
+      document.querySelectorAll('.expertise-card').forEach(function (card) {
+        card.addEventListener('pointermove', function (ev) {
+          const r = card.getBoundingClientRect();
+          card.style.setProperty('--mx', (ev.clientX - r.left) + 'px');
+          card.style.setProperty('--my', (ev.clientY - r.top) + 'px');
+        });
+      });
+
+      /* ---- lightweight floating circuit/particle canvas ---- */
+      if (!reduceMotion) {
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+        let w, h, dpr, particles = [], raf = null, running = true;
+
+        function resize() {
+          dpr = Math.min(window.devicePixelRatio || 1, 2);
+          w = window.innerWidth;
+          h = window.innerHeight;
+          canvas.style.width = w + 'px';
+          canvas.style.height = h + 'px';
+          canvas.width = w * dpr;
+          canvas.height = h * dpr;
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          // density scales with viewport but capped for CPU
+          const count = Math.min(Math.floor((w * h) / 26000), 70);
+          particles = [];
+          for (let i = 0; i < count; i++) {
+            particles.push({
+              x: Math.random() * w,
+              y: Math.random() * h,
+              vx: (Math.random() - 0.5) * 0.28,
+              vy: (Math.random() - 0.5) * 0.28,
+              r: Math.random() * 1.6 + 0.6,
+            });
+          }
+        }
+
+        const LINK_DIST = 130;
+        function draw() {
+          if (!running) return;
+          ctx.clearRect(0, 0, w, h);
+          for (let i = 0; i < particles.length; i++) {
+            const p = particles[i];
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0 || p.x > w) p.vx *= -1;
+            if (p.y < 0 || p.y > h) p.vy *= -1;
+
+            // links
+            for (let j = i + 1; j < particles.length; j++) {
+              const q = particles[j];
+              const dx = p.x - q.x, dy = p.y - q.y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < LINK_DIST) {
+                const a = (1 - dist / LINK_DIST) * 0.5;
+                ctx.strokeStyle = 'rgba(94, 234, 212,' + a * 0.5 + ')';
+                ctx.lineWidth = 0.6;
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(q.x, q.y);
+                ctx.stroke();
+              }
+            }
+            // node
+            ctx.fillStyle = 'rgba(34, 211, 238, 0.7)';
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fill();
+          }
+          raf = requestAnimationFrame(draw);
+        }
+
+        function start() { if (!running) { running = true; draw(); } }
+        function stop() { running = false; if (raf) cancelAnimationFrame(raf); }
+
+        resize();
+        draw();
+        let rt;
+        window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(resize, 200); });
+        document.addEventListener('visibilitychange', function () {
+          if (document.hidden) stop(); else start();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
