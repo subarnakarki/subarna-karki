@@ -11,41 +11,20 @@
   <meta property="og:title" content="Subarna Karki — Senior SDET" />
   <meta property="og:description" content="8+ years building test automation frameworks, developer tooling, and AI-assisted testing at scale." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://subarnakarki.github.io/subarna-karki/" />
+  <meta property="og:image" content="https://subarnakarki.github.io/subarna-karki/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Subarna Karki, Senior SDET: 8+ years, 2,500+ tests moved to Playwright, 85% faster regression, 99.8% nightly pass rate" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://subarnakarki.github.io/subarna-karki/" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind CSS (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: {
-              DEFAULT: '#1a365d',
-              900: '#0a1626',
-              800: '#0f223b',
-              700: '#132c4d',
-              600: '#1a365d',
-              500: '#254977',
-            },
-            slate: {
-              muted: '#94a3b8',
-            },
-            mint: '#5eead4',
-            cyan: '#22d3ee',
-          },
-          fontFamily: {
-            display: ['Sora', 'system-ui', 'sans-serif'],
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-        },
-      },
-    };
-  </script>
+  <!-- Tailwind CSS, prebuilt: npm run build:css -->
+  <link rel="stylesheet" href="assets/tailwind.css" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -70,8 +49,8 @@
           <a href="#home" class="nav-link">Home</a>
           <a href="#about" class="nav-link">About</a>
           <a href="#expertise" class="nav-link">Expertise</a>
-          <a href="#experience" class="nav-link">Experience</a>
           <a href="#projects" class="nav-link">Projects</a>
+          <a href="#experience" class="nav-link">Experience</a>
           <a href="#education" class="nav-link">Education</a>
           <a href="#photography" class="nav-link">Photos</a>
           <a href="#contact" class="btn-ghost rounded-full px-5 py-2 text-slate-100">Get in touch</a>
@@ -89,8 +68,8 @@
         <a href="#home" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Home</a>
         <a href="#about" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">About</a>
         <a href="#expertise" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Expertise</a>
-        <a href="#experience" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Experience</a>
         <a href="#projects" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Projects</a>
+        <a href="#experience" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Experience</a>
         <a href="#education" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Education</a>
         <a href="#photography" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Photos</a>
         <a href="#contact" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Get in touch</a>
@@ -123,7 +102,7 @@
           </p>
 
           <div class="anim-rise d5 mt-9 flex flex-wrap gap-4">
-            <a href="#experience" class="btn-primary rounded-full px-7 py-3 font-semibold text-sm sm:text-base">View my work</a>
+            <a href="#projects" class="btn-primary rounded-full px-7 py-3 font-semibold text-sm sm:text-base">View my work</a>
             <a href="https://github.com/subarnakarki" target="_blank" rel="noopener" class="btn-ghost rounded-full px-7 py-3 font-semibold text-sm sm:text-base text-slate-100 flex items-center gap-2">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
               GitHub
@@ -131,6 +110,10 @@
             <a href="https://www.linkedin.com/in/subarnakarki" target="_blank" rel="noopener" class="btn-ghost rounded-full px-7 py-3 font-semibold text-sm sm:text-base text-slate-100 flex items-center gap-2">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
               LinkedIn
+            </a>
+            <a href="resume/Subarna-Karki-Resume.pdf" download class="btn-ghost rounded-full px-7 py-3 font-semibold text-sm sm:text-base text-slate-100 flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+              Resume (PDF)
             </a>
           </div>
 
@@ -192,10 +175,11 @@
         <p class="kicker text-xs text-cyan mb-3">/ 01 — ABOUT ME</p>
         <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">About me</h2>
         <p class="mt-6 max-w-3xl text-slate-300 text-base sm:text-lg leading-relaxed">
-          I'm a Software Development Engineer in Test. Most of my work is about making other engineers'
-          jobs easier — test frameworks, developer tooling, and the automation that keeps CI honest.
-          Over the past few years a lot of that has centered on figuring out where AI genuinely helps
-          with testing and developer workflows, and where it just gets in the way.
+          I'm a Senior SDET. Most of my work is about making other engineers' jobs easier: test
+          frameworks, developer tooling, and the automation that keeps CI honest. At Polly I was the
+          sole quality owner for ~50 developers, and moved ~2,500 tests from Cypress to Playwright in
+          four months by pairing a solid framework with Claude Code skills. A lot of my work now is
+          figuring out where AI genuinely helps with testing, and where it just gets in the way.
         </p>
         <p class="mt-4 max-w-3xl text-slate-400 leading-relaxed">
           I like work that's practical and holds up over time, and I'm usually happy to talk shop or
@@ -354,13 +338,116 @@
     </div>
   </section>
 
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="relative py-24 sm:py-28">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="reveal mb-14">
+        <p class="kicker text-xs text-cyan mb-3">/ 03 — WHAT I'VE BUILT</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Projects</h2>
+        <p class="mt-4 max-w-2xl text-slate-400">Things I've built, on my own and at work: tested first, typed end to end, and shipped through CI.</p>
+      </div>
+
+      <article class="exp-card reveal glass rounded-2xl p-6 sm:p-8">
+        <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+          <h3 class="font-display font-semibold text-xl sm:text-2xl text-slate-50">Job Application Tracker</h3>
+          <span class="kicker text-xs text-mint">2026 · FULL-STACK + AI</span>
+        </div>
+        <p class="text-cyan font-medium text-sm mb-5">A personal hiring-pipeline tracker with an AI job search and resume match</p>
+        <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed mb-6">
+          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Tracks every application from Saved to Offer: a drag-and-drop (and keyboard-accessible) pipeline board, follow-up reminders, interview logging, source stats and Gmail import.</li>
+          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Uses the Claude API as a senior recruiter: a <span class="text-slate-100 font-medium">resume match</span> that returns the 20 best-fit titles with their ATS keywords, and a <span class="text-slate-100 font-medium">scheduled job search</span> across 15 job boards that drafts every application answer into a queue for Claude in Chrome to fill in.</li>
+          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Built test-first: <span class="text-slate-100 font-medium">1,400+</span> Vitest unit and API tests against a real Postgres, plus Playwright end-to-end suites (Page Object Model, fixtures, role-based locators) on desktop and mobile.</li>
+          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Secure by construction: Google sign-in with cookie sessions and CSRF protection, and every API route declares its auth level, with a test proving one user can never read another's data.</li>
+          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Lint, type-check, unit and end-to-end tests run in GitHub Actions on every push; Vercel deploys from main.</li>
+        </ul>
+        <div class="grid sm:grid-cols-3 gap-4 mb-7">
+          <figure class="shot">
+            <a href="images/projects/tracker-board.webp" target="_blank" rel="noopener" class="block overflow-hidden rounded-xl border border-slate-500/20 bg-navy-900">
+              <img src="images/projects/tracker-board.webp" alt="The pipeline board: drag a card, or move it with the keyboard" width="1360" height="860" loading="lazy" decoding="async" class="w-full h-auto transition-transform duration-500 hover:scale-[1.03]" />
+            </a>
+            <figcaption class="mt-2 text-xs text-slate-400">Pipeline board</figcaption>
+          </figure>
+          <figure class="shot">
+            <a href="images/projects/tracker-resume.webp" target="_blank" rel="noopener" class="block overflow-hidden rounded-xl border border-slate-500/20 bg-navy-900">
+              <img src="images/projects/tracker-resume.webp" alt="Resume match: best-fit titles with the ATS keywords found and missing" width="1360" height="860" loading="lazy" decoding="async" class="w-full h-auto transition-transform duration-500 hover:scale-[1.03]" />
+            </a>
+            <figcaption class="mt-2 text-xs text-slate-400">Resume match</figcaption>
+          </figure>
+          <figure class="shot">
+            <a href="images/projects/tracker-queue.webp" target="_blank" rel="noopener" class="block overflow-hidden rounded-xl border border-slate-500/20 bg-navy-900">
+              <img src="images/projects/tracker-queue.webp" alt="Apply queue: every drafted answer, in tabs, ready for Claude in Chrome" width="1360" height="860" loading="lazy" decoding="async" class="w-full h-auto transition-transform duration-500 hover:scale-[1.03]" />
+            </a>
+            <figcaption class="mt-2 text-xs text-slate-400">Apply queue</figcaption>
+          </figure>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-7">
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">React</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">TypeScript</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Fastify</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">PostgreSQL (Neon)</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Zod</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">TanStack Query</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Tailwind CSS</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Claude API</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Playwright</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Vitest</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">GitHub Actions</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Vercel</span>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://job-application-tracker-eta-one.vercel.app/" target="_blank" rel="noopener" class="btn-primary rounded-full px-6 py-2.5 font-semibold text-sm">Live demo<span class="sr-only"> of the Job Application Tracker (opens in a new tab)</span></a>
+          <a href="https://github.com/subarnakarki/job-application-tracker" target="_blank" rel="noopener" class="btn-ghost rounded-full px-6 py-2.5 text-sm text-slate-100">Source on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+        </div>
+      </article>
+      <article class="exp-card reveal glass rounded-2xl p-6 sm:p-8 mt-6">
+        <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+          <h3 class="font-display font-semibold text-xl sm:text-2xl text-slate-50">Test Data Platform &amp; AI Test Tooling</h3>
+          <span class="kicker text-xs text-mint">POLLY · CASE STUDY</span>
+        </div>
+        <p class="text-cyan font-medium text-sm mb-5">Internal tooling that let ~50 developers own their own tests</p>
+        <div class="grid md:grid-cols-3 gap-5 mb-6">
+          <div>
+            <p class="kicker text-[11px] text-slate-500 mb-2">THE PROBLEM</p>
+            <p class="text-sm sm:text-[15px] text-slate-300 leading-relaxed">Setting up a realistic mortgage org for a test took a day or more by hand, ~2,500 Cypress scenarios needed moving to Playwright, and after the QA team was cut, one engineer owned quality for ~50 developers.</p>
+          </div>
+          <div>
+            <p class="kicker text-[11px] text-slate-500 mb-2">THE APPROACH</p>
+            <ul class="space-y-2 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>A Python seed data platform that provisions fully configured orgs on demand across 30+ scenario types.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Claude Code skills for the migration that enforce full assertion parity, backed by PR checks.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>CLAUDE.md files, MCP servers and test-generation skills rolled out to every developer.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="kicker text-[11px] text-slate-500 mb-2">THE RESULT</p>
+            <ul class="space-y-2 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span><span class="text-slate-100 font-medium">~2,500 scenarios</span> migrated in 4 months, not years.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Nightly pass rate <span class="text-slate-100 font-medium">95% → 99.8%</span>.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Release triage cut from <span class="text-slate-100 font-medium">3 days to 1</span>.</li>
+              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Test data setup from a day or more to on demand.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2">
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Python</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Playwright</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">TypeScript</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Claude Code</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">MCP Servers</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">GitHub Actions</span>
+        </div>
+        <p class="mt-5 text-xs text-slate-500">Built at work, so the code is private; happy to walk through it.</p>
+      </article>
+    </div>
+  </section>
+
   <!-- ============ EXPERIENCE / TIMELINE ============ -->
   <section id="experience" class="relative py-24 sm:py-28">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <div class="reveal mb-16">
-        <p class="kicker text-xs text-cyan mb-3">/ 03 — WHERE I'VE BEEN</p>
+        <p class="kicker text-xs text-cyan mb-3">/ 04 — WHERE I'VE BEEN</p>
         <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Professional Experience</h2>
-        <p class="mt-4 max-w-2xl text-slate-400">Eight years of shipping quality tooling and test infrastructure across mortgage-tech, low-code platforms, edtech, and media.</p>
+        <p class="mt-4 max-w-2xl text-slate-400">8+ years of shipping quality tooling and test infrastructure across mortgage-tech, low-code platforms, edtech, and media.</p>
       </div>
 
       <div class="relative pl-8 sm:pl-12">
@@ -448,49 +535,6 @@
     </div>
   </section>
 
-  <!-- ============ PROJECTS ============ -->
-  <section id="projects" class="relative py-24 sm:py-28">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-      <div class="reveal mb-14">
-        <p class="kicker text-xs text-cyan mb-3">/ 04 — WHAT I'VE BUILT</p>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Projects</h2>
-        <p class="mt-4 max-w-2xl text-slate-400">Side projects built the way I'd want production code built: tested first, typed end to end, and shipped through CI.</p>
-      </div>
-
-      <article class="exp-card reveal glass rounded-2xl p-6 sm:p-8">
-        <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-          <h3 class="font-display font-semibold text-xl sm:text-2xl text-slate-50">Job Application Tracker</h3>
-          <span class="kicker text-xs text-mint">2026 · FULL-STACK + AI</span>
-        </div>
-        <p class="text-cyan font-medium text-sm mb-5">A personal hiring-pipeline tracker with an AI job search and resume match</p>
-        <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed mb-6">
-          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Tracks every application from Saved to Offer: a drag-and-drop (and keyboard-accessible) pipeline board, follow-up reminders, interview logging, source stats and Gmail import.</li>
-          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Uses the Claude API as a senior recruiter: a <span class="text-slate-100 font-medium">resume match</span> that returns the 20 best-fit titles with their ATS keywords, and a <span class="text-slate-100 font-medium">scheduled job search</span> across 15 job boards that drafts every application answer into a queue for Claude in Chrome to fill in.</li>
-          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Built test-first: <span class="text-slate-100 font-medium">1,400+</span> Vitest unit and API tests against a real Postgres, plus Playwright end-to-end suites (Page Object Model, fixtures, role-based locators) on desktop and mobile.</li>
-          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Secure by construction: Google sign-in with cookie sessions and CSRF protection, and every API route declares its auth level, with a test proving one user can never read another's data.</li>
-          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Lint, type-check, unit and end-to-end tests run in GitHub Actions on every push; Vercel deploys from main.</li>
-        </ul>
-        <div class="flex flex-wrap gap-2 mb-7">
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">React</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">TypeScript</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Fastify</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">PostgreSQL (Neon)</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Zod</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">TanStack Query</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Tailwind CSS</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Claude API</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Playwright</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Vitest</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">GitHub Actions</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Vercel</span>
-        </div>
-        <div class="flex flex-wrap gap-3">
-          <a href="https://job-application-tracker-eta-one.vercel.app/" target="_blank" rel="noopener" class="btn-primary rounded-full px-6 py-2.5 font-semibold text-sm">Live demo<span class="sr-only"> of the Job Application Tracker (opens in a new tab)</span></a>
-          <a href="https://github.com/subarnakarki/job-application-tracker" target="_blank" rel="noopener" class="btn-ghost rounded-full px-6 py-2.5 text-sm text-slate-100">Source on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
-        </div>
-      </article>
-    </div>
-  </section>
 
   <!-- ============ EDUCATION ============ -->
   <section id="education" class="relative py-24 sm:py-28">
@@ -637,6 +681,10 @@
           <a href="https://www.linkedin.com/in/subarnakarki" target="_blank" rel="noopener" class="btn-ghost rounded-full px-7 py-3 font-semibold text-sm text-slate-100 flex items-center gap-2">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
             linkedin.com/in/subarnakarki
+          </a>
+          <a href="resume/Subarna-Karki-Resume.pdf" download class="btn-ghost rounded-full px-7 py-3 font-semibold text-sm text-slate-100 flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+            Resume (PDF)
           </a>
         </div>
 
