@@ -37,7 +37,7 @@
       window.addEventListener('scroll', onScroll, { passive: true });
 
       /* ---- animated role text ---- */
-      const roles = ['Quality Engineer', 'Test Automation Architect', 'AI-Assisted Engineering', 'Developer Tooling & CI/CD'];
+      const roles = ['Senior SDET', 'Test Automation Architect', 'AI-Assisted Testing', 'CI/CD Quality Gates'];
       const roleEl = document.getElementById('role');
       if (reduceMotion) {
         roleEl.textContent = roles[0];
@@ -73,7 +73,7 @@
       }
 
       /* ---- active nav link on scroll (scrollspy) ---- */
-      const sections = ['home', 'about', 'expertise', 'experience', 'education', 'photography', 'contact'];
+      const sections = ['home', 'about', 'expertise', 'experience', 'projects', 'education', 'photography', 'contact'];
       const linkMap = {};
       document.querySelectorAll('.nav-link').forEach(function (l) {
         const id = (l.getAttribute('href') || '').replace('#', '');
@@ -96,13 +96,14 @@
       function animateCount(el) {
         const target = parseFloat(el.dataset.count);
         const suffix = el.dataset.suffix || '';
+        const decimals = parseInt(el.dataset.decimals || '0', 10);
         const dur = 1400;
         let start = null;
         function step(ts) {
           if (!start) start = ts;
           const p = Math.min((ts - start) / dur, 1);
           const eased = 1 - Math.pow(1 - p, 3);
-          el.textContent = Math.round(target * eased) + suffix;
+          el.textContent = (target * eased).toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals }) + suffix;
           if (p < 1) requestAnimationFrame(step);
         }
         requestAnimationFrame(step);
@@ -116,7 +117,7 @@
         }, { threshold: 0.6 });
         counters.forEach(function (c) { cio.observe(c); });
       } else {
-        counters.forEach(function (c) { c.textContent = c.dataset.count + (c.dataset.suffix || ''); });
+        counters.forEach(function (c) { c.textContent = Number(c.dataset.count).toLocaleString('en-US') + (c.dataset.suffix || ''); });
       }
 
       /* ---- expertise card spotlight ---- */
