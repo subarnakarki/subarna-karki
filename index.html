@@ -71,6 +71,7 @@
           <a href="#about" class="nav-link">About</a>
           <a href="#expertise" class="nav-link">Expertise</a>
           <a href="#experience" class="nav-link">Experience</a>
+          <a href="#projects" class="nav-link">Projects</a>
           <a href="#education" class="nav-link">Education</a>
           <a href="#photography" class="nav-link">Photos</a>
           <a href="#contact" class="btn-ghost rounded-full px-5 py-2 text-slate-100">Get in touch</a>
@@ -89,6 +90,7 @@
         <a href="#about" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">About</a>
         <a href="#expertise" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Expertise</a>
         <a href="#experience" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Experience</a>
+        <a href="#projects" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Projects</a>
         <a href="#education" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Education</a>
         <a href="#photography" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Photos</a>
         <a href="#contact" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Get in touch</a>
@@ -430,11 +432,55 @@
     </div>
   </section>
 
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="relative py-24 sm:py-28">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="reveal mb-14">
+        <p class="kicker text-xs text-cyan mb-3">/ 04 — WHAT I'VE BUILT</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Projects</h2>
+        <p class="mt-4 max-w-2xl text-slate-400">Side projects built the way I'd want production code built: tested first, typed end to end, and shipped through CI.</p>
+      </div>
+
+      <article class="exp-card reveal glass rounded-2xl p-6 sm:p-8">
+        <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+          <h3 class="font-display font-semibold text-xl sm:text-2xl text-slate-50">Job Application Tracker</h3>
+          <span class="kicker text-xs text-mint">2026 · FULL-STACK + AI</span>
+        </div>
+        <p class="text-cyan font-medium text-sm mb-5">A personal hiring-pipeline tracker with an AI job search and resume match</p>
+        <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed mb-6">
+          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Tracks every application from Saved to Offer: a drag-and-drop (and keyboard-accessible) pipeline board, follow-up reminders, interview logging, source stats and Gmail import.</li>
+          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Uses the Claude API as a senior recruiter: a <span class="text-slate-100 font-medium">resume match</span> that returns the 20 best-fit titles with their ATS keywords, and a <span class="text-slate-100 font-medium">scheduled job search</span> across 15 job boards that drafts every application answer into a queue for Claude in Chrome to fill in.</li>
+          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Built test-first: <span class="text-slate-100 font-medium">1,400+</span> Vitest unit and API tests against a real Postgres, plus Playwright end-to-end suites (Page Object Model, fixtures, role-based locators) on desktop and mobile.</li>
+          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Secure by construction: Google sign-in with cookie sessions and CSRF protection, and every API route declares its auth level, with a test proving one user can never read another's data.</li>
+          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Lint, type-check, unit and end-to-end tests run in GitHub Actions on every push; Vercel deploys from main.</li>
+        </ul>
+        <div class="flex flex-wrap gap-2 mb-7">
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">React</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">TypeScript</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Fastify</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">PostgreSQL (Neon)</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Zod</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">TanStack Query</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Tailwind CSS</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Claude API</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Playwright</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Vitest</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">GitHub Actions</span>
+            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Vercel</span>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://job-application-tracker-eta-one.vercel.app/" target="_blank" rel="noopener" class="btn-primary rounded-full px-6 py-2.5 font-semibold text-sm">Live demo<span class="sr-only"> of the Job Application Tracker (opens in a new tab)</span></a>
+          <a href="https://github.com/subarnakarki/job-application-tracker" target="_blank" rel="noopener" class="btn-ghost rounded-full px-6 py-2.5 text-sm text-slate-100">Source on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <!-- ============ EDUCATION ============ -->
   <section id="education" class="relative py-24 sm:py-28">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <div class="reveal mb-14">
-        <p class="kicker text-xs text-cyan mb-3">/ 04 — FOUNDATIONS</p>
+        <p class="kicker text-xs text-cyan mb-3">/ 05 — FOUNDATIONS</p>
         <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Education &amp; Credentials</h2>
       </div>
 
@@ -502,7 +548,7 @@
   <section id="photography" class="relative py-24 sm:py-28">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <div class="reveal mb-12">
-        <p class="kicker text-xs text-cyan mb-3">/ 05 — THROUGH THE LENS</p>
+        <p class="kicker text-xs text-cyan mb-3">/ 06 — THROUGH THE LENS</p>
         <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Photography</h2>
         <p class="mt-4 max-w-2xl text-slate-400">A few frames from places I've wandered through. Click any photo to view it larger.</p>
       </div>
@@ -559,7 +605,7 @@
   <section id="contact" class="relative py-24 sm:py-28">
     <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
       <div class="reveal">
-        <p class="kicker text-xs text-cyan mb-3">/ 06 — LET'S CONNECT</p>
+        <p class="kicker text-xs text-cyan mb-3">/ 07 — LET'S CONNECT</p>
         <h2 class="font-display font-bold text-3xl sm:text-5xl text-slate-50">Let's build quality<br class="hidden sm:block" /> <span class="text-gradient">at scale.</span></h2>
         <p class="mt-6 max-w-xl mx-auto text-slate-400">Open to conversations about test infrastructure, developer tooling, and AI-assisted engineering workflows.</p>
 
