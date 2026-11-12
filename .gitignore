@@ -1,1 +1,22 @@
+# Dependencies (only needed for `npm run build:css`)
 node_modules/
+
+# AI assistant / editor tooling, not part of the site
+.agents/
+.claude/
+.taste-skill/
+skills-lock.json
+.vscode/
+.idea/
+
+# Local screenshots and check output
+shots/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*

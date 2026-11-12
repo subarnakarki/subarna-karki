@@ -6,6 +6,7 @@
   <title>Subarna Karki — Senior SDET | Test Automation Architecture</title>
   <meta name="description" content="Subarna Karki — Senior SDET with 8+ years building test automation frameworks, developer tooling, test data infrastructure, and AI-assisted quality engineering." />
   <meta name="author" content="Subarna Karki" />
+  <meta name="theme-color" content="#0a1626" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Subarna Karki — Senior SDET | Test Automation Architecture" />
@@ -21,7 +22,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS, prebuilt: npm run build:css -->
   <link rel="stylesheet" href="assets/tailwind.css" />
@@ -30,746 +31,540 @@
 </head>
 
 <body class="font-sans antialiased selection:bg-mint/30 selection:text-white">
-
-  <!-- backdrop layers -->
-  <div class="aurora"></div>
-  <canvas id="bg-canvas"></canvas>
-  <div class="grid-overlay"></div>
+  <a href="#projects" class="skip-link">Skip to projects</a>
 
   <!-- ============ NAV ============ -->
-  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
-    <nav class="max-w-6xl mx-auto px-5 sm:px-8">
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-colors duration-300">
+    <nav class="max-w-6xl mx-auto px-5 sm:px-8" aria-label="Main">
       <div class="flex items-center justify-between h-16 md:h-20">
-        <a href="#home" class="group flex items-center gap-2.5">
+        <a href="#home" class="group flex items-center gap-2.5" aria-label="Subarna Karki, back to top">
           <span class="grid place-items-center w-9 h-9 rounded-lg border border-mint/40 bg-navy-700/60 font-display font-bold text-mint text-sm group-hover:bg-mint group-hover:text-navy-900 transition-colors duration-300">SK</span>
-          <span class="font-display font-semibold tracking-tight text-slate-100 hidden sm:block">Subarna<span class="text-mint">.</span>Karki</span>
+          <span class="font-display font-semibold tracking-tight text-slate-100 hidden sm:block">Subarna Karki</span>
         </a>
 
-        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#expertise" class="nav-link">Expertise</a>
+        <div class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
           <a href="#projects" class="nav-link">Projects</a>
           <a href="#experience" class="nav-link">Experience</a>
-          <a href="#education" class="nav-link">Education</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#about" class="nav-link">About</a>
           <a href="#photography" class="nav-link">Photos</a>
           <a href="#contact" class="btn-ghost rounded-full px-5 py-2 text-slate-100">Get in touch</a>
         </div>
 
-        <button id="menu-btn" aria-label="Toggle menu" class="md:hidden grid place-items-center w-10 h-10 rounded-lg border border-slate-500/30 text-slate-200">
-          <svg id="icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
-          <svg id="icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+        <button id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden grid place-items-center w-11 h-11 rounded-lg border border-slate-500/30 text-slate-200">
+          <svg id="icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg id="icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
       </div>
     </nav>
 
     <div id="mobile-menu" class="md:hidden mx-4 rounded-2xl glass">
       <div class="flex flex-col p-4 gap-1 text-slate-200">
-        <a href="#home" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Home</a>
-        <a href="#about" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">About</a>
-        <a href="#expertise" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Expertise</a>
         <a href="#projects" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Projects</a>
         <a href="#experience" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Experience</a>
-        <a href="#education" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Education</a>
+        <a href="#skills" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Skills</a>
+        <a href="#about" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">About</a>
         <a href="#photography" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Photos</a>
         <a href="#contact" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Get in touch</a>
       </div>
     </div>
   </header>
 
+  <main>
   <!-- ============ HERO ============ -->
-  <section id="home" class="relative min-h-screen flex items-center pt-24 pb-16">
+  <section id="home" class="hero relative flex items-center pt-28 pb-16">
     <div class="max-w-6xl mx-auto px-5 sm:px-8 w-full">
-      <div class="grid lg:grid-cols-12 gap-10 items-center">
-        <div class="lg:col-span-8">
-          <p class="anim-rise d1 kicker text-xs sm:text-sm text-mint mb-5 flex items-center gap-3">
-            <span class="inline-block w-8 h-px bg-mint/60"></span>
-            TEST AUTOMATION ARCHITECTURE · AI-ASSISTED QUALITY ENGINEERING · CI/CD QUALITY GATES
-          </p>
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+        <div class="lg:col-span-7">
+          <p class="anim-rise d1 kicker text-xs text-mint mb-5">SUBARNA KARKI · SENIOR SDET</p>
 
-          <h1 class="anim-rise d2 font-display font-extrabold leading-[1.05] tracking-tight text-4xl sm:text-6xl lg:text-7xl text-slate-50">
-            Subarna <span class="text-gradient">Karki</span>
+          <h1 class="anim-rise d2 font-display font-bold leading-[1.08] tracking-tight text-4xl sm:text-5xl lg:text-[3.5rem] text-slate-50">
+            I build the test systems product teams ship on.
           </h1>
 
-          <p class="anim-rise d3 mt-5 text-lg sm:text-2xl font-display font-medium text-slate-200">
-            <span id="role"></span><span class="cursor" aria-hidden="true"></span>
+          <p class="anim-rise d3 mt-6 max-w-xl text-base sm:text-lg text-slate-300 leading-relaxed">
+            Most recently the sole quality owner for ~50 developers at Polly, where I moved ~2,500 tests
+            to Playwright in four months. 8+ years across mortgage-tech, low-code platforms, edtech and media.
           </p>
 
-          <p class="anim-rise d4 mt-6 max-w-2xl text-base sm:text-lg text-slate-400 leading-relaxed">
-            I build the test systems, quality gates, and AI workflows that help product teams ship faster
-            without sacrificing confidence. With <span class="text-mint font-semibold">8+ years</span> of
-            experience across mortgage-tech, low-code platforms, edtech, and media, I lead automation
-            strategy from framework design to release sign-off.
-          </p>
-
-          <div class="anim-rise d5 mt-9 flex flex-wrap gap-4">
-            <a href="#projects" class="btn-primary rounded-full px-7 py-3 font-semibold text-sm sm:text-base">View my work</a>
-            <a href="https://github.com/subarnakarki" target="_blank" rel="noopener" class="btn-ghost rounded-full px-7 py-3 font-semibold text-sm sm:text-base text-slate-100 flex items-center gap-2">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
-              GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/subarnakarki" target="_blank" rel="noopener" class="btn-ghost rounded-full px-7 py-3 font-semibold text-sm sm:text-base text-slate-100 flex items-center gap-2">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
-              LinkedIn
-            </a>
-            <a href="resume/Subarna-Karki-Resume.pdf" download class="btn-ghost rounded-full px-7 py-3 font-semibold text-sm sm:text-base text-slate-100 flex items-center gap-2">
+          <div class="anim-rise d4 mt-8 flex flex-wrap items-center gap-3">
+            <a href="#projects" class="btn-primary rounded-full px-7 py-3 font-semibold text-sm sm:text-base">See my projects</a>
+            <a href="resume/Subarna-Karki-Resume.pdf" download class="btn-ghost rounded-full px-6 py-3 font-semibold text-sm sm:text-base text-slate-100 inline-flex items-center gap-2">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
-              Resume (PDF)
+              Download resume
+            </a>
+            <a href="https://github.com/subarnakarki" target="_blank" rel="noopener" class="btn-icon" aria-label="GitHub (opens in a new tab)">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/subarnakarki" target="_blank" rel="noopener" class="btn-icon" aria-label="LinkedIn (opens in a new tab)">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
             </a>
           </div>
 
           <!-- stats -->
-          <div class="anim-rise d6 mt-12 grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-2xl">
-            <div class="glass rounded-xl px-4 py-4">
-              <div class="stat-value font-display font-bold text-2xl sm:text-3xl text-gradient" data-count="8" data-suffix="+">0</div>
-              <div class="text-xs text-slate-400 mt-1">Years experience</div>
+          <dl class="anim-rise d5 mt-12 grid grid-cols-2 sm:grid-cols-4 gap-y-6 gap-x-3 max-w-2xl stats">
+            <div class="stat">
+              <dt class="text-xs text-slate-400 order-2 mt-1">Years experience</dt>
+              <dd class="stat-value font-display font-bold text-3xl sm:text-4xl text-slate-50" data-count="8" data-suffix="+">8+</dd>
             </div>
-            <div class="glass rounded-xl px-4 py-4">
-              <div class="stat-value font-display font-bold text-2xl sm:text-3xl text-gradient" data-count="2500" data-suffix="+">0</div>
-              <div class="text-xs text-slate-400 mt-1">Tests moved to Playwright</div>
+            <div class="stat">
+              <dt class="text-xs text-slate-400 order-2 mt-1">Tests moved to Playwright</dt>
+              <dd class="stat-value font-display font-bold text-3xl sm:text-4xl text-slate-50" data-count="2500" data-suffix="+">2,500+</dd>
             </div>
-            <div class="glass rounded-xl px-4 py-4">
-              <div class="stat-value font-display font-bold text-2xl sm:text-3xl text-gradient" data-count="85" data-suffix="%">0</div>
-              <div class="text-xs text-slate-400 mt-1">Faster regression</div>
+            <div class="stat">
+              <dt class="text-xs text-slate-400 order-2 mt-1">Faster regression</dt>
+              <dd class="stat-value font-display font-bold text-3xl sm:text-4xl text-slate-50" data-count="85" data-suffix="%">85%</dd>
             </div>
-            <div class="glass rounded-xl px-4 py-4">
-              <div class="stat-value font-display font-bold text-2xl sm:text-3xl text-gradient" data-count="99.8" data-decimals="1" data-suffix="%">0</div>
-              <div class="text-xs text-slate-400 mt-1">Nightly pass rate</div>
+            <div class="stat">
+              <dt class="text-xs text-slate-400 order-2 mt-1">Nightly pass rate</dt>
+              <dd class="stat-value font-display font-bold text-3xl sm:text-4xl text-mint" data-count="99.8" data-decimals="1" data-suffix="%">99.8%</dd>
             </div>
-          </div>
+          </dl>
         </div>
 
-        <!-- decorative code panel -->
-        <div class="hidden lg:block lg:col-span-4 anim-rise d4">
-          <div class="float-slow glass rounded-2xl p-5 font-mono text-[13px] leading-relaxed shadow-2xl">
-            <div class="flex gap-1.5 mb-4">
-              <span class="w-3 h-3 rounded-full bg-red-400/70"></span>
-              <span class="w-3 h-3 rounded-full bg-yellow-400/70"></span>
-              <span class="w-3 h-3 rounded-full bg-mint/80"></span>
+        <!-- nightly run, built from the Polly results -->
+        <div class="lg:col-span-5 anim-rise d3">
+          <div class="terminal" role="img" aria-label="A nightly Playwright run: Pricing Engine and seed data suites pass, nightly pass rate up from 95% to 99.8%, release triage down from 3 days to 1.">
+            <div class="terminal-bar">
+              <span class="terminal-dot bg-red-400/70"></span>
+              <span class="terminal-dot bg-yellow-400/70"></span>
+              <span class="terminal-dot bg-mint/80"></span>
+              <span class="terminal-title">nightly — playwright</span>
             </div>
-<pre class="text-slate-300 whitespace-pre-wrap"><span class="text-slate-500">// engineer.ts</span>
-<span class="text-cyan">const</span> engineer = {
-  role: <span class="text-mint">'Senior SDET'</span>,
-  focus: [<span class="text-mint">'tooling'</span>,
-          <span class="text-mint">'CI/CD'</span>,
-          <span class="text-mint">'AI workflows'</span>],
-  stack: [<span class="text-mint">'Playwright'</span>,
-          <span class="text-mint">'Python'</span>,
-          <span class="text-mint">'TypeScript'</span>],
-  shipsCleanCode: <span class="text-cyan">true</span>,
-};</pre>
+<pre class="terminal-body" aria-hidden="true"><span class="t-line" style="--i:0"><span class="text-slate-500">$</span> npx playwright test --grep @nightly</span>
+<span class="t-line text-slate-400" style="--i:1">Running ~2,500 scenarios across shards</span>
+<span class="t-line" style="--i:2"><span class="text-mint">✓</span> pricing-engine › counter offers</span>
+<span class="t-line" style="--i:3"><span class="text-mint">✓</span> pricing-engine › MI rate cards</span>
+<span class="t-line" style="--i:4"><span class="text-mint">✓</span> pricing-engine › lock workflows</span>
+<span class="t-line" style="--i:5"><span class="text-mint">✓</span> seed-data › 30+ org scenarios</span>
+<span class="t-line text-slate-600" style="--i:6">──────────────────────────────────</span>
+<span class="t-line" style="--i:7"><span class="text-slate-400">nightly pass rate </span> 95.0% <span class="text-slate-500">→</span> <span class="text-mint font-medium">99.8%</span></span>
+<span class="t-line" style="--i:8"><span class="text-slate-400">release triage    </span> 3 days <span class="text-slate-500">→</span> <span class="text-mint font-medium">1 day</span></span></pre>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- scroll hint -->
-    <a href="#about" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-slate-500 hover:text-mint transition-colors" aria-label="Scroll down">
-      <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
-    </a>
-  </section>
-
-  <!-- ============ ABOUT ============ -->
-  <section id="about" class="relative py-16 sm:py-20">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-      <div class="reveal mb-12">
-        <p class="kicker text-xs text-cyan mb-3">/ 01 — ABOUT ME</p>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">About me</h2>
-        <p class="mt-6 max-w-3xl text-slate-300 text-base sm:text-lg leading-relaxed">
-          I'm a Senior SDET focused on automation architecture, release confidence, and AI-assisted quality
-          workflows. I was the sole QA engineer retained after Polly's 25+ person QA team was eliminated,
-          owned quality end-to-end for ~50 developers, and shifted testing to them with Claude Code tooling,
-          self-healing pipelines, and targeted PR validation. My work is less about writing tests for their
-          own sake and more about creating systems that make quality scalable, measurable, and sustainable.
-        </p>
-        <p class="mt-4 max-w-3xl text-slate-400 leading-relaxed">
-          I like practical engineering: clear architecture, strong ownership, and a workflow that makes
-          teams faster without creating noisy false confidence.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-6">
-        <!-- What I care about -->
-        <article class="expertise-card reveal from-left glass rounded-2xl p-7">
-          <h3 class="font-display font-semibold text-lg text-slate-100 mb-4">What I care about</h3>
-          <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
-            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Designing test systems that help teams move fast without creating release risk.</li>
-            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Automation frameworks that are maintainable, observable, and owned by the people using them.</li>
-            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Finding the real leverage points where AI improves testing — and where discipline matters more.</li>
-            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Turning quality work into a repeatable operating model rather than a last-minute scramble.</li>
-          </ul>
-        </article>
-
-        <!-- What I work on -->
-        <article class="expertise-card reveal from-right glass rounded-2xl p-7">
-          <h3 class="font-display font-semibold text-lg text-slate-100 mb-4">What I work on</h3>
-          <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
-            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Test automation architecture for distributed product teams.</li>
-            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Playwright, Cypress, and API testing strategy across full-stack product suites.</li>
-            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>CI/CD quality gates, sharding, and targeted validation for faster merges.</li>
-            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>AI-driven testing workflows, prompt-driven tooling, and self-healing automation.</li>
-            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Seed data, test infrastructure, and the operational systems behind reliable release confidence.</li>
-          </ul>
-        </article>
-
-        <!-- What I'm learning -->
-        <article class="expertise-card reveal from-left glass rounded-2xl p-7">
-          <h3 class="font-display font-semibold text-lg text-slate-100 mb-4">What I'm learning right now</h3>
-          <p class="text-sm sm:text-[15px] text-slate-300 leading-relaxed">
-            Lately I've been going deeper on AI engineering and LLMs, agentic systems, and how they hold
-            up in real distributed and cloud setups. On the side I follow quantitative trading, which
-            scratches the same itch — building something that reacts intelligently without needing me to
-            babysit it.
-          </p>
-        </article>
-
-        <!-- Outside of work -->
-        <article class="expertise-card reveal from-right glass rounded-2xl p-7">
-          <h3 class="font-display font-semibold text-lg text-slate-100 mb-4">Away from the keyboard</h3>
-          <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
-            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Following the markets and tinkering with quant trading ideas.</li>
-            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Video games when there's time.</li>
-            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Traveling, and taking photos of wherever I end up.</li>
-            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Hanging out with my miniature dachshund, Momo.</li>
-            <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>And mostly, being around for my wife and our daughter, Saanvi — the hardest and best thing I've taken on.</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ EXPERTISE ============ -->
-  <section id="expertise" class="relative py-16 sm:py-20">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8">
-      <div class="reveal mb-14">
-        <p class="kicker text-xs text-cyan mb-3">/ 02 — WHAT I WORK WITH</p>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Technical Expertise</h2>
-        <p class="mt-4 max-w-2xl text-slate-400">A toolkit spanning automation, AI engineering, languages &amp; data, and the CI/CD &amp; cloud infrastructure that ties it all together.</p>
-      </div>
-
-      <div class="grid sm:grid-cols-2 gap-6" id="expertise-grid">
-        <!-- cards injected below (static for reliability) -->
-        <article class="expertise-card reveal glass rounded-2xl p-7">
-          <div class="flex items-center gap-3 mb-5">
-            <span class="grid place-items-center w-11 h-11 rounded-xl bg-mint/10 border border-mint/30 text-mint">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </span>
-            <h3 class="font-display font-semibold text-lg text-slate-100">Test Automation &amp; Practice</h3>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Playwright</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Cypress</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Selenium</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Jest</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Applitools</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Postman</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Artillery</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Axios</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Cucumber</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Page Object Model</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Visual Regression</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Performance &amp; Load</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Security Testing</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Shift-Left Testing</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Root-Cause Analysis</span>
-          </div>
-        </article>
-
-        <article class="expertise-card reveal glass rounded-2xl p-7">
-          <div class="flex items-center gap-3 mb-5">
-            <span class="grid place-items-center w-11 h-11 rounded-xl bg-cyan/10 border border-cyan/30 text-cyan">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.3 24.3 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
-            </span>
-            <h3 class="font-display font-semibold text-lg text-slate-100">AI Engineering</h3>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Claude Code (CLI)</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">GitHub Copilot</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Augment Code</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">MCP Servers (Playwright · Jira · GitHub · Kibana)</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">AI-Assisted Test Generation</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Self-Healing Tests</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Context Engineering (CLAUDE.md)</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">LLM-as-Judge Eval</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Prompt Engineering</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Agentic Workflows</span>
-          </div>
-        </article>
-
-        <article class="expertise-card reveal glass rounded-2xl p-7">
-          <div class="flex items-center gap-3 mb-5">
-            <span class="grid place-items-center w-11 h-11 rounded-xl bg-mint/10 border border-mint/30 text-mint">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
-            </span>
-            <h3 class="font-display font-semibold text-lg text-slate-100">Languages &amp; Data</h3>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Python</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">TypeScript</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">JavaScript</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">HTML5</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">CSS3</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">GraphQL</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">REST APIs</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">MySQL</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">PostgreSQL</span>
-          </div>
-        </article>
-
-        <article class="expertise-card reveal glass rounded-2xl p-7">
-          <div class="flex items-center gap-3 mb-5">
-            <span class="grid place-items-center w-11 h-11 rounded-xl bg-cyan/10 border border-cyan/30 text-cyan">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/></svg>
-            </span>
-            <h3 class="font-display font-semibold text-lg text-slate-100">CI/CD &amp; Cloud</h3>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">GitHub Actions</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Jenkins</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Harness</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">CircleCI</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Docker</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">SonarQube</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Node-Vault</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">AWS (S3 · EC2 · Lambda · Secrets Mgr)</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Grafana</span>
-          </div>
-        </article>
       </div>
     </div>
   </section>
 
   <!-- ============ PROJECTS ============ -->
-  <section id="projects" class="relative py-16 sm:py-20">
+  <section id="projects" class="section">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
-      <div class="reveal mb-10">
-        <p class="kicker text-xs text-cyan mb-3">/ 03 — WHAT I'VE BUILT</p>
+      <div class="mb-10">
         <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Projects</h2>
-        <p class="mt-4 max-w-2xl text-slate-400">Things I've built, on my own and at work: tested first, typed end to end, and shipped through CI.</p>
+        <p class="mt-3 max-w-2xl text-slate-400">One built on my own, one built at work. Both tested first and shipped through CI.</p>
       </div>
 
-      <article class="exp-card reveal glass rounded-2xl p-6 sm:p-8">
-        <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-          <h3 class="font-display font-semibold text-xl sm:text-2xl text-slate-50">Job Application Tracker</h3>
-          <span class="kicker text-xs text-mint">2026 · FULL-STACK + AI</span>
-        </div>
-        <p class="text-cyan font-medium text-sm mb-5">A personal hiring-pipeline tracker with an AI job search and resume match</p>
-        <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed mb-6">
-          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Tracks every application from Saved to Offer: a drag-and-drop (and keyboard-accessible) pipeline board, follow-up reminders, interview logging, source stats and Gmail import.</li>
-          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Uses the Claude API as a senior recruiter: a <span class="text-slate-100 font-medium">resume match</span> that returns the 20 best-fit titles with their ATS keywords, and a <span class="text-slate-100 font-medium">scheduled job search</span> across 15 job boards that drafts every application answer into a queue for Claude in Chrome to fill in.</li>
-          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Built test-first: <span class="text-slate-100 font-medium">1,400+</span> Vitest unit and API tests against a real Postgres, plus Playwright end-to-end suites (Page Object Model, fixtures, role-based locators) on desktop and mobile.</li>
-          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Secure by construction: Google sign-in with cookie sessions and CSRF protection, and every API route declares its auth level, with a test proving one user can never read another's data.</li>
-          <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Lint, type-check, unit and end-to-end tests run in GitHub Actions on every push; Vercel deploys from main.</li>
-        </ul>
-        <p class="mb-4 text-sm text-slate-400">Explore the Job Application Tracker interface. Select any screenshot to view it larger.</p>
-        <div class="project-carousel carousel mb-7" role="region" aria-roledescription="carousel" aria-label="Job Application Tracker screenshots">
-          <div id="project-track" class="project-track carousel-track" data-lightbox-gallery="projects">
-            <figure class="project-slide photo" role="group" aria-roledescription="slide" aria-label="1 of 5: Applications" data-caption="Applications: stage counts, next steps, and the application list">
-              <a href="images/projects/tracker-applications.webp" class="block overflow-hidden rounded-xl border border-slate-500/20 bg-navy-900" aria-label="View applications screenshot">
-                <img src="images/projects/tracker-applications.webp" alt="The applications page: a count per stage, this week's next steps, and the list with each stage." width="1500" height="1125" loading="lazy" decoding="async" />
-              </a>
-            </figure>
-            <figure class="project-slide photo" role="group" aria-roledescription="slide" aria-label="2 of 5: Application board" data-caption="Board: one column per stage, with a card for each application">
-              <a href="images/projects/tracker-board.webp" class="block overflow-hidden rounded-xl border border-slate-500/20 bg-navy-900" aria-label="View pipeline board screenshot">
-                <img src="images/projects/tracker-board.webp" alt="The board: one column per stage, with a card for each application." width="1500" height="1125" loading="lazy" decoding="async" />
-              </a>
-            </figure>
-            <figure class="project-slide photo" role="group" aria-roledescription="slide" aria-label="3 of 5: Resume match" data-caption="Resume match: best-fit titles with keywords marked found or missing">
-              <a href="images/projects/tracker-resume.webp" class="block overflow-hidden rounded-xl border border-slate-500/20 bg-navy-900" aria-label="View resume match screenshot">
-                <img src="images/projects/tracker-resume.webp" alt="Resume match: the best-fit titles, each with its keywords marked found or missing." width="1500" height="1125" loading="lazy" decoding="async" />
-              </a>
-            </figure>
-            <figure class="project-slide photo" role="group" aria-roledescription="slide" aria-label="4 of 5: Apply queue" data-caption="Apply queue: tabs with counts, and each job's fit score and missing keywords">
-              <a href="images/projects/tracker-queue.webp" class="block overflow-hidden rounded-xl border border-slate-500/20 bg-navy-900" aria-label="View application queue screenshot">
-                <img src="images/projects/tracker-queue.webp" alt="The apply queue: tabs with counts, and each job with its fit score and the keywords it is missing." width="1500" height="1125" loading="lazy" decoding="async" />
-              </a>
-            </figure>
-            <figure class="project-slide photo" role="group" aria-roledescription="slide" aria-label="5 of 5: Tailored resume" data-caption="Tailored resume: suggested rewording beside the original line, with fit before and after">
-              <a href="images/projects/tracker-tailored-resume.webp" class="block overflow-hidden rounded-xl border border-slate-500/20 bg-navy-900" aria-label="View tailored resume screenshot">
-                <img src="images/projects/tracker-tailored-resume.webp" alt="A tailored resume: a suggested rewording beside the original line, the fit before and after, and a number to check." width="1500" height="1125" loading="lazy" decoding="async" />
-              </a>
-            </figure>
+      <article class="card rounded-2xl p-6 sm:p-8">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-10">
+          <div class="lg:col-span-5">
+            <p class="kicker text-[11px] text-mint mb-3">2026 · FULL-STACK + AI</p>
+            <h3 class="font-display font-semibold text-2xl text-slate-50">Job Application Tracker</h3>
+            <p class="mt-2 text-slate-300">A personal hiring-pipeline tracker with an AI job search and resume match.</p>
+            <ul class="mt-5 space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+              <li class="dot-item">Every application from Saved to Offer on a drag-and-drop board (keyboard-accessible too), with follow-up reminders, interview logs and Gmail import.</li>
+              <li class="dot-item">The Claude API acts as a senior recruiter: a <span class="text-slate-100 font-medium">resume match</span> that returns the 20 best-fit titles with their ATS keywords, and a <span class="text-slate-100 font-medium">scheduled job search</span> across 15 job boards that drafts every answer into a queue for Claude in Chrome.</li>
+              <li class="dot-item">Built test-first: <span class="text-slate-100 font-medium">1,400+</span> Vitest unit and API tests against a real Postgres, plus Playwright end-to-end suites on desktop and mobile.</li>
+              <li class="dot-item">Google sign-in with cookie sessions and CSRF protection; every API route declares its auth level, with a test proving one user can never read another's data.</li>
+            </ul>
+            <p class="mt-5 text-sm text-slate-400">React · TypeScript · Fastify · PostgreSQL (Neon) · Zod · TanStack Query · Tailwind · Claude API · Playwright · Vitest · GitHub Actions · Vercel</p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="https://job-application-tracker-eta-one.vercel.app/" target="_blank" rel="noopener" class="btn-primary rounded-full px-6 py-2.5 font-semibold text-sm">Open the live demo<span class="sr-only"> (opens in a new tab)</span></a>
+              <a href="https://github.com/subarnakarki/job-application-tracker" target="_blank" rel="noopener" class="btn-ghost rounded-full px-6 py-2.5 font-semibold text-sm text-slate-100">Read the source<span class="sr-only"> on GitHub (opens in a new tab)</span></a>
+            </div>
           </div>
-          <button class="car-btn car-prev project-car-prev" aria-label="Previous project screenshot">&#8249;</button>
-          <button class="car-btn car-next project-car-next" aria-label="Next project screenshot">&#8250;</button>
-        </div>
-        <div class="flex flex-wrap gap-2 mb-7">
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">React</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">TypeScript</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Fastify</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">PostgreSQL (Neon)</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Zod</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">TanStack Query</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Tailwind CSS</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Claude API</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Playwright</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Vitest</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">GitHub Actions</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Vercel</span>
-        </div>
-        <div class="flex flex-wrap gap-3">
-          <a href="https://job-application-tracker-eta-one.vercel.app/" target="_blank" rel="noopener" class="btn-primary rounded-full px-6 py-2.5 font-semibold text-sm">Live demo<span class="sr-only"> of the Job Application Tracker (opens in a new tab)</span></a>
-          <a href="https://github.com/subarnakarki/job-application-tracker" target="_blank" rel="noopener" class="btn-ghost rounded-full px-6 py-2.5 text-sm text-slate-100">Source on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+
+          <div class="lg:col-span-7" data-lightbox-gallery="projects">
+            <figure class="shot shot-lead" data-caption="Applications: stage counts, next steps, and the application list">
+              <a href="images/projects/tracker-applications.webp" aria-label="View the applications screen larger">
+                <img src="images/projects/tracker-applications.webp" alt="The applications page: a count per stage, this week's next steps, and the list with each stage." width="1500" height="1125" decoding="async" />
+              </a>
+            </figure>
+            <div class="mt-3 grid grid-cols-4 gap-3">
+              <figure class="shot" data-caption="Board: one column per stage, with a card for each application">
+                <a href="images/projects/tracker-board.webp" aria-label="View the pipeline board larger">
+                  <img src="images/projects/tracker-board.webp" alt="The board: one column per stage, with a card for each application." width="1500" height="1125" loading="lazy" decoding="async" />
+                </a>
+              </figure>
+              <figure class="shot" data-caption="Resume match: best-fit titles with keywords marked found or missing">
+                <a href="images/projects/tracker-resume.webp" aria-label="View the resume match larger">
+                  <img src="images/projects/tracker-resume.webp" alt="Resume match: the best-fit titles, each with its keywords marked found or missing." width="1500" height="1125" loading="lazy" decoding="async" />
+                </a>
+              </figure>
+              <figure class="shot" data-caption="Apply queue: tabs with counts, and each job's fit score and missing keywords">
+                <a href="images/projects/tracker-queue.webp" aria-label="View the apply queue larger">
+                  <img src="images/projects/tracker-queue.webp" alt="The apply queue: tabs with counts, and each job with its fit score and the keywords it is missing." width="1500" height="1125" loading="lazy" decoding="async" />
+                </a>
+              </figure>
+              <figure class="shot" data-caption="Tailored resume: suggested rewording beside the original line, with fit before and after">
+                <a href="images/projects/tracker-tailored-resume.webp" aria-label="View the tailored resume larger">
+                  <img src="images/projects/tracker-tailored-resume.webp" alt="A tailored resume: a suggested rewording beside the original line, the fit before and after, and a number to check." width="1500" height="1125" loading="lazy" decoding="async" />
+                </a>
+              </figure>
+            </div>
+          </div>
         </div>
       </article>
-      <article class="exp-card reveal glass rounded-2xl p-6 sm:p-8 mt-4">
-        <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-          <h3 class="font-display font-semibold text-xl sm:text-2xl text-slate-50">Test Data Platform &amp; AI Test Tooling</h3>
-          <span class="kicker text-xs text-mint">POLLY · INTERNAL TOOLING</span>
-        </div>
-        <p class="text-cyan font-medium text-sm mb-4">Seed data and AI-assisted testing workflows scaled quality across ~50 developers</p>
-        <div class="grid md:grid-cols-3 gap-4 mb-5">
+
+      <article class="card rounded-2xl p-6 sm:p-8 mt-6">
+        <p class="kicker text-[11px] text-mint mb-3">POLLY · INTERNAL TOOLING</p>
+        <h3 class="font-display font-semibold text-2xl text-slate-50">Test Data Platform &amp; AI Test Tooling</h3>
+        <p class="mt-2 text-slate-300">Seed data and AI-assisted testing workflows that scaled quality across ~50 developers.</p>
+        <div class="mt-6 grid md:grid-cols-3 gap-6 mb-6">
           <div>
-            <p class="kicker text-[11px] text-slate-500 mb-2">SCOPE</p>
+            <p class="kicker text-[11px] text-slate-400 mb-2">SCOPE</p>
             <p class="text-sm sm:text-[15px] text-slate-300 leading-relaxed">Mortgage test environments took a day or more to set up. After the QA team was eliminated, one engineer owned quality for ~50 developers and a ~2,500-test migration.</p>
           </div>
           <div>
-            <p class="kicker text-[11px] text-slate-500 mb-2">WHAT I BUILT</p>
+            <p class="kicker text-[11px] text-slate-400 mb-2">WHAT I BUILT</p>
             <ul class="space-y-1.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Python seed data platform provisioned mortgage orgs on demand across 30+ scenarios.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Claude Code migration and test-generation skills moved Cypress/Cucumber tests to Playwright with assertion parity and CI checks for lint, types, and fixtures.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>A shared code-review skill checked test PRs against Page Object Model, fixture, tagging, and team standards; CLAUDE.md and MCP tools supplied project context.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Release-triage skills connected Slack status to GitHub history and Jira, routing failures and tracking bugs through verified fixes.</li>
+              <li class="dot-item">A Python seed data platform that provisions mortgage orgs on demand across 30+ scenarios.</li>
+              <li class="dot-item">Claude Code skills that moved Cypress/Cucumber tests to Playwright with assertion parity.</li>
+              <li class="dot-item">A shared code-review skill that checks test PRs against team standards.</li>
+              <li class="dot-item">Release-triage skills linking Slack, GitHub history and Jira.</li>
             </ul>
           </div>
           <div>
-            <p class="kicker text-[11px] text-slate-500 mb-2">IMPACT</p>
+            <p class="kicker text-[11px] text-slate-400 mb-2">IMPACT</p>
             <ul class="space-y-1.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span><span class="text-slate-100 font-medium">~2,500 scenarios</span> migrated in 4 months, not years.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Nightly pass rate <span class="text-slate-100 font-medium">95% → 99.8%</span>.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Release triage cut from <span class="text-slate-100 font-medium">3 days to 1</span>.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Test data setup from a day or more to on demand.</li>
+              <li class="dot-item"><span class="text-slate-100 font-medium">~2,500 scenarios</span> migrated in 4 months, not years.</li>
+              <li class="dot-item">Nightly pass rate <span class="text-slate-100 font-medium">95% → 99.8%</span>.</li>
+              <li class="dot-item">Release triage cut from <span class="text-slate-100 font-medium">3 days to 1</span>.</li>
+              <li class="dot-item">Test data setup from a day or more to on demand.</li>
             </ul>
           </div>
         </div>
-        <div class="grid md:grid-cols-2 gap-4 mb-5">
-          <figure class="project-mock">
-            <div class="project-mock-panel">
-              <div class="project-mock-header">
-                <span class="project-dot bg-mint"></span>
-                <span class="project-dot bg-cyan"></span>
-                <span class="project-dot bg-slate-300"></span>
-              </div>
-              <div class="project-mock-body">
-                <div class="project-mock-kicker">QUALITY DASHBOARD</div>
-                <div class="project-mock-chart">
-                  <span style="height: 38%"></span>
-                  <span style="height: 52%"></span>
-                  <span style="height: 60%"></span>
-                  <span style="height: 72%"></span>
-                  <span style="height: 86%"></span>
-                  <span style="height: 98%"></span>
-                </div>
-                <div class="project-mock-metrics">
-                  <div><strong>99.8%</strong><span>Nightly pass</span></div>
-                  <div><strong>3d → 1d</strong><span>Release triage</span></div>
-                  <div><strong>~50</strong><span>Developers</span></div>
-                </div>
-              </div>
+        <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="project-mock-panel" role="img" aria-label="Quality dashboard: nightly pass rate 99.8%, release triage 3 days to 1, about 50 developers.">
+            <div class="project-mock-kicker">QUALITY DASHBOARD</div>
+            <div class="project-mock-chart" aria-hidden="true">
+              <span style="height: 38%"></span>
+              <span style="height: 52%"></span>
+              <span style="height: 60%"></span>
+              <span style="height: 72%"></span>
+              <span style="height: 86%"></span>
+              <span style="height: 98%"></span>
             </div>
-          </figure>
-          <figure class="project-mock">
-            <div class="project-mock-panel">
-              <div class="project-mock-header">
-                <span class="project-dot bg-mint"></span>
-                <span class="project-dot bg-cyan"></span>
-                <span class="project-dot bg-slate-300"></span>
-              </div>
-              <div class="project-mock-body">
-                <div class="project-mock-kicker">SEED DATA</div>
-                <div class="project-mock-tags">
-                  <span>Pricing</span>
-                  <span>Lock policies</span>
-                  <span>Investor orgs</span>
-                  <span>Products</span>
-                  <span>Rules</span>
-                  <span>Channels</span>
-                </div>
-                <div class="project-mock-stack">
-                  <div class="project-mock-row"><span>Scenario coverage</span><b>30+</b></div>
-                  <div class="project-mock-row"><span>Provision time</span><b>1 day → on demand</b></div>
-                  <div class="project-mock-row"><span>Parallel runs</span><b>Stable under load</b></div>
-                </div>
-              </div>
+            <div class="project-mock-metrics" aria-hidden="true">
+              <div><strong>99.8%</strong><span>Nightly pass</span></div>
+              <div><strong>3d → 1d</strong><span>Release triage</span></div>
+              <div><strong>~50</strong><span>Developers</span></div>
             </div>
-          </figure>
+          </div>
+          <div class="project-mock-panel" role="img" aria-label="Seed data: pricing, lock policies, investor orgs, products, rules and channels; 30+ scenarios, provisioned on demand.">
+            <div class="project-mock-kicker">SEED DATA</div>
+            <div class="project-mock-tags" aria-hidden="true">
+              <span>Pricing</span>
+              <span>Lock policies</span>
+              <span>Investor orgs</span>
+              <span>Products</span>
+              <span>Rules</span>
+              <span>Channels</span>
+            </div>
+            <div class="project-mock-stack" aria-hidden="true">
+              <div class="project-mock-row"><span>Scenario coverage</span><b>30+</b></div>
+              <div class="project-mock-row"><span>Provision time</span><b>1 day → on demand</b></div>
+              <div class="project-mock-row"><span>Parallel runs</span><b>Stable under load</b></div>
+            </div>
+          </div>
         </div>
-        <div class="flex flex-wrap gap-2">
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Python</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Playwright</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">TypeScript</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">Claude Code</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">MCP Servers</span>
-            <span class="pill text-xs px-3 py-1.5 rounded-full border border-slate-500/25 text-slate-300 bg-navy-700/40">GitHub Actions</span>
-        </div>
-        <p class="mt-5 text-xs text-slate-500">Built at work, so the code is private; happy to walk through it.</p>
+        <p class="text-sm text-slate-400">Python · Playwright · TypeScript · Claude Code · MCP servers · GitHub Actions. Built at work, so the code is private; happy to walk through it.</p>
       </article>
     </div>
   </section>
 
-  <!-- ============ EXPERIENCE / TIMELINE ============ -->
-  <section id="experience" class="relative py-16 sm:py-20">
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" class="section">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
-      <div class="reveal mb-16">
-        <p class="kicker text-xs text-cyan mb-3">/ 04 — WHERE I'VE BEEN</p>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Professional Experience</h2>
-        <p class="mt-4 max-w-2xl text-slate-400">8+ years of shipping quality tooling and test infrastructure across mortgage-tech, low-code platforms, edtech, and media — with measurable gains in speed, stability, and release confidence.</p>
+      <div class="mb-10">
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Experience</h2>
+        <p class="mt-3 max-w-2xl text-slate-400">8+ years of quality tooling and test infrastructure, each role with numbers to show for it.</p>
       </div>
 
-      <div class="relative pl-8 sm:pl-12">
-        <!-- vertical line -->
-        <div class="timeline-line absolute left-2 sm:left-3 top-2 bottom-2 w-0.5"></div>
-
+      <div class="jobs">
         <!-- Polly -->
-        <div class="timeline-item reveal from-right relative mb-12">
-          <span class="timeline-dot absolute -left-[26px] sm:-left-[38px] top-2 w-3.5 h-3.5 rounded-full bg-mint"></span>
-          <div class="exp-card glass rounded-2xl p-6 sm:p-7">
-            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-              <h3 class="font-display font-semibold text-xl text-slate-50">Polly</h3>
-              <span class="kicker text-xs text-mint">SEP 2024 – NOV 2026</span>
-            </div>
-            <p class="text-cyan font-medium text-sm">Senior SDET</p>
-            <p class="text-slate-400 text-xs mb-4">San Francisco, CA (Remote)</p>
-            <p class="text-slate-300 text-sm mb-4 italic">Only QA engineer kept after the 25+ person QA team was let go in Feb 2026; sole quality owner for ~50 developers from then on.</p>
-            <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Cut release triage from <span class="text-slate-100 font-medium">3 days to 1</span> with Claude Code skills that poll feature teams on automation status in a Slack release channel and auto-heal broken tests, tracing each failure to its root cause through PR history, Jira and Confluence.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Migrated <span class="text-slate-100 font-medium">~2,500 test scenarios</span> from Cypress to Playwright in 4 months (an effort estimated at years by hand): a Page Object Model and fixture framework, Claude Code migration skills enforcing full assertion parity, and PR checks for lint, type-check and fixture coverage.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Raised the nightly pass rate from <span class="text-slate-100 font-medium">95% to 99.8%</span> by fixing long-standing flaky tests and a pagination bug breaking suites across teams; added a Slack bot that routes each failure to its owning team, and tests on every pull request.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Built a Python seed data platform, now used by every engineer, that provisions fully configured mortgage environments on demand across <span class="text-slate-100 font-medium">30+ scenario types</span>, replacing manual setup that took a day or more per org.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Rolled out Claude Code to all ~50 developers with project guidance, MCP servers for Playwright, Jira, GitHub and Kibana, and skills for test generation, seed-data migration, and test code review; trained teams to write and own tests for every pull request.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Built a test trends dashboard for developers, managers and release engineers, and merged sharded Playwright reports into one with shared caching across shards.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Wrote end-to-end automation for 6+ major Pricing Engine features (Counter Offers, MI Rate Cards, Lock Workflows and more) that caught real bugs before release, plus the shared base class every Pricing Engine test uses.</li>
-            </ul>
+        <article class="job">
+          <div class="job-meta">
+            <p class="kicker text-xs text-mint">SEP 2024 – NOV 2026</p>
+            <p class="mt-1 text-sm text-slate-400">San Francisco, CA (Remote)</p>
           </div>
-        </div>
+          <div>
+            <h3 class="font-display font-semibold text-xl text-slate-50">Polly <span class="text-slate-400 font-normal">· Senior SDET</span></h3>
+            <p class="mt-2 text-slate-300 text-sm sm:text-[15px]">Only QA engineer kept after the 25+ person QA team was let go in Feb 2026; sole quality owner for ~50 developers from then on.</p>
+            <ul class="mt-4 space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+              <li class="dot-item">Cut release triage from <span class="text-slate-100 font-medium">3 days to 1</span> with Claude Code skills that poll feature teams on automation status in a Slack release channel and auto-heal broken tests, tracing each failure to its root cause through PR history, Jira and Confluence.</li>
+              <li class="dot-item">Migrated <span class="text-slate-100 font-medium">~2,500 test scenarios</span> from Cypress to Playwright in 4 months (an effort estimated at years by hand): a Page Object Model and fixture framework, Claude Code migration skills enforcing full assertion parity, and PR checks for lint, type-check and fixture coverage.</li>
+              <li class="dot-item">Raised the nightly pass rate from <span class="text-slate-100 font-medium">95% to 99.8%</span> by fixing long-standing flaky tests and a pagination bug breaking suites across teams; added a Slack bot that routes each failure to its owning team, and tests on every pull request.</li>
+            </ul>
+            <details class="more">
+              <summary>Show 4 more</summary>
+              <ul class="mt-3 space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+                <li class="dot-item">Built a Python seed data platform, now used by every engineer, that provisions fully configured mortgage environments on demand across <span class="text-slate-100 font-medium">30+ scenario types</span>, replacing manual setup that took a day or more per org.</li>
+                <li class="dot-item">Rolled out Claude Code to all ~50 developers with project guidance, MCP servers for Playwright, Jira, GitHub and Kibana, and skills for test generation, seed-data migration, and test code review; trained teams to write and own tests for every pull request.</li>
+                <li class="dot-item">Built a test trends dashboard for developers, managers and release engineers, and merged sharded Playwright reports into one with shared caching across shards.</li>
+                <li class="dot-item">Wrote end-to-end automation for 6+ major Pricing Engine features (Counter Offers, MI Rate Cards, Lock Workflows and more) that caught real bugs before release, plus the shared base class every Pricing Engine test uses.</li>
+              </ul>
+            </details>
+          </div>
+        </article>
 
         <!-- Infinite Blue -->
-        <div class="timeline-item reveal from-right relative mb-12">
-          <span class="timeline-dot absolute -left-[26px] sm:-left-[38px] top-2 w-3.5 h-3.5 rounded-full bg-cyan"></span>
-          <div class="exp-card glass rounded-2xl p-6 sm:p-7">
-            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-              <h3 class="font-display font-semibold text-xl text-slate-50">Infinite Blue <span class="text-slate-400 font-normal text-base">(acquired by Everbridge)</span></h3>
-              <span class="kicker text-xs text-mint">SEP 2022 – SEP 2024</span>
-            </div>
-            <p class="text-cyan font-medium text-sm">Senior SDET (promoted Apr 2024)</p>
-            <p class="text-slate-400 text-xs mb-4">Audubon, PA (Remote)</p>
-            <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Cut nightly regression time by <span class="text-slate-100 font-medium">85%</span> (2h 30m → 20m) by rolling out Cypress Cloud with Harness CI/CD for parallel execution across machines.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Led a GraphQL security audit with standardized Postman collections; found and fixed critical issues (XSS, access control) and presented the findings to leadership.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Built and grew a Cypress framework for a React Single-SPA app covering 10+ micro front-ends and 10+ microservices, with page objects, stable data-attribute locators and tag-based pipeline runs per service.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Built a Jest and Axios API test framework for the Cenari public REST API, using Node-Vault for keys and credentials, with scripts to seed and clean up test data.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Ran Artillery performance and load tests against public REST APIs; onboarded and mentored new SDETs and ran testing workshops across the company, including Customer Support.</li>
-            </ul>
+        <article class="job">
+          <div class="job-meta">
+            <p class="kicker text-xs text-mint">SEP 2022 – SEP 2024</p>
+            <p class="mt-1 text-sm text-slate-400">Audubon, PA (Remote)</p>
           </div>
-        </div>
+          <div>
+            <h3 class="font-display font-semibold text-xl text-slate-50">Infinite Blue <span class="text-slate-400 font-normal">· Senior SDET</span></h3>
+            <p class="mt-1 text-sm text-slate-400">Acquired by Everbridge; promoted to Senior in Apr 2024.</p>
+            <ul class="mt-4 space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+              <li class="dot-item">Cut nightly regression time by <span class="text-slate-100 font-medium">85%</span> (2h 30m → 20m) by rolling out Cypress Cloud with Harness CI/CD for parallel execution across machines.</li>
+              <li class="dot-item">Led a GraphQL security audit with standardized Postman collections; found and fixed critical issues (XSS, access control) and presented the findings to leadership.</li>
+              <li class="dot-item">Built and grew a Cypress framework for a React Single-SPA app covering 10+ micro front-ends and 10+ microservices, with page objects, stable data-attribute locators and tag-based pipeline runs per service.</li>
+            </ul>
+            <details class="more">
+              <summary>Show 2 more</summary>
+              <ul class="mt-3 space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+                <li class="dot-item">Built a Jest and Axios API test framework for the Cenari public REST API, using Node-Vault for keys and credentials, with scripts to seed and clean up test data.</li>
+                <li class="dot-item">Ran Artillery performance and load tests against public REST APIs; onboarded and mentored new SDETs and ran testing workshops across the company, including Customer Support.</li>
+              </ul>
+            </details>
+          </div>
+        </article>
 
         <!-- Everfi -->
-        <div class="timeline-item reveal from-right relative mb-12">
-          <span class="timeline-dot absolute -left-[26px] sm:-left-[38px] top-2 w-3.5 h-3.5 rounded-full bg-mint"></span>
-          <div class="exp-card glass rounded-2xl p-6 sm:p-7">
-            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-              <h3 class="font-display font-semibold text-xl text-slate-50">Everfi</h3>
-              <span class="kicker text-xs text-mint">MAR 2021 – SEP 2022</span>
-            </div>
-            <p class="text-cyan font-medium text-sm">Quality Engineer</p>
-            <p class="text-slate-400 text-xs mb-4">Washington, DC (Remote)</p>
-            <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Cut course development time from <span class="text-slate-100 font-medium">3 days to half a day</span> with CLI automation tools and a shared NPM package of 20+ reusable Cypress functions for course components.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-mint"></span>Automated 13+ courses in Test Modeller, all running in CI, within the first quarter; wrote code and model organization guidelines and mentored teammates, interns and developers.</li>
+        <article class="job">
+          <div class="job-meta">
+            <p class="kicker text-xs text-mint">MAR 2021 – SEP 2022</p>
+            <p class="mt-1 text-sm text-slate-400">Washington, DC (Remote)</p>
+          </div>
+          <div>
+            <h3 class="font-display font-semibold text-xl text-slate-50">Everfi <span class="text-slate-400 font-normal">· Quality Engineer</span></h3>
+            <ul class="mt-4 space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+              <li class="dot-item">Cut course development time from <span class="text-slate-100 font-medium">3 days to half a day</span> with CLI automation tools and a shared NPM package of 20+ reusable Cypress functions for course components.</li>
+              <li class="dot-item">Automated 13+ courses in Test Modeller, all running in CI, within the first quarter; wrote code and model organization guidelines and mentored teammates, interns and developers.</li>
             </ul>
           </div>
-        </div>
+        </article>
 
         <!-- Gannett -->
-        <div class="timeline-item reveal from-right relative">
-          <span class="timeline-dot absolute -left-[26px] sm:-left-[38px] top-2 w-3.5 h-3.5 rounded-full bg-cyan"></span>
-          <div class="exp-card glass rounded-2xl p-6 sm:p-7">
-            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-              <h3 class="font-display font-semibold text-xl text-slate-50">Gannett | USA TODAY Network</h3>
-              <span class="kicker text-xs text-mint">JAN 2018 – MAR 2021</span>
-            </div>
-            <p class="text-cyan font-medium text-sm">Software Developer in Test</p>
-            <p class="text-slate-400 text-xs mb-4">McLean, VA</p>
-            <ul class="space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Shifted testing into development by teaching developers Simulato, a model-based tool that generates Selenium tests from models, catching bugs earlier and cutting manual testing.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Added SonarQube security scanning to GitHub Actions, and static fixtures that mock API calls for consistent visual and integration test data.</li>
-              <li class="relative pl-5"><span class="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-cyan"></span>Added Selenium visual tests to Jenkins, running in Docker containers as pipeline steps.</li>
+        <article class="job">
+          <div class="job-meta">
+            <p class="kicker text-xs text-mint">JAN 2018 – MAR 2021</p>
+            <p class="mt-1 text-sm text-slate-400">McLean, VA</p>
+          </div>
+          <div>
+            <h3 class="font-display font-semibold text-xl text-slate-50">Gannett | USA TODAY Network <span class="text-slate-400 font-normal">· Software Developer in Test</span></h3>
+            <ul class="mt-4 space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+              <li class="dot-item">Shifted testing into development by teaching developers Simulato, a model-based tool that generates Selenium tests from models, catching bugs earlier and cutting manual testing.</li>
+              <li class="dot-item">Added SonarQube security scanning to GitHub Actions, and static fixtures that mock API calls for consistent visual and integration test data.</li>
+              <li class="dot-item">Added Selenium visual tests to Jenkins, running in Docker containers as pipeline steps.</li>
             </ul>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-
-  <!-- ============ EDUCATION ============ -->
-  <section id="education" class="relative py-16 sm:py-20">
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
-      <div class="reveal mb-10">
-        <p class="kicker text-xs text-cyan mb-3">/ 05 — FOUNDATIONS</p>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Education &amp; Credentials</h2>
+      <div class="mb-10">
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Skills and tools</h2>
+        <p class="mt-3 max-w-2xl text-slate-400">The tools I use most, by area, with the rest of each toolkit underneath.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="exp-card reveal from-left glass rounded-2xl p-7">
-          <div class="flex items-start gap-4">
-            <span class="grid place-items-center w-12 h-12 rounded-xl bg-mint/10 border border-mint/30 text-mint shrink-0">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg>
-            </span>
-            <div>
-              <h3 class="font-display font-semibold text-lg text-slate-50 leading-snug">B.S. in Software Development</h3>
-              <p class="text-cyan text-sm mt-1">Western Governors University</p>
-              <p class="text-slate-400 text-sm">Salt Lake City, UT</p>
-            </div>
-          </div>
-        </div>
+        <article class="card rounded-2xl p-6 sm:p-7">
+          <h3 class="font-display font-semibold text-lg text-slate-100">Test automation</h3>
+          <ul class="tools mt-5">
+            <li class="tool"><span class="tool-tile"><img src="images/icons/playwright.svg" alt="" width="22" height="22" /></span>Playwright</li>
+            <li class="tool"><span class="tool-tile"><img src="images/icons/cypress.svg" alt="" width="22" height="22" /></span>Cypress</li>
+            <li class="tool"><span class="tool-tile"><img src="images/icons/selenium.svg" alt="" width="22" height="22" /></span>Selenium</li>
+            <li class="tool"><span class="tool-tile"><img src="images/icons/jest.svg" alt="" width="22" height="22" /></span>Jest</li>
+            <li class="tool"><span class="tool-tile"><img src="images/icons/postman.svg" alt="" width="22" height="22" /></span>Postman</li>
+          </ul>
+          <p class="mt-5 text-sm text-slate-400 leading-relaxed">Also Applitools, Artillery, Axios, Cucumber, Page Object Model, visual regression, performance and load, security testing, shift-left testing, root-cause analysis.</p>
+        </article>
 
-        <div class="exp-card reveal from-right glass rounded-2xl p-7">
-          <div class="flex items-start gap-4">
-            <span class="grid place-items-center w-12 h-12 rounded-xl bg-cyan/10 border border-cyan/30 text-cyan shrink-0">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443"/></svg>
-            </span>
-            <div>
-              <h3 class="font-display font-semibold text-lg text-slate-50 leading-snug">A.A.S. in Information Systems Technology</h3>
-              <p class="text-cyan text-sm mt-1">Northern Virginia Community College</p>
-              <p class="text-slate-400 text-sm">Manassas, VA</p>
-            </div>
+        <article class="card rounded-2xl p-6 sm:p-7">
+          <h3 class="font-display font-semibold text-lg text-slate-100">AI engineering</h3>
+          <ul class="tools mt-5">
+            <li class="tool"><span class="tool-tile"><img src="images/icons/claude.svg" alt="" width="22" height="22" /></span>Claude Code</li>
+            <li class="tool"><span class="tool-tile"><img src="images/icons/github-copilot.svg" alt="" width="22" height="22" /></span>GitHub Copilot</li>
+          </ul>
+          <p class="mt-5 text-sm text-slate-400 leading-relaxed">Also Augment Code, MCP servers (Playwright, Jira, GitHub, Kibana), AI-assisted test generation, self-healing tests, context engineering (CLAUDE.md), LLM-as-judge evals, prompt engineering, agentic workflows.</p>
+        </article>
+
+        <article class="card rounded-2xl p-6 sm:p-7">
+          <h3 class="font-display font-semibold text-lg text-slate-100">Languages and data</h3>
+          <ul class="tools mt-5">
+            <li class="tool"><span class="tool-tile"><img src="images/icons/python.svg" alt="" width="22" height="22" /></span>Python</li>
+            <li class="tool"><span class="tool-tile"><img src="images/icons/typescript.svg" alt="" width="22" height="22" /></span>TypeScript</li>
+            <li class="tool"><span class="tool-tile"><img src="images/icons/javascript.svg" alt="" width="22" height="22" /></span>JavaScript</li>
+            <li class="tool"><span class="tool-tile"><img src="images/icons/graphql.svg" alt="" width="22" height="22" /></span>GraphQL</li>
+            <li class="tool"><span class="tool-tile"><img src="images/icons/postgres.svg" alt="" width="22" height="22" /></span>PostgreSQL</li>
+            <li class="tool"><span class="tool-tile"><img src="images/icons/mysql.svg" alt="" width="22" height="22" /></span>MySQL</li>
+          </ul>
+          <p class="mt-5 text-sm text-slate-400 leading-relaxed">Also HTML, CSS and REST APIs.</p>
+        </article>
+
+        <article class="card rounded-2xl p-6 sm:p-7">
+          <h3 class="font-display font-semibold text-lg text-slate-100">CI/CD and cloud</h3>
+          <ul class="tools mt-5">
+            <li class="tool"><span class="tool-tile"><img src="images/icons/github-actions.svg" alt="" width="22" height="22" /></span>GitHub Actions</li>
+            <li class="tool"><span class="tool-tile"><img src="images/icons/jenkins.svg" alt="" width="22" height="22" /></span>Jenkins</li>
+            <li class="tool"><span class="tool-tile"><img src="images/icons/circleci.svg" alt="" width="22" height="22" /></span>CircleCI</li>
+            <li class="tool"><span class="tool-tile"><img src="images/icons/docker.svg" alt="" width="22" height="22" /></span>Docker</li>
+            <li class="tool"><span class="tool-tile"><img src="images/icons/aws.svg" alt="" width="22" height="22" /></span>AWS</li>
+            <li class="tool"><span class="tool-tile"><img src="images/icons/grafana.svg" alt="" width="22" height="22" /></span>Grafana</li>
+          </ul>
+          <p class="mt-5 text-sm text-slate-400 leading-relaxed">Also Harness, SonarQube, Node-Vault, and AWS S3, EC2, Lambda and Secrets Manager.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="grid lg:grid-cols-12 gap-10">
+        <div class="lg:col-span-7">
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">About me</h2>
+          <p class="mt-6 text-slate-300 text-base sm:text-lg leading-relaxed">
+            I'm a Senior SDET focused on automation architecture, release confidence, and AI-assisted quality
+            workflows. I was the sole QA engineer retained after Polly's 25+ person QA team was eliminated,
+            owned quality end-to-end for ~50 developers, and shifted testing to them with Claude Code tooling,
+            self-healing pipelines, and targeted PR validation.
+          </p>
+          <p class="mt-4 text-slate-400 leading-relaxed">
+            My work is less about writing tests for their own sake and more about systems that make quality
+            scalable and measurable. I like practical engineering: clear architecture, strong ownership, and a
+            workflow that makes teams faster without noisy false confidence.
+          </p>
+        </div>
+        <div class="lg:col-span-5 space-y-8 lg:pt-16">
+          <div>
+            <h3 class="font-display font-semibold text-lg text-slate-100">What I'm learning</h3>
+            <p class="mt-3 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+              AI engineering and LLMs, agentic systems, and how they hold up in real distributed and cloud setups.
+              On the side, quantitative trading, which scratches the same itch: building something that reacts
+              intelligently without needing me to babysit it.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-display font-semibold text-lg text-slate-100">Away from the keyboard</h3>
+            <p class="mt-3 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+              Following the markets, video games when there's time, and travelling with a camera. Mostly, being
+              around for my wife and our daughter, Saanvi, the hardest and best thing I've taken on, and for our
+              miniature dachshund, Momo.
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="reveal mt-6 glass rounded-2xl p-7">
-        <div class="flex items-center gap-3 mb-4">
-          <svg class="w-5 h-5 text-mint" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0"/></svg>
-          <h3 class="font-display font-semibold text-lg text-slate-100">Certifications</h3>
-        </div>
-        <p class="kicker text-[11px] text-slate-500 mb-2">TESTING &amp; PROCESS</p>
-        <div class="flex flex-wrap gap-3 mb-6">
-          <span class="pill px-4 py-2 rounded-lg border border-slate-500/25 text-slate-200 bg-navy-700/40 text-sm">ISTQB Certified Tester — Foundation Level (CTFL)</span>
-          <span class="pill px-4 py-2 rounded-lg border border-slate-500/25 text-slate-200 bg-navy-700/40 text-sm">ITIL V3 Foundation</span>
-        </div>
-        <p class="kicker text-[11px] text-slate-500 mb-2">IT &amp; PROFESSIONAL</p>
-        <div class="flex flex-wrap gap-3 mb-6">
-          <span class="pill px-4 py-2 rounded-lg border border-slate-500/25 text-slate-200 bg-navy-700/40 text-sm">CompTIA A+</span>
-          <span class="pill px-4 py-2 rounded-lg border border-slate-500/25 text-slate-200 bg-navy-700/40 text-sm">CompTIA Project+</span>
-          <span class="pill px-4 py-2 rounded-lg border border-slate-500/25 text-slate-200 bg-navy-700/40 text-sm">CIW User Interface Designer</span>
-          <span class="pill px-4 py-2 rounded-lg border border-slate-500/25 text-slate-200 bg-navy-700/40 text-sm">MOS Excel 2016</span>
-          <span class="pill px-4 py-2 rounded-lg border border-slate-500/25 text-slate-200 bg-navy-700/40 text-sm">MOS Outlook 2016</span>
-        </div>
-        <p class="kicker text-[11px] text-cyan mb-2">ANTHROPIC AI</p>
-        <div class="flex flex-wrap gap-3">
-          <span class="pill px-4 py-2 rounded-lg border border-cyan/25 text-slate-200 bg-navy-700/40 text-sm">AI Fluency: Framework &amp; Foundations</span>
-          <span class="pill px-4 py-2 rounded-lg border border-cyan/25 text-slate-200 bg-navy-700/40 text-sm">Claude 101</span>
-          <span class="pill px-4 py-2 rounded-lg border border-cyan/25 text-slate-200 bg-navy-700/40 text-sm">Claude Code 101</span>
-          <span class="pill px-4 py-2 rounded-lg border border-cyan/25 text-slate-200 bg-navy-700/40 text-sm">Claude Code in Action</span>
-          <span class="pill px-4 py-2 rounded-lg border border-cyan/25 text-slate-200 bg-navy-700/40 text-sm">Introduction to Agent Skills</span>
-          <span class="pill px-4 py-2 rounded-lg border border-cyan/25 text-slate-200 bg-navy-700/40 text-sm">Introduction to Model Context Protocol</span>
-          <span class="pill px-4 py-2 rounded-lg border border-cyan/25 text-slate-200 bg-navy-700/40 text-sm">Introduction to Subagents</span>
+      <!-- Education -->
+      <div id="education" class="mt-16 pt-10 border-t border-slate-500/15">
+        <h3 class="font-display font-semibold text-2xl text-slate-50">Education and certifications</h3>
+        <div class="mt-6 grid md:grid-cols-3 gap-6">
+          <div>
+            <p class="font-display font-semibold text-slate-100">B.S. in Software Development</p>
+            <p class="mt-1 text-sm text-slate-400">Western Governors University</p>
+          </div>
+          <div>
+            <p class="font-display font-semibold text-slate-100">A.A.S. in Information Systems Technology</p>
+            <p class="mt-1 text-sm text-slate-400">Northern Virginia Community College</p>
+          </div>
+          <div>
+            <p class="font-display font-semibold text-slate-100">ISTQB Certified Tester, Foundation Level</p>
+            <p class="mt-1 text-sm text-slate-400">Plus Anthropic courses: AI Fluency, Claude Code in Action, Agent Skills, Model Context Protocol and Subagents.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============ PHOTOGRAPHY ============ -->
-  <section id="photography" class="relative py-16 sm:py-20">
+  <section id="photography" class="section">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
-      <div class="reveal mb-12">
-        <p class="kicker text-xs text-cyan mb-3">/ 06 — THROUGH THE LENS</p>
+      <div class="mb-10">
         <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Photography</h2>
-        <p class="mt-4 max-w-2xl text-slate-400">A few frames from places I've wandered through. Click any photo to view it larger.</p>
+        <p class="mt-3 max-w-2xl text-slate-400">Frames from places I've travelled. Select one to see it larger.</p>
       </div>
 
-      <div class="reveal carousel">
-        <div id="photo-track" class="carousel-track" data-lightbox-gallery="photos">
-        <figure class="photo" data-caption="Lawson storefront beneath Mount Fuji, Japan">
-          <img src="images/photo-01.jpg" alt="Lawson storefront beneath Mount Fuji, Japan" loading="lazy" decoding="async" />
+      <div class="photo-grid" data-lightbox-gallery="photos">
+        <figure class="photo photo-big" data-caption="Lawson storefront beneath Mount Fuji, Japan">
+          <a href="images/photo-01.jpg" aria-label="View larger: Lawson storefront beneath Mount Fuji, Japan"><img src="images/photo-01.jpg" alt="Lawson storefront beneath Mount Fuji, Japan" width="1800" height="1200" loading="lazy" decoding="async" /></a>
         </figure>
-        <figure class="photo" data-caption="Cherry blossoms and the Washington Monument in morning fog">
-          <img src="images/photo-03.jpg" alt="Cherry blossoms and the Washington Monument in morning fog" loading="lazy" decoding="async" />
+        <figure class="photo photo-tall" data-caption="Cherry blossoms and the Washington Monument in morning fog">
+          <a href="images/photo-03.jpg" aria-label="View larger: Cherry blossoms and the Washington Monument"><img src="images/photo-03.jpg" alt="Cherry blossoms and the Washington Monument in morning fog" width="1200" height="1800" loading="lazy" decoding="async" /></a>
         </figure>
         <figure class="photo" data-caption="Sunset over the water at National Harbor, Maryland">
-          <img src="images/photo-02.jpg" alt="Sunset over the water at National Harbor, Maryland" loading="lazy" decoding="async" />
+          <a href="images/photo-02.jpg" aria-label="View larger: Sunset at National Harbor, Maryland"><img src="images/photo-02.jpg" alt="Sunset over the water at National Harbor, Maryland" width="1800" height="1200" loading="lazy" decoding="async" /></a>
         </figure>
         <figure class="photo" data-caption="The Manhattan Bridge framed by brick buildings in DUMBO">
-          <img src="images/photo-05.jpg" alt="The Manhattan Bridge framed by brick buildings in DUMBO" loading="lazy" decoding="async" />
+          <a href="images/photo-05.jpg" aria-label="View larger: The Manhattan Bridge from DUMBO"><img src="images/photo-05.jpg" alt="The Manhattan Bridge framed by brick buildings in DUMBO" width="1800" height="1200" loading="lazy" decoding="async" /></a>
         </figure>
         <figure class="photo" data-caption="Chinatown at night, San Francisco">
-          <img src="images/photo-04.jpg" alt="Chinatown at night, San Francisco" loading="lazy" decoding="async" />
+          <a href="images/photo-04.jpg" aria-label="View larger: Chinatown at night, San Francisco"><img src="images/photo-04.jpg" alt="Chinatown at night, San Francisco" width="1800" height="1200" loading="lazy" decoding="async" /></a>
         </figure>
         <figure class="photo" data-caption="Snow-dusted mountains along an open road, Colorado">
-          <img src="images/photo-07.jpg" alt="Snow-dusted mountains along an open road, Colorado" loading="lazy" decoding="async" />
+          <a href="images/photo-07.jpg" aria-label="View larger: Snow-dusted mountains, Colorado"><img src="images/photo-07.jpg" alt="Snow-dusted mountains along an open road, Colorado" width="1800" height="1200" loading="lazy" decoding="async" /></a>
         </figure>
         <figure class="photo" data-caption="Houston's skyline from a Ferris wheel seat, in black and white">
-          <img src="images/photo-06.jpg" alt="Houston's skyline from a Ferris wheel seat, in black and white" loading="lazy" decoding="async" />
+          <a href="images/photo-06.jpg" aria-label="View larger: Houston's skyline from a Ferris wheel"><img src="images/photo-06.jpg" alt="Houston's skyline from a Ferris wheel seat, in black and white" width="1800" height="1200" loading="lazy" decoding="async" /></a>
         </figure>
         <figure class="photo" data-caption="Manhattan skyline from above at dusk">
-          <img src="images/photo-09.jpg" alt="Manhattan skyline from above at dusk" loading="lazy" decoding="async" />
+          <a href="images/photo-09.jpg" aria-label="View larger: Manhattan skyline at dusk"><img src="images/photo-09.jpg" alt="Manhattan skyline from above at dusk" width="1800" height="1200" loading="lazy" decoding="async" /></a>
         </figure>
-        <figure class="photo" data-caption="Shea's Buffalo theatre on a quiet night street">
-          <img src="images/photo-08.jpg" alt="Shea's Buffalo theatre on a quiet night street" loading="lazy" decoding="async" />
+        <figure class="photo photo-wide" data-caption="Shea's Buffalo theatre on a quiet night street">
+          <a href="images/photo-08.jpg" aria-label="View larger: Shea's Buffalo theatre at night"><img src="images/photo-08.jpg" alt="Shea's Buffalo theatre on a quiet night street" width="1800" height="1200" loading="lazy" decoding="async" /></a>
         </figure>
-        <figure class="photo" data-caption="Along the harbor at sunset, Philadelphia">
-          <img src="images/photo-10.jpg" alt="Along the harbor at sunset, Philadelphia" loading="lazy" decoding="async" />
+        <figure class="photo photo-wide" data-caption="Along the harbor at sunset, Philadelphia">
+          <a href="images/photo-10.jpg" aria-label="View larger: The harbor at sunset, Philadelphia"><img src="images/photo-10.jpg" alt="Along the harbor at sunset, Philadelphia" width="1800" height="1200" loading="lazy" decoding="async" /></a>
         </figure>
-        </div>
-        <button class="car-btn car-prev" aria-label="Previous photo">&#8249;</button>
-        <button class="car-btn car-next" aria-label="Next photo">&#8250;</button>
       </div>
     </div>
   </section>
 
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="max-w-3xl">
+        <h2 class="font-display font-bold text-4xl sm:text-6xl leading-[1.05] tracking-tight text-slate-50">Let's build quality <span class="text-gradient">at scale.</span></h2>
+        <p class="mt-6 max-w-xl text-slate-400 text-base sm:text-lg">Open to senior SDET, test automation architecture and AI-assisted quality engineering roles, especially where quality systems need to keep up with product velocity.</p>
+
+        <div class="mt-9 flex flex-wrap items-center gap-3">
+          <a href="mailto:subarna.karki13@gmail.com" class="btn-primary rounded-full px-7 py-3 font-semibold text-sm sm:text-base inline-flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+            Email me
+          </a>
+          <a href="resume/Subarna-Karki-Resume.pdf" download class="btn-ghost rounded-full px-6 py-3 font-semibold text-sm sm:text-base text-slate-100">Download resume</a>
+          <a href="https://www.linkedin.com/in/subarnakarki" target="_blank" rel="noopener" class="btn-ghost rounded-full px-6 py-3 font-semibold text-sm sm:text-base text-slate-100">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
+          <a href="https://github.com/subarnakarki" target="_blank" rel="noopener" class="btn-ghost rounded-full px-6 py-3 font-semibold text-sm sm:text-base text-slate-100">GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+        </div>
+
+        <p class="mt-8 text-slate-400 text-sm">subarna.karki13@gmail.com · Concord, NC</p>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="border-t border-slate-500/15">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-8 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-sm text-slate-500">
+      <p>© <span id="year">2026</span> Subarna Karki</p>
+      <p class="text-xs">Product names and logos are trademarks of their owners.</p>
+    </div>
+  </footer>
+
   <!-- Lightbox -->
-  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Photo viewer">
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
     <button class="lb-close" aria-label="Close">&times;</button>
-    <button class="lb-nav lb-prev" aria-label="Previous photo">&#8249;</button>
-    <img class="lb-img" src="" alt="" />
-    <button class="lb-nav lb-next" aria-label="Next photo">&#8250;</button>
+    <button class="lb-nav lb-prev" aria-label="Previous image">&#8249;</button>
+    <img class="lb-img" src="data:," alt="" />
+    <button class="lb-nav lb-next" aria-label="Next image">&#8250;</button>
     <p class="lb-caption"></p>
   </div>
 
-  <!-- ============ CONTACT / FOOTER ============ -->
-  <section id="contact" class="relative py-16 sm:py-20">
-    <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
-      <div class="reveal">
-        <p class="kicker text-xs text-cyan mb-3">/ 07 — LET'S CONNECT</p>
-        <h2 class="font-display font-bold text-3xl sm:text-5xl text-slate-50">Let's build quality<br class="hidden sm:block" /> <span class="text-gradient">at scale.</span></h2>
-        <p class="mt-6 max-w-xl mx-auto text-slate-400">Open to senior SDET, test automation architecture, and AI-assisted quality engineering conversations — especially where quality systems need to scale with product velocity.</p>
-
-        <div class="mt-9 flex flex-wrap justify-center gap-4">
-          <a href="mailto:subarna.karki13@gmail.com" class="btn-primary rounded-full px-7 py-3 font-semibold text-sm flex items-center gap-2">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
-            subarna.karki13@gmail.com
-          </a>
-          <a href="https://github.com/subarnakarki" target="_blank" rel="noopener" class="btn-ghost rounded-full px-7 py-3 font-semibold text-sm text-slate-100 flex items-center gap-2">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
-            github.com/subarnakarki
-          </a>
-          <a href="https://www.linkedin.com/in/subarnakarki" target="_blank" rel="noopener" class="btn-ghost rounded-full px-7 py-3 font-semibold text-sm text-slate-100 flex items-center gap-2">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
-            linkedin.com/in/subarnakarki
-          </a>
-          <a href="resume/Subarna-Karki-Resume.pdf" download class="btn-ghost rounded-full px-7 py-3 font-semibold text-sm text-slate-100 flex items-center gap-2">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
-            Resume (PDF)
-          </a>
-        </div>
-
-        <p class="mt-8 text-slate-500 text-sm flex items-center justify-center gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
-          Concord, NC
-        </p>
-      </div>
-    </div>
-
-    <footer class="mt-20 border-t border-slate-500/15">
-      <div class="max-w-6xl mx-auto px-5 sm:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
-        <p>© <span id="year"></span> Subarna Karki — Senior SDET &amp; Test Automation Architect</p>
-        <p class="font-mono text-xs">Built with HTML · Tailwind · Vanilla JS</p>
-      </div>
-    </footer>
-  </section>
-
-  <!-- ============ SCRIPTS ============ -->
   <script src="script.js" defer></script>
 </body>
 </html>
