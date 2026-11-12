@@ -37,7 +37,7 @@
       window.addEventListener('scroll', onScroll, { passive: true });
 
       /* ---- animated role text ---- */
-      const roles = ['Senior SDET', 'Test Automation Architect', 'AI-Assisted Testing', 'CI/CD Quality Gates'];
+      const roles = ['Senior SDET', 'Test Automation Architect', 'AI-Assisted Quality Engineering', 'CI/CD Quality Gates'];
       const roleEl = document.getElementById('role');
       if (reduceMotion) {
         roleEl.textContent = roles[0];
@@ -204,40 +204,55 @@
         });
       }
 
-      /* ---- photography lightbox ---- */
+      /* ---- image lightbox ---- */
       (function () {
-        const figures = Array.prototype.slice.call(document.querySelectorAll('#photo-track .photo'));
+        const galleries = Array.prototype.slice.call(document.querySelectorAll('[data-lightbox-gallery]'));
         const lb = document.getElementById('lightbox');
-        if (!figures.length || !lb) return;
+        if (!galleries.length || !lb) return;
         const lbImg = lb.querySelector('.lb-img');
         const lbCap = lb.querySelector('.lb-caption');
         const btnClose = lb.querySelector('.lb-close');
         const btnPrev = lb.querySelector('.lb-prev');
         const btnNext = lb.querySelector('.lb-next');
+        let figures = [];
         let current = 0;
+        let opener = null;
 
         function show(i) {
           current = (i + figures.length) % figures.length;
           const fig = figures[current];
           const img = fig.querySelector('img');
+          if (!img) return;
           lbImg.src = img.src;
           lbImg.alt = img.alt;
           lbCap.textContent = fig.getAttribute('data-caption') || '';
         }
-        function open(i) {
+        function open(i, trigger) {
+          opener = trigger;
           show(i);
           lb.classList.add('open');
           lb.setAttribute('aria-hidden', 'false');
           document.body.style.overflow = 'hidden';
+          btnClose.focus();
         }
         function close() {
           lb.classList.remove('open');
           lb.setAttribute('aria-hidden', 'true');
           document.body.style.overflow = '';
+          if (opener) opener.focus();
         }
 
-        figures.forEach(function (fig, i) {
-          fig.addEventListener('click', function () { open(i); });
+        galleries.forEach(function (gallery) {
+          const galleryFigures = Array.prototype.slice.call(gallery.querySelectorAll('figure')).filter(function (fig) {
+            return Boolean(fig.querySelector('img'));
+          });
+          galleryFigures.forEach(function (fig, i) {
+            fig.addEventListener('click', function (e) {
+              e.preventDefault();
+              figures = galleryFigures;
+              open(i, fig.querySelector('a') || fig);
+            });
+          });
         });
         btnClose.addEventListener('click', close);
         btnPrev.addEventListener('click', function (e) { e.stopPropagation(); show(current - 1); });
@@ -276,4 +291,37 @@
         window.addEventListener('resize', updateButtons);
         updateButtons();
       })();
+
+      /* ---- project screenshot carousel controls ---- */
+      (function () {
+        const track = document.getElementById('project-track');
+        if (!track) return;
+        const prev = document.querySelector('.project-car-prev');
+        const next = document.querySelector('.project-car-next');
+        if (!prev || !next) return;
+
+        function step() {
+          const first = track.querySelector('.project-slide');
+          if (!first) return track.clientWidth * 0.8;
+          const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || '20') || 20;
+          return first.getBoundingClientRect().width + gap;
+        }
+        function updateButtons() {
+          const maxScroll = track.scrollWidth - track.clientWidth - 8;
+          prev.disabled = track.scrollLeft <= 8;
+          next.disabled = track.scrollLeft >= maxScroll;
+        }
+        prev.addEventListener('click', function () {
+          track.scrollLeft -= step();
+          updateButtons();
+        });
+        next.addEventListener('click', function () {
+          track.scrollLeft += step();
+          updateButtons();
+        });
+        track.addEventListener('scroll', updateButtons, { passive: true });
+        window.addEventListener('resize', updateButtons);
+        updateButtons();
+      })();
+
     })();
