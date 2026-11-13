@@ -29,7 +29,7 @@
      A link is active when its section crosses a line 35% down the screen, so tall
      sections (Projects, Experience) count too; at the very bottom the last one wins. */
   const navbar = document.getElementById('navbar');
-  const navClasses = ['bg-navy-900/85', 'backdrop-blur-lg', 'border-b', 'border-slate-500/10'];
+  const navClasses = ['bg-paper/90', 'backdrop-blur-lg', 'border-b', 'border-line'];
   const links = Array.prototype.slice.call(document.querySelectorAll('.nav-link'));
   const tracked = links.map(function (l) {
     return { link: l, section: document.getElementById((l.getAttribute('href') || '').slice(1)) };

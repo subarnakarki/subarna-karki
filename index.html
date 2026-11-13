@@ -6,7 +6,7 @@
   <title>Subarna Karki — Senior SDET | Test Automation Architecture</title>
   <meta name="description" content="Subarna Karki — Senior SDET with 8+ years building test automation frameworks, developer tooling, test data infrastructure, and AI-assisted quality engineering." />
   <meta name="author" content="Subarna Karki" />
-  <meta name="theme-color" content="#0a1626" />
+  <meta name="theme-color" content="#0f1115" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Subarna Karki — Senior SDET | Test Automation Architecture" />
@@ -22,7 +22,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;600;700&family=Red+Hat+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS, prebuilt: npm run build:css -->
   <link rel="stylesheet" href="assets/tailwind.css" />
@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="font-sans antialiased selection:bg-mint/30 selection:text-white">
+<body class="font-sans antialiased selection:bg-accent/20 selection:text-ink">
   <a href="#projects" class="skip-link">Skip to projects</a>
 
   <!-- ============ NAV ============ -->
@@ -38,20 +38,20 @@
     <nav class="max-w-6xl mx-auto px-5 sm:px-8" aria-label="Main">
       <div class="flex items-center justify-between h-16 md:h-20">
         <a href="#home" class="group flex items-center gap-2.5" aria-label="Subarna Karki, back to top">
-          <span class="grid place-items-center w-9 h-9 rounded-lg border border-mint/40 bg-navy-700/60 font-display font-bold text-mint text-sm group-hover:bg-mint group-hover:text-navy-900 transition-colors duration-300">SK</span>
-          <span class="font-display font-semibold tracking-tight text-slate-100 hidden sm:block">Subarna Karki</span>
+          <span class="grid place-items-center w-9 h-9 rounded-lg bg-ink font-display font-bold text-paper text-sm group-hover:bg-accent transition-colors duration-300">SK</span>
+          <span class="font-display font-semibold tracking-tight text-ink hidden sm:block">Subarna Karki</span>
         </a>
 
-        <div class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <div class="hidden md:flex items-center gap-7 text-sm font-medium text-ink-2">
           <a href="#projects" class="nav-link">Projects</a>
           <a href="#experience" class="nav-link">Experience</a>
           <a href="#skills" class="nav-link">Skills</a>
           <a href="#about" class="nav-link">About</a>
           <a href="#photography" class="nav-link">Photos</a>
-          <a href="#contact" class="btn-ghost rounded-full px-5 py-2 text-slate-100">Get in touch</a>
+          <a href="#contact" class="btn-ghost rounded-full px-5 py-2 text-ink">Get in touch</a>
         </div>
 
-        <button id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden grid place-items-center w-11 h-11 rounded-lg border border-slate-500/30 text-slate-200">
+        <button id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden grid place-items-center w-11 h-11 rounded-lg border border-line text-ink">
           <svg id="icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
           <svg id="icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
@@ -59,13 +59,13 @@
     </nav>
 
     <div id="mobile-menu" class="md:hidden mx-4 rounded-2xl glass">
-      <div class="flex flex-col p-4 gap-1 text-slate-200">
-        <a href="#projects" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Projects</a>
-        <a href="#experience" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Experience</a>
-        <a href="#skills" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Skills</a>
-        <a href="#about" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">About</a>
-        <a href="#photography" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Photos</a>
-        <a href="#contact" class="mobile-link rounded-lg px-4 py-3 hover:bg-mint/10 hover:text-mint transition">Get in touch</a>
+      <div class="flex flex-col p-4 gap-1 text-ink">
+        <a href="#projects" class="mobile-link rounded-lg px-4 py-3 hover:bg-surface hover:text-accent transition">Projects</a>
+        <a href="#experience" class="mobile-link rounded-lg px-4 py-3 hover:bg-surface hover:text-accent transition">Experience</a>
+        <a href="#skills" class="mobile-link rounded-lg px-4 py-3 hover:bg-surface hover:text-accent transition">Skills</a>
+        <a href="#about" class="mobile-link rounded-lg px-4 py-3 hover:bg-surface hover:text-accent transition">About</a>
+        <a href="#photography" class="mobile-link rounded-lg px-4 py-3 hover:bg-surface hover:text-accent transition">Photos</a>
+        <a href="#contact" class="mobile-link rounded-lg px-4 py-3 hover:bg-surface hover:text-accent transition">Get in touch</a>
       </div>
     </div>
   </header>
@@ -76,20 +76,20 @@
     <div class="max-w-6xl mx-auto px-5 sm:px-8 w-full">
       <div class="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
         <div class="lg:col-span-7">
-          <p class="anim-rise d1 kicker text-xs text-mint mb-5">SUBARNA KARKI · SENIOR SDET</p>
+          <p class="anim-rise d1 kicker text-xs text-accent mb-5">SUBARNA KARKI · SENIOR SDET</p>
 
-          <h1 class="anim-rise d2 font-display font-bold leading-[1.08] tracking-tight text-4xl sm:text-5xl lg:text-[3.5rem] text-slate-50">
+          <h1 class="anim-rise d2 font-display font-bold leading-[1.08] tracking-tight text-4xl sm:text-5xl lg:text-[3.5rem] text-ink">
             I build the test systems product teams ship on.
           </h1>
 
-          <p class="anim-rise d3 mt-6 max-w-xl text-base sm:text-lg text-slate-300 leading-relaxed">
+          <p class="anim-rise d3 mt-6 max-w-xl text-base sm:text-lg text-ink-2 leading-relaxed">
             Most recently the sole quality owner for ~50 developers at Polly, where I moved ~2,500 tests
             to Playwright in four months. 8+ years across mortgage-tech, low-code platforms, edtech and media.
           </p>
 
           <div class="anim-rise d4 mt-8 flex flex-wrap items-center gap-3">
             <a href="#projects" class="btn-primary rounded-full px-7 py-3 font-semibold text-sm sm:text-base">See my projects</a>
-            <a href="resume/Subarna-Karki-Resume.pdf" download class="btn-ghost rounded-full px-6 py-3 font-semibold text-sm sm:text-base text-slate-100 inline-flex items-center gap-2">
+            <a href="resume/Subarna-Karki-Resume.pdf" download class="btn-ghost rounded-full px-6 py-3 font-semibold text-sm sm:text-base text-ink inline-flex items-center gap-2">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
               Download resume
             </a>
@@ -102,22 +102,22 @@
           </div>
 
           <!-- stats -->
-          <dl class="anim-rise d5 mt-12 grid grid-cols-2 sm:grid-cols-4 gap-y-6 gap-x-3 max-w-2xl stats">
+          <dl class="anim-rise d5 mt-12 grid grid-cols-2 sm:grid-cols-4 gap-y-6 gap-x-6 max-w-2xl stats">
             <div class="stat">
-              <dt class="text-xs text-slate-400 order-2 mt-1">Years experience</dt>
-              <dd class="stat-value font-display font-bold text-3xl sm:text-4xl text-slate-50" data-count="8" data-suffix="+">8+</dd>
+              <dt class="text-xs text-muted order-2 mt-1">Years experience</dt>
+              <dd class="stat-value font-display font-bold text-3xl sm:text-4xl text-ink" data-count="8" data-suffix="+">8+</dd>
             </div>
             <div class="stat">
-              <dt class="text-xs text-slate-400 order-2 mt-1">Tests moved to Playwright</dt>
-              <dd class="stat-value font-display font-bold text-3xl sm:text-4xl text-slate-50" data-count="2500" data-suffix="+">2,500+</dd>
+              <dt class="text-xs text-muted order-2 mt-1">Tests moved to Playwright</dt>
+              <dd class="stat-value font-display font-bold text-3xl sm:text-4xl text-ink" data-count="2500" data-suffix="+">2,500+</dd>
             </div>
             <div class="stat">
-              <dt class="text-xs text-slate-400 order-2 mt-1">Faster regression</dt>
-              <dd class="stat-value font-display font-bold text-3xl sm:text-4xl text-slate-50" data-count="85" data-suffix="%">85%</dd>
+              <dt class="text-xs text-muted order-2 mt-1">Faster regression</dt>
+              <dd class="stat-value font-display font-bold text-3xl sm:text-4xl text-ink" data-count="85" data-suffix="%">85%</dd>
             </div>
             <div class="stat">
-              <dt class="text-xs text-slate-400 order-2 mt-1">Nightly pass rate</dt>
-              <dd class="stat-value font-display font-bold text-3xl sm:text-4xl text-mint" data-count="99.8" data-decimals="1" data-suffix="%">99.8%</dd>
+              <dt class="text-xs text-muted order-2 mt-1">Nightly pass rate</dt>
+              <dd class="stat-value font-display font-bold text-3xl sm:text-4xl text-accent" data-count="99.8" data-decimals="1" data-suffix="%">99.8%</dd>
             </div>
           </dl>
         </div>
@@ -126,20 +126,20 @@
         <div class="lg:col-span-5 anim-rise d3">
           <div class="terminal" role="img" aria-label="A nightly Playwright run: Pricing Engine and seed data suites pass, nightly pass rate up from 95% to 99.8%, release triage down from 3 days to 1.">
             <div class="terminal-bar">
-              <span class="terminal-dot bg-red-400/70"></span>
-              <span class="terminal-dot bg-yellow-400/70"></span>
-              <span class="terminal-dot bg-mint/80"></span>
+              <span class="terminal-dot t-red"></span>
+              <span class="terminal-dot t-yellow"></span>
+              <span class="terminal-dot t-green"></span>
               <span class="terminal-title">nightly — playwright</span>
             </div>
-<pre class="terminal-body" aria-hidden="true"><span class="t-line" style="--i:0"><span class="text-slate-500">$</span> npx playwright test --grep @nightly</span>
-<span class="t-line text-slate-400" style="--i:1">Running ~2,500 scenarios across shards</span>
-<span class="t-line" style="--i:2"><span class="text-mint">✓</span> pricing-engine › counter offers</span>
-<span class="t-line" style="--i:3"><span class="text-mint">✓</span> pricing-engine › MI rate cards</span>
-<span class="t-line" style="--i:4"><span class="text-mint">✓</span> pricing-engine › lock workflows</span>
-<span class="t-line" style="--i:5"><span class="text-mint">✓</span> seed-data › 30+ org scenarios</span>
-<span class="t-line text-slate-600" style="--i:6">──────────────────────────────────</span>
-<span class="t-line" style="--i:7"><span class="text-slate-400">nightly pass rate </span> 95.0% <span class="text-slate-500">→</span> <span class="text-mint font-medium">99.8%</span></span>
-<span class="t-line" style="--i:8"><span class="text-slate-400">release triage    </span> 3 days <span class="text-slate-500">→</span> <span class="text-mint font-medium">1 day</span></span></pre>
+<pre class="terminal-body" aria-hidden="true"><span class="t-line" style="--i:0"><span class="t-dim">$</span> npx playwright test --grep @nightly</span>
+<span class="t-line t-mute" style="--i:1">Running ~2,500 scenarios across shards</span>
+<span class="t-line" style="--i:2"><span class="t-ok">✓</span> pricing-engine › counter offers</span>
+<span class="t-line" style="--i:3"><span class="t-ok">✓</span> pricing-engine › MI rate cards</span>
+<span class="t-line" style="--i:4"><span class="t-ok">✓</span> pricing-engine › lock workflows</span>
+<span class="t-line" style="--i:5"><span class="t-ok">✓</span> seed-data › 30+ org scenarios</span>
+<span class="t-line t-rule" style="--i:6">──────────────────────────────────</span>
+<span class="t-line" style="--i:7"><span class="t-mute">nightly pass rate </span> 95.0% <span class="t-dim">→</span> <span class="t-ok t-strong">99.8%</span></span>
+<span class="t-line" style="--i:8"><span class="t-mute">release triage    </span> 3 days <span class="t-dim">→</span> <span class="t-ok t-strong">1 day</span></span></pre>
           </div>
         </div>
       </div>
@@ -150,26 +150,26 @@
   <section id="projects" class="section">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <div class="mb-10">
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Projects</h2>
-        <p class="mt-3 max-w-2xl text-slate-400">One built on my own, one built at work. Both tested first and shipped through CI.</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-ink">Projects</h2>
+        <p class="mt-3 max-w-2xl text-muted">One built on my own, one built at work. Both tested first and shipped through CI.</p>
       </div>
 
       <article class="card rounded-2xl p-6 sm:p-8">
         <div class="grid lg:grid-cols-12 gap-8 lg:gap-10">
           <div class="lg:col-span-5">
-            <p class="kicker text-[11px] text-mint mb-3">2026 · FULL-STACK + AI</p>
-            <h3 class="font-display font-semibold text-2xl text-slate-50">Job Application Tracker</h3>
-            <p class="mt-2 text-slate-300">A personal hiring-pipeline tracker with an AI job search and resume match.</p>
-            <ul class="mt-5 space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+            <p class="kicker text-[11px] text-accent mb-3">2026 · FULL-STACK + AI</p>
+            <h3 class="font-display font-semibold text-xl text-ink">Job Application Tracker</h3>
+            <p class="mt-2 text-ink-2">A personal hiring-pipeline tracker with an AI job search and resume match.</p>
+            <ul class="mt-5 space-y-2.5 text-sm sm:text-[15px] text-ink-2 leading-relaxed">
               <li class="dot-item">Every application from Saved to Offer on a drag-and-drop board (keyboard-accessible too), with follow-up reminders, interview logs and Gmail import.</li>
-              <li class="dot-item">The Claude API acts as a senior recruiter: a <span class="text-slate-100 font-medium">resume match</span> that returns the 20 best-fit titles with their ATS keywords, and a <span class="text-slate-100 font-medium">scheduled job search</span> across 15 job boards that drafts every answer into a queue for Claude in Chrome.</li>
-              <li class="dot-item">Built test-first: <span class="text-slate-100 font-medium">1,400+</span> Vitest unit and API tests against a real Postgres, plus Playwright end-to-end suites on desktop and mobile.</li>
+              <li class="dot-item">The Claude API acts as a senior recruiter: a <span class="text-ink font-medium">resume match</span> that returns the 20 best-fit titles with their ATS keywords, and a <span class="text-ink font-medium">scheduled job search</span> across 15 job boards that drafts every answer into a queue for Claude in Chrome.</li>
+              <li class="dot-item">Built test-first: <span class="text-ink font-medium">1,400+</span> Vitest unit and API tests against a real Postgres, plus Playwright end-to-end suites on desktop and mobile.</li>
               <li class="dot-item">Google sign-in with cookie sessions and CSRF protection; every API route declares its auth level, with a test proving one user can never read another's data.</li>
             </ul>
-            <p class="mt-5 text-sm text-slate-400">React · TypeScript · Fastify · PostgreSQL (Neon) · Zod · TanStack Query · Tailwind · Claude API · Playwright · Vitest · GitHub Actions · Vercel</p>
+            <p class="mt-5 text-sm text-muted">React · TypeScript · Fastify · PostgreSQL (Neon) · Zod · TanStack Query · Tailwind · Claude API · Playwright · Vitest · GitHub Actions · Vercel</p>
             <div class="mt-6 flex flex-wrap gap-3">
               <a href="https://job-application-tracker-eta-one.vercel.app/" target="_blank" rel="noopener" class="btn-primary rounded-full px-6 py-2.5 font-semibold text-sm">Open the live demo<span class="sr-only"> (opens in a new tab)</span></a>
-              <a href="https://github.com/subarnakarki/job-application-tracker" target="_blank" rel="noopener" class="btn-ghost rounded-full px-6 py-2.5 font-semibold text-sm text-slate-100">Read the source<span class="sr-only"> on GitHub (opens in a new tab)</span></a>
+              <a href="https://github.com/subarnakarki/job-application-tracker" target="_blank" rel="noopener" class="btn-ghost rounded-full px-6 py-2.5 font-semibold text-sm text-ink">Read the source<span class="sr-only"> on GitHub (opens in a new tab)</span></a>
             </div>
           </div>
 
@@ -206,17 +206,17 @@
       </article>
 
       <article class="card rounded-2xl p-6 sm:p-8 mt-6">
-        <p class="kicker text-[11px] text-mint mb-3">POLLY · INTERNAL TOOLING</p>
-        <h3 class="font-display font-semibold text-2xl text-slate-50">Test Data Platform &amp; AI Test Tooling</h3>
-        <p class="mt-2 text-slate-300">Seed data and AI-assisted testing workflows that scaled quality across ~50 developers.</p>
+        <p class="kicker text-[11px] text-accent mb-3">POLLY · INTERNAL TOOLING</p>
+        <h3 class="font-display font-semibold text-xl text-ink">Test Data Platform &amp; AI Test Tooling</h3>
+        <p class="mt-2 text-ink-2">Seed data and AI-assisted testing workflows that scaled quality across ~50 developers.</p>
         <div class="mt-6 grid md:grid-cols-3 gap-6 mb-6">
           <div>
-            <p class="kicker text-[11px] text-slate-400 mb-2">SCOPE</p>
-            <p class="text-sm sm:text-[15px] text-slate-300 leading-relaxed">Mortgage test environments took a day or more to set up. After the QA team was eliminated, one engineer owned quality for ~50 developers and a ~2,500-test migration.</p>
+            <p class="kicker text-[11px] text-muted mb-2">SCOPE</p>
+            <p class="text-sm sm:text-[15px] text-ink-2 leading-relaxed">Mortgage test environments took a day or more to set up. After the QA team was eliminated, one engineer owned quality for ~50 developers and a ~2,500-test migration.</p>
           </div>
           <div>
-            <p class="kicker text-[11px] text-slate-400 mb-2">WHAT I BUILT</p>
-            <ul class="space-y-1.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+            <p class="kicker text-[11px] text-muted mb-2">WHAT I BUILT</p>
+            <ul class="space-y-1.5 text-sm sm:text-[15px] text-ink-2 leading-relaxed">
               <li class="dot-item">A Python seed data platform that provisions mortgage orgs on demand across 30+ scenarios.</li>
               <li class="dot-item">Claude Code skills that moved Cypress/Cucumber tests to Playwright with assertion parity.</li>
               <li class="dot-item">A shared code-review skill that checks test PRs against team standards.</li>
@@ -224,11 +224,11 @@
             </ul>
           </div>
           <div>
-            <p class="kicker text-[11px] text-slate-400 mb-2">IMPACT</p>
-            <ul class="space-y-1.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
-              <li class="dot-item"><span class="text-slate-100 font-medium">~2,500 scenarios</span> migrated in 4 months, not years.</li>
-              <li class="dot-item">Nightly pass rate <span class="text-slate-100 font-medium">95% → 99.8%</span>.</li>
-              <li class="dot-item">Release triage cut from <span class="text-slate-100 font-medium">3 days to 1</span>.</li>
+            <p class="kicker text-[11px] text-muted mb-2">IMPACT</p>
+            <ul class="space-y-1.5 text-sm sm:text-[15px] text-ink-2 leading-relaxed">
+              <li class="dot-item"><span class="text-ink font-medium">~2,500 scenarios</span> migrated in 4 months, not years.</li>
+              <li class="dot-item">Nightly pass rate <span class="text-ink font-medium">95% → 99.8%</span>.</li>
+              <li class="dot-item">Release triage cut from <span class="text-ink font-medium">3 days to 1</span>.</li>
               <li class="dot-item">Test data setup from a day or more to on demand.</li>
             </ul>
           </div>
@@ -267,7 +267,7 @@
             </div>
           </div>
         </div>
-        <p class="text-sm text-slate-400">Python · Playwright · TypeScript · Claude Code · MCP servers · GitHub Actions. Built at work, so the code is private; happy to walk through it.</p>
+        <p class="text-sm text-muted">Python · Playwright · TypeScript · Claude Code · MCP servers · GitHub Actions. Built at work, so the code is private; happy to walk through it.</p>
       </article>
     </div>
   </section>
@@ -276,29 +276,29 @@
   <section id="experience" class="section">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <div class="mb-10">
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Experience</h2>
-        <p class="mt-3 max-w-2xl text-slate-400">8+ years of quality tooling and test infrastructure, each role with numbers to show for it.</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-ink">Experience</h2>
+        <p class="mt-3 max-w-2xl text-muted">8+ years of quality tooling and test infrastructure, each role with numbers to show for it.</p>
       </div>
 
       <div class="jobs">
         <!-- Polly -->
         <article class="job">
           <div class="job-meta">
-            <p class="kicker text-xs text-mint">SEP 2024 – NOV 2026</p>
-            <p class="mt-1 text-sm text-slate-400">San Francisco, CA (Remote)</p>
+            <p class="kicker text-xs text-accent">SEP 2024 – NOV 2026</p>
+            <p class="mt-1 text-sm text-muted">San Francisco, CA (Remote)</p>
           </div>
           <div>
-            <h3 class="font-display font-semibold text-xl text-slate-50">Polly <span class="text-slate-400 font-normal">· Senior SDET</span></h3>
-            <p class="mt-2 text-slate-300 text-sm sm:text-[15px]">Only QA engineer kept after the 25+ person QA team was let go in Feb 2026; sole quality owner for ~50 developers from then on.</p>
-            <ul class="mt-4 space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
-              <li class="dot-item">Cut release triage from <span class="text-slate-100 font-medium">3 days to 1</span> with Claude Code skills that poll feature teams on automation status in a Slack release channel and auto-heal broken tests, tracing each failure to its root cause through PR history, Jira and Confluence.</li>
-              <li class="dot-item">Migrated <span class="text-slate-100 font-medium">~2,500 test scenarios</span> from Cypress to Playwright in 4 months (an effort estimated at years by hand): a Page Object Model and fixture framework, Claude Code migration skills enforcing full assertion parity, and PR checks for lint, type-check and fixture coverage.</li>
-              <li class="dot-item">Raised the nightly pass rate from <span class="text-slate-100 font-medium">95% to 99.8%</span> by fixing long-standing flaky tests and a pagination bug breaking suites across teams; added a Slack bot that routes each failure to its owning team, and tests on every pull request.</li>
+            <h3 class="font-display font-semibold text-xl text-ink">Polly <span class="text-muted font-normal">· Senior SDET</span></h3>
+            <p class="mt-2 text-ink-2 text-sm sm:text-[15px]">Only QA engineer kept after the 25+ person QA team was let go in Feb 2026; sole quality owner for ~50 developers from then on.</p>
+            <ul class="mt-4 space-y-2.5 text-sm sm:text-[15px] text-ink-2 leading-relaxed">
+              <li class="dot-item">Cut release triage from <span class="text-ink font-medium">3 days to 1</span> with Claude Code skills that poll feature teams on automation status in a Slack release channel and auto-heal broken tests, tracing each failure to its root cause through PR history, Jira and Confluence.</li>
+              <li class="dot-item">Migrated <span class="text-ink font-medium">~2,500 test scenarios</span> from Cypress to Playwright in 4 months (an effort estimated at years by hand): a Page Object Model and fixture framework, Claude Code migration skills enforcing full assertion parity, and PR checks for lint, type-check and fixture coverage.</li>
+              <li class="dot-item">Raised the nightly pass rate from <span class="text-ink font-medium">95% to 99.8%</span> by fixing long-standing flaky tests and a pagination bug breaking suites across teams; added a Slack bot that routes each failure to its owning team, and tests on every pull request.</li>
             </ul>
             <details class="more">
               <summary>Show 4 more</summary>
-              <ul class="mt-3 space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
-                <li class="dot-item">Built a Python seed data platform, now used by every engineer, that provisions fully configured mortgage environments on demand across <span class="text-slate-100 font-medium">30+ scenario types</span>, replacing manual setup that took a day or more per org.</li>
+              <ul class="mt-3 space-y-2.5 text-sm sm:text-[15px] text-ink-2 leading-relaxed">
+                <li class="dot-item">Built a Python seed data platform, now used by every engineer, that provisions fully configured mortgage environments on demand across <span class="text-ink font-medium">30+ scenario types</span>, replacing manual setup that took a day or more per org.</li>
                 <li class="dot-item">Rolled out Claude Code to all ~50 developers with project guidance, MCP servers for Playwright, Jira, GitHub and Kibana, and skills for test generation, seed-data migration, and test code review; trained teams to write and own tests for every pull request.</li>
                 <li class="dot-item">Built a test trends dashboard for developers, managers and release engineers, and merged sharded Playwright reports into one with shared caching across shards.</li>
                 <li class="dot-item">Wrote end-to-end automation for 6+ major Pricing Engine features (Counter Offers, MI Rate Cards, Lock Workflows and more) that caught real bugs before release, plus the shared base class every Pricing Engine test uses.</li>
@@ -310,20 +310,20 @@
         <!-- Infinite Blue -->
         <article class="job">
           <div class="job-meta">
-            <p class="kicker text-xs text-mint">SEP 2022 – SEP 2024</p>
-            <p class="mt-1 text-sm text-slate-400">Audubon, PA (Remote)</p>
+            <p class="kicker text-xs text-accent">SEP 2022 – SEP 2024</p>
+            <p class="mt-1 text-sm text-muted">Audubon, PA (Remote)</p>
           </div>
           <div>
-            <h3 class="font-display font-semibold text-xl text-slate-50">Infinite Blue <span class="text-slate-400 font-normal">· Senior SDET</span></h3>
-            <p class="mt-1 text-sm text-slate-400">Acquired by Everbridge; promoted to Senior in Apr 2024.</p>
-            <ul class="mt-4 space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
-              <li class="dot-item">Cut nightly regression time by <span class="text-slate-100 font-medium">85%</span> (2h 30m → 20m) by rolling out Cypress Cloud with Harness CI/CD for parallel execution across machines.</li>
+            <h3 class="font-display font-semibold text-xl text-ink">Infinite Blue <span class="text-muted font-normal">· Senior SDET</span></h3>
+            <p class="mt-1 text-sm text-muted">Acquired by Everbridge; promoted to Senior in Apr 2024.</p>
+            <ul class="mt-4 space-y-2.5 text-sm sm:text-[15px] text-ink-2 leading-relaxed">
+              <li class="dot-item">Cut nightly regression time by <span class="text-ink font-medium">85%</span> (2h 30m → 20m) by rolling out Cypress Cloud with Harness CI/CD for parallel execution across machines.</li>
               <li class="dot-item">Led a GraphQL security audit with standardized Postman collections; found and fixed critical issues (XSS, access control) and presented the findings to leadership.</li>
               <li class="dot-item">Built and grew a Cypress framework for a React Single-SPA app covering 10+ micro front-ends and 10+ microservices, with page objects, stable data-attribute locators and tag-based pipeline runs per service.</li>
             </ul>
             <details class="more">
               <summary>Show 2 more</summary>
-              <ul class="mt-3 space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+              <ul class="mt-3 space-y-2.5 text-sm sm:text-[15px] text-ink-2 leading-relaxed">
                 <li class="dot-item">Built a Jest and Axios API test framework for the Cenari public REST API, using Node-Vault for keys and credentials, with scripts to seed and clean up test data.</li>
                 <li class="dot-item">Ran Artillery performance and load tests against public REST APIs; onboarded and mentored new SDETs and ran testing workshops across the company, including Customer Support.</li>
               </ul>
@@ -334,13 +334,13 @@
         <!-- Everfi -->
         <article class="job">
           <div class="job-meta">
-            <p class="kicker text-xs text-mint">MAR 2021 – SEP 2022</p>
-            <p class="mt-1 text-sm text-slate-400">Washington, DC (Remote)</p>
+            <p class="kicker text-xs text-accent">MAR 2021 – SEP 2022</p>
+            <p class="mt-1 text-sm text-muted">Washington, DC (Remote)</p>
           </div>
           <div>
-            <h3 class="font-display font-semibold text-xl text-slate-50">Everfi <span class="text-slate-400 font-normal">· Quality Engineer</span></h3>
-            <ul class="mt-4 space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
-              <li class="dot-item">Cut course development time from <span class="text-slate-100 font-medium">3 days to half a day</span> with CLI automation tools and a shared NPM package of 20+ reusable Cypress functions for course components.</li>
+            <h3 class="font-display font-semibold text-xl text-ink">Everfi <span class="text-muted font-normal">· Quality Engineer</span></h3>
+            <ul class="mt-4 space-y-2.5 text-sm sm:text-[15px] text-ink-2 leading-relaxed">
+              <li class="dot-item">Cut course development time from <span class="text-ink font-medium">3 days to half a day</span> with CLI automation tools and a shared NPM package of 20+ reusable Cypress functions for course components.</li>
               <li class="dot-item">Automated 13+ courses in Test Modeller, all running in CI, within the first quarter; wrote code and model organization guidelines and mentored teammates, interns and developers.</li>
             </ul>
           </div>
@@ -349,12 +349,12 @@
         <!-- Gannett -->
         <article class="job">
           <div class="job-meta">
-            <p class="kicker text-xs text-mint">JAN 2018 – MAR 2021</p>
-            <p class="mt-1 text-sm text-slate-400">McLean, VA</p>
+            <p class="kicker text-xs text-accent">JAN 2018 – MAR 2021</p>
+            <p class="mt-1 text-sm text-muted">McLean, VA</p>
           </div>
           <div>
-            <h3 class="font-display font-semibold text-xl text-slate-50">Gannett | USA TODAY Network <span class="text-slate-400 font-normal">· Software Developer in Test</span></h3>
-            <ul class="mt-4 space-y-2.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+            <h3 class="font-display font-semibold text-xl text-ink">Gannett | USA TODAY Network <span class="text-muted font-normal">· Software Developer in Test</span></h3>
+            <ul class="mt-4 space-y-2.5 text-sm sm:text-[15px] text-ink-2 leading-relaxed">
               <li class="dot-item">Shifted testing into development by teaching developers Simulato, a model-based tool that generates Selenium tests from models, catching bugs earlier and cutting manual testing.</li>
               <li class="dot-item">Added SonarQube security scanning to GitHub Actions, and static fixtures that mock API calls for consistent visual and integration test data.</li>
               <li class="dot-item">Added Selenium visual tests to Jenkins, running in Docker containers as pipeline steps.</li>
@@ -369,13 +369,13 @@
   <section id="skills" class="section">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <div class="mb-10">
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Skills and tools</h2>
-        <p class="mt-3 max-w-2xl text-slate-400">The tools I use most, by area, with the rest of each toolkit underneath.</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-ink">Skills and tools</h2>
+        <p class="mt-3 max-w-2xl text-muted">The tools I use most, by area, with the rest of each toolkit underneath.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
         <article class="card rounded-2xl p-6 sm:p-7">
-          <h3 class="font-display font-semibold text-lg text-slate-100">Test automation</h3>
+          <h3 class="font-display font-semibold text-xl text-ink">Test automation</h3>
           <ul class="tools mt-5">
             <li class="tool"><span class="tool-tile"><img src="images/icons/playwright.svg" alt="" width="22" height="22" /></span>Playwright</li>
             <li class="tool"><span class="tool-tile"><img src="images/icons/cypress.svg" alt="" width="22" height="22" /></span>Cypress</li>
@@ -383,20 +383,20 @@
             <li class="tool"><span class="tool-tile"><img src="images/icons/jest.svg" alt="" width="22" height="22" /></span>Jest</li>
             <li class="tool"><span class="tool-tile"><img src="images/icons/postman.svg" alt="" width="22" height="22" /></span>Postman</li>
           </ul>
-          <p class="mt-5 text-sm text-slate-400 leading-relaxed">Also Applitools, Artillery, Axios, Cucumber, Page Object Model, visual regression, performance and load, security testing, shift-left testing, root-cause analysis.</p>
+          <p class="mt-5 text-sm text-muted leading-relaxed">Also Applitools, Artillery, Axios, Cucumber, Page Object Model, visual regression, performance and load, security testing, shift-left testing, root-cause analysis.</p>
         </article>
 
         <article class="card rounded-2xl p-6 sm:p-7">
-          <h3 class="font-display font-semibold text-lg text-slate-100">AI engineering</h3>
+          <h3 class="font-display font-semibold text-xl text-ink">AI engineering</h3>
           <ul class="tools mt-5">
             <li class="tool"><span class="tool-tile"><img src="images/icons/claude.svg" alt="" width="22" height="22" /></span>Claude Code</li>
             <li class="tool"><span class="tool-tile"><img src="images/icons/github-copilot.svg" alt="" width="22" height="22" /></span>GitHub Copilot</li>
           </ul>
-          <p class="mt-5 text-sm text-slate-400 leading-relaxed">Also Augment Code, MCP servers (Playwright, Jira, GitHub, Kibana), AI-assisted test generation, self-healing tests, context engineering (CLAUDE.md), LLM-as-judge evals, prompt engineering, agentic workflows.</p>
+          <p class="mt-5 text-sm text-muted leading-relaxed">Also Augment Code, MCP servers (Playwright, Jira, GitHub, Kibana), AI-assisted test generation, self-healing tests, context engineering (CLAUDE.md), LLM-as-judge evals, prompt engineering, agentic workflows.</p>
         </article>
 
         <article class="card rounded-2xl p-6 sm:p-7">
-          <h3 class="font-display font-semibold text-lg text-slate-100">Languages and data</h3>
+          <h3 class="font-display font-semibold text-xl text-ink">Languages and data</h3>
           <ul class="tools mt-5">
             <li class="tool"><span class="tool-tile"><img src="images/icons/python.svg" alt="" width="22" height="22" /></span>Python</li>
             <li class="tool"><span class="tool-tile"><img src="images/icons/typescript.svg" alt="" width="22" height="22" /></span>TypeScript</li>
@@ -405,11 +405,11 @@
             <li class="tool"><span class="tool-tile"><img src="images/icons/postgres.svg" alt="" width="22" height="22" /></span>PostgreSQL</li>
             <li class="tool"><span class="tool-tile"><img src="images/icons/mysql.svg" alt="" width="22" height="22" /></span>MySQL</li>
           </ul>
-          <p class="mt-5 text-sm text-slate-400 leading-relaxed">Also HTML, CSS and REST APIs.</p>
+          <p class="mt-5 text-sm text-muted leading-relaxed">Also HTML, CSS and REST APIs.</p>
         </article>
 
         <article class="card rounded-2xl p-6 sm:p-7">
-          <h3 class="font-display font-semibold text-lg text-slate-100">CI/CD and cloud</h3>
+          <h3 class="font-display font-semibold text-xl text-ink">CI/CD and cloud</h3>
           <ul class="tools mt-5">
             <li class="tool"><span class="tool-tile"><img src="images/icons/github-actions.svg" alt="" width="22" height="22" /></span>GitHub Actions</li>
             <li class="tool"><span class="tool-tile"><img src="images/icons/jenkins.svg" alt="" width="22" height="22" /></span>Jenkins</li>
@@ -418,7 +418,7 @@
             <li class="tool"><span class="tool-tile"><img src="images/icons/aws.svg" alt="" width="22" height="22" /></span>AWS</li>
             <li class="tool"><span class="tool-tile"><img src="images/icons/grafana.svg" alt="" width="22" height="22" /></span>Grafana</li>
           </ul>
-          <p class="mt-5 text-sm text-slate-400 leading-relaxed">Also Harness, SonarQube, Node-Vault, and AWS S3, EC2, Lambda and Secrets Manager.</p>
+          <p class="mt-5 text-sm text-muted leading-relaxed">Also Harness, SonarQube, Node-Vault, and AWS S3, EC2, Lambda and Secrets Manager.</p>
         </article>
       </div>
     </div>
@@ -429,14 +429,14 @@
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <div class="grid lg:grid-cols-12 gap-10">
         <div class="lg:col-span-7">
-          <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">About me</h2>
-          <p class="mt-6 text-slate-300 text-base sm:text-lg leading-relaxed">
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-ink">About me</h2>
+          <p class="mt-6 text-ink-2 text-base sm:text-lg leading-relaxed">
             I'm a Senior SDET focused on automation architecture, release confidence, and AI-assisted quality
             workflows. I was the sole QA engineer retained after Polly's 25+ person QA team was eliminated,
             owned quality end-to-end for ~50 developers, and shifted testing to them with Claude Code tooling,
             self-healing pipelines, and targeted PR validation.
           </p>
-          <p class="mt-4 text-slate-400 leading-relaxed">
+          <p class="mt-4 text-muted leading-relaxed">
             My work is less about writing tests for their own sake and more about systems that make quality
             scalable and measurable. I like practical engineering: clear architecture, strong ownership, and a
             workflow that makes teams faster without noisy false confidence.
@@ -444,16 +444,16 @@
         </div>
         <div class="lg:col-span-5 space-y-8 lg:pt-16">
           <div>
-            <h3 class="font-display font-semibold text-lg text-slate-100">What I'm learning</h3>
-            <p class="mt-3 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+            <h3 class="font-display font-semibold text-xl text-ink">What I'm learning</h3>
+            <p class="mt-3 text-sm sm:text-[15px] text-ink-2 leading-relaxed">
               AI engineering and LLMs, agentic systems, and how they hold up in real distributed and cloud setups.
               On the side, quantitative trading, which scratches the same itch: building something that reacts
               intelligently without needing me to babysit it.
             </p>
           </div>
           <div>
-            <h3 class="font-display font-semibold text-lg text-slate-100">Away from the keyboard</h3>
-            <p class="mt-3 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+            <h3 class="font-display font-semibold text-xl text-ink">Away from the keyboard</h3>
+            <p class="mt-3 text-sm sm:text-[15px] text-ink-2 leading-relaxed">
               Following the markets, video games when there's time, and travelling with a camera. Mostly, being
               around for my wife and our daughter, Saanvi, the hardest and best thing I've taken on, and for our
               miniature dachshund, Momo.
@@ -463,20 +463,20 @@
       </div>
 
       <!-- Education -->
-      <div id="education" class="mt-16 pt-10 border-t border-slate-500/15">
-        <h3 class="font-display font-semibold text-2xl text-slate-50">Education and certifications</h3>
+      <div id="education" class="mt-16 pt-10 border-t border-line">
+        <h3 class="font-display font-semibold text-xl text-ink">Education and certifications</h3>
         <div class="mt-6 grid md:grid-cols-3 gap-6">
           <div>
-            <p class="font-display font-semibold text-slate-100">B.S. in Software Development</p>
-            <p class="mt-1 text-sm text-slate-400">Western Governors University</p>
+            <p class="font-display font-semibold text-ink">B.S. in Software Development</p>
+            <p class="mt-1 text-sm text-muted">Western Governors University</p>
           </div>
           <div>
-            <p class="font-display font-semibold text-slate-100">A.A.S. in Information Systems Technology</p>
-            <p class="mt-1 text-sm text-slate-400">Northern Virginia Community College</p>
+            <p class="font-display font-semibold text-ink">A.A.S. in Information Systems Technology</p>
+            <p class="mt-1 text-sm text-muted">Northern Virginia Community College</p>
           </div>
           <div>
-            <p class="font-display font-semibold text-slate-100">ISTQB Certified Tester, Foundation Level</p>
-            <p class="mt-1 text-sm text-slate-400">Plus Anthropic courses: AI Fluency, Claude Code in Action, Agent Skills, Model Context Protocol and Subagents.</p>
+            <p class="font-display font-semibold text-ink">ISTQB Certified Tester, Foundation Level</p>
+            <p class="mt-1 text-sm text-muted">Plus Anthropic courses: AI Fluency, Claude Code in Action, Agent Skills, Model Context Protocol and Subagents.</p>
           </div>
         </div>
       </div>
@@ -487,8 +487,8 @@
   <section id="photography" class="section">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <div class="mb-10">
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-50">Photography</h2>
-        <p class="mt-3 max-w-2xl text-slate-400">Frames from places I've travelled. Select one to see it larger.</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-ink">Photography</h2>
+        <p class="mt-3 max-w-2xl text-muted">Frames from places I've travelled. Select one to see it larger.</p>
       </div>
 
       <div class="photo-grid" data-lightbox-gallery="photos">
@@ -530,27 +530,27 @@
   <section id="contact" class="section">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <div class="max-w-3xl">
-        <h2 class="font-display font-bold text-4xl sm:text-6xl leading-[1.05] tracking-tight text-slate-50">Let's build quality <span class="text-gradient">at scale.</span></h2>
-        <p class="mt-6 max-w-xl text-slate-400 text-base sm:text-lg">Open to senior SDET, test automation architecture and AI-assisted quality engineering roles, especially where quality systems need to keep up with product velocity.</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-ink">Let's build quality <span class="text-accent">at scale.</span></h2>
+        <p class="mt-6 max-w-xl text-muted text-base sm:text-lg">Open to senior SDET, test automation architecture and AI-assisted quality engineering roles, especially where quality systems need to keep up with product velocity.</p>
 
         <div class="mt-9 flex flex-wrap items-center gap-3">
           <a href="mailto:subarna.karki13@gmail.com" class="btn-primary rounded-full px-7 py-3 font-semibold text-sm sm:text-base inline-flex items-center gap-2">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
             Email me
           </a>
-          <a href="resume/Subarna-Karki-Resume.pdf" download class="btn-ghost rounded-full px-6 py-3 font-semibold text-sm sm:text-base text-slate-100">Download resume</a>
-          <a href="https://www.linkedin.com/in/subarnakarki" target="_blank" rel="noopener" class="btn-ghost rounded-full px-6 py-3 font-semibold text-sm sm:text-base text-slate-100">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
-          <a href="https://github.com/subarnakarki" target="_blank" rel="noopener" class="btn-ghost rounded-full px-6 py-3 font-semibold text-sm sm:text-base text-slate-100">GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+          <a href="resume/Subarna-Karki-Resume.pdf" download class="btn-ghost rounded-full px-6 py-3 font-semibold text-sm sm:text-base text-ink inline-flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>Download resume</a>
+          <a href="https://www.linkedin.com/in/subarnakarki" target="_blank" rel="noopener" class="btn-ghost rounded-full px-6 py-3 font-semibold text-sm sm:text-base text-ink inline-flex items-center gap-2"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
+          <a href="https://github.com/subarnakarki" target="_blank" rel="noopener" class="btn-ghost rounded-full px-6 py-3 font-semibold text-sm sm:text-base text-ink inline-flex items-center gap-2"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>GitHub<span class="sr-only"> (opens in a new tab)</span></a>
         </div>
 
-        <p class="mt-8 text-slate-400 text-sm">subarna.karki13@gmail.com · Concord, NC</p>
+        <p class="mt-8 text-muted text-sm">subarna.karki13@gmail.com · Concord, NC</p>
       </div>
     </div>
   </section>
   </main>
 
-  <footer class="border-t border-slate-500/15">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-8 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-sm text-slate-500">
+  <footer class="border-t border-line">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-8 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-sm text-muted">
       <p>© <span id="year">2026</span> Subarna Karki</p>
       <p class="text-xs">Product names and logos are trademarks of their owners.</p>
     </div>

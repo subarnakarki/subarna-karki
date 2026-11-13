@@ -4,24 +4,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        navy: {
-          DEFAULT: '#1a365d',
-          900: '#0a1626',
-          800: '#0f223b',
-          700: '#132c4d',
-          600: '#1a365d',
-          500: '#254977',
-        },
-        slate: {
-          muted: '#94a3b8',
-        },
-        mint: '#5eead4',
-        cyan: '#22d3ee',
+        paper: '#0f1115',
+        surface: '#171a20',
+        ink: { DEFAULT: '#eceff4', 2: '#c3c8d1' },
+        muted: '#8f96a3',
+        line: '#232731',
+        accent: { DEFAULT: '#8fb4ff', dark: '#a9c5ff' },
       },
       fontFamily: {
-        display: ['Sora', 'system-ui', 'sans-serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        display: ['"Red Hat Display"', 'system-ui', 'sans-serif'],
+        sans: ['"Red Hat Text"', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
     },
   },
