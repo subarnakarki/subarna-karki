@@ -370,7 +370,7 @@
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <div class="mb-10">
         <h2 class="font-display font-bold text-3xl sm:text-4xl text-ink">Skills and tools</h2>
-        <p class="mt-3 max-w-2xl text-muted">The tools I use most, by area, with the rest of each toolkit underneath.</p>
+        <p class="mt-3 max-w-2xl text-muted">The tools I use most, by area: main tools first, then the rest of each toolkit and the practices behind it.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
@@ -383,7 +383,13 @@
             <li class="tool"><span class="tool-tile"><img src="images/icons/jest.svg" alt="" width="22" height="22" /></span>Jest</li>
             <li class="tool"><span class="tool-tile"><img src="images/icons/postman.svg" alt="" width="22" height="22" /></span>Postman</li>
           </ul>
-          <p class="mt-5 text-sm text-muted leading-relaxed">Also Applitools, Artillery, Axios, Cucumber, Page Object Model, visual regression, performance and load, security testing, shift-left testing, root-cause analysis.</p>
+          <ul class="mini-tools mt-4" aria-label="Other test automation tools">
+            <li class="mini-tool"><span class="mini-tile"><img src="images/icons/applitools-icon.svg" alt="" width="14" height="14" /></span>Applitools</li>
+            <li class="mini-tool"><span class="mini-tile"><img src="images/icons/cucumber.svg" alt="" width="14" height="14" /></span>Cucumber</li>
+            <li class="mini-tool"><span class="mini-tile mini-glyph"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5M4.5 16.5c-1.5 1.260-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg></span>Artillery</li>
+            <li class="mini-tool"><span class="mini-tile"><img src="images/icons/si-axios.svg" alt="" width="14" height="14" /></span>Axios</li>
+          </ul>
+          <p class="practices mt-5 text-sm text-muted"><span class="practices-label">Practices</span>Page Object Model, visual regression, performance and load testing, security testing, shift-left testing, root-cause analysis</p>
         </article>
 
         <article class="card rounded-2xl p-6 sm:p-7">
@@ -392,7 +398,14 @@
             <li class="tool"><span class="tool-tile"><img src="images/icons/claude.svg" alt="" width="22" height="22" /></span>Claude Code</li>
             <li class="tool"><span class="tool-tile"><img src="images/icons/github-copilot.svg" alt="" width="22" height="22" /></span>GitHub Copilot</li>
           </ul>
-          <p class="mt-5 text-sm text-muted leading-relaxed">Also Augment Code, MCP servers (Playwright, Jira, GitHub, Kibana), AI-assisted test generation, self-healing tests, context engineering (CLAUDE.md), LLM-as-judge evals, prompt engineering, agentic workflows.</p>
+          <ul class="mini-tools mt-4" aria-label="Other ai engineering tools">
+            <li class="mini-tool"><span class="mini-tile"><img src="images/icons/playwright.svg" alt="" width="14" height="14" /></span>Playwright MCP</li>
+            <li class="mini-tool"><span class="mini-tile"><img src="images/icons/jira.svg" alt="" width="14" height="14" /></span>Jira MCP</li>
+            <li class="mini-tool"><span class="mini-tile"><img src="images/icons/github.svg" alt="" width="14" height="14" /></span>GitHub MCP</li>
+            <li class="mini-tool"><span class="mini-tile"><img src="images/icons/kibana.svg" alt="" width="14" height="14" /></span>Kibana MCP</li>
+            <li class="mini-tool"><span class="mini-tile mini-glyph"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2m16 0h2m-7-1v2m-6-2v2"/></svg></span>Augment Code</li>
+          </ul>
+          <p class="practices mt-5 text-sm text-muted"><span class="practices-label">Practices</span>AI-assisted test generation, self-healing tests, context engineering (CLAUDE.md), LLM-as-judge evals, prompt engineering, agentic workflows</p>
         </article>
 
         <article class="card rounded-2xl p-6 sm:p-7">
@@ -405,7 +418,11 @@
             <li class="tool"><span class="tool-tile"><img src="images/icons/postgres.svg" alt="" width="22" height="22" /></span>PostgreSQL</li>
             <li class="tool"><span class="tool-tile"><img src="images/icons/mysql.svg" alt="" width="22" height="22" /></span>MySQL</li>
           </ul>
-          <p class="mt-5 text-sm text-muted leading-relaxed">Also HTML, CSS and REST APIs.</p>
+          <ul class="mini-tools mt-4" aria-label="Other languages and data tools">
+            <li class="mini-tool"><span class="mini-tile"><img src="images/icons/html-5.svg" alt="" width="14" height="14" /></span>HTML</li>
+            <li class="mini-tool"><span class="mini-tile"><img src="images/icons/css.svg" alt="" width="14" height="14" /></span>CSS</li>
+            <li class="mini-tool"><span class="mini-tile mini-glyph"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2a2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1m8 0h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></svg></span>REST APIs</li>
+          </ul>
         </article>
 
         <article class="card rounded-2xl p-6 sm:p-7">
@@ -418,7 +435,15 @@
             <li class="tool"><span class="tool-tile"><img src="images/icons/aws.svg" alt="" width="22" height="22" /></span>AWS</li>
             <li class="tool"><span class="tool-tile"><img src="images/icons/grafana.svg" alt="" width="22" height="22" /></span>Grafana</li>
           </ul>
-          <p class="mt-5 text-sm text-muted leading-relaxed">Also Harness, SonarQube, Node-Vault, and AWS S3, EC2, Lambda and Secrets Manager.</p>
+          <ul class="mini-tools mt-4" aria-label="Other ci/cd and cloud tools">
+            <li class="mini-tool"><span class="mini-tile"><img src="images/icons/harness-icon.svg" alt="" width="14" height="14" /></span>Harness</li>
+            <li class="mini-tool"><span class="mini-tile"><img src="images/icons/sonarqubeserver.svg" alt="" width="14" height="14" /></span>SonarQube</li>
+            <li class="mini-tool"><span class="mini-tile"><img src="images/icons/vault.svg" alt="" width="14" height="14" /></span>Node-Vault</li>
+            <li class="mini-tool"><span class="mini-tile"><img src="images/icons/aws-s3.svg" alt="" width="14" height="14" /></span>S3</li>
+            <li class="mini-tool"><span class="mini-tile"><img src="images/icons/aws-ec2.svg" alt="" width="14" height="14" /></span>EC2</li>
+            <li class="mini-tool"><span class="mini-tile"><img src="images/icons/aws-lambda.svg" alt="" width="14" height="14" /></span>Lambda</li>
+            <li class="mini-tool"><span class="mini-tile"><img src="images/icons/aws-secrets-manager.svg" alt="" width="14" height="14" /></span>Secrets Manager</li>
+          </ul>
         </article>
       </div>
     </div>

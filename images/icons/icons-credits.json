@@ -1,5 +1,65 @@
 [
   {
+    "file": "applitools-icon.svg",
+    "icon": "logos:applitools-icon",
+    "name": "Applitools",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://applitools.com/"
+  },
+  {
+    "file": "aws-ec2.svg",
+    "icon": "logos:aws-ec2",
+    "name": "Aws Ec",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://aws.amazon.com/ec2/"
+  },
+  {
+    "file": "aws-lambda.svg",
+    "icon": "logos:aws-lambda",
+    "name": "Aws Lambda",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://aws.amazon.com/lambda/"
+  },
+  {
+    "file": "aws-s3.svg",
+    "icon": "logos:aws-s3",
+    "name": "Aws S",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://aws.amazon.com/s3/"
+  },
+  {
+    "file": "aws-secrets-manager.svg",
+    "icon": "logos:aws-secrets-manager",
+    "name": "Aws Secrets Manager",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://aws.amazon.com/secrets-manager/"
+  },
+  {
     "file": "aws.svg",
     "icon": "logos:aws",
     "name": "AWS",
@@ -10,6 +70,18 @@
     "url": "https://github.com/gilbarbara/logos",
     "trademark": true,
     "markUrl": "https://aws.amazon.com/"
+  },
+  {
+    "file": "axios.svg",
+    "icon": "logos:axios",
+    "name": "Axios",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://axios-http.com/"
   },
   {
     "file": "circleci.svg",
@@ -34,6 +106,30 @@
     "url": "https://github.com/gilbarbara/logos",
     "trademark": true,
     "markUrl": "https://claude.ai/"
+  },
+  {
+    "file": "css.svg",
+    "icon": "logos:css",
+    "name": "Css",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://github.com/CSS-Next/css-next"
+  },
+  {
+    "file": "cucumber.svg",
+    "icon": "logos:cucumber",
+    "name": "Cucumber",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://cucumber.io/"
   },
   {
     "file": "cypress.svg",
@@ -84,6 +180,18 @@
     "markUrl": "https://copilot.github.com/"
   },
   {
+    "file": "github.svg",
+    "icon": "logos:github-icon",
+    "name": "GitHub",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://github.com/"
+  },
+  {
     "file": "grafana.svg",
     "icon": "logos:grafana",
     "name": "Grafana",
@@ -106,6 +214,30 @@
     "url": "https://github.com/gilbarbara/logos",
     "trademark": true,
     "markUrl": "https://graphql.org/"
+  },
+  {
+    "file": "harness-icon.svg",
+    "icon": "logos:harness-icon",
+    "name": "Harness",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://harness.io/"
+  },
+  {
+    "file": "html-5.svg",
+    "icon": "logos:html-5",
+    "name": "Html",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://www.w3.org/TR/html5/"
   },
   {
     "file": "javascript.svg",
@@ -142,6 +274,30 @@
     "url": "https://github.com/gilbarbara/logos",
     "trademark": true,
     "markUrl": "https://facebook.github.io/jest/"
+  },
+  {
+    "file": "jira.svg",
+    "icon": "logos:jira",
+    "name": "Jira",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://www.atlassian.com/software/jira"
+  },
+  {
+    "file": "kibana.svg",
+    "icon": "logos:kibana",
+    "name": "Kibana",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://www.elastic.co/products/kibana"
   },
   {
     "file": "mysql.svg",
@@ -216,6 +372,18 @@
     "markUrl": "https://www.seleniumhq.org/"
   },
   {
+    "file": "si-axios.svg",
+    "icon": "si:axios",
+    "name": "Axios",
+    "kind": "mono",
+    "source": "simple-icons@16.30.0",
+    "author": "Simple Icons Collaborators",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/simple-icons/simple-icons",
+    "trademark": true,
+    "colour": "one-colour fallback in the brand hex"
+  },
+  {
     "file": "sonarqube.svg",
     "icon": "logos:sonarqube",
     "name": "SonarQube",
@@ -228,6 +396,18 @@
     "markUrl": "https://www.sonarqube.org/"
   },
   {
+    "file": "sonarqubeserver.svg",
+    "icon": "si:sonarqubeserver",
+    "name": "SonarQube Server",
+    "kind": "mono",
+    "source": "simple-icons@16.30.0",
+    "author": "Simple Icons Collaborators",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/simple-icons/simple-icons",
+    "trademark": true,
+    "colour": "one-colour fallback in the brand hex"
+  },
+  {
     "file": "typescript.svg",
     "icon": "logos:typescript-icon",
     "name": "Typescript",
@@ -238,5 +418,50 @@
     "url": "https://github.com/gilbarbara/logos",
     "trademark": true,
     "markUrl": "https://www.typescriptlang.org/"
+  },
+  {
+    "file": "ui-bot.svg",
+    "icon": "ui:bot",
+    "name": "Bot",
+    "kind": "line",
+    "source": "@iconify-json/lucide@1.2.100",
+    "author": "Lucide Contributors",
+    "licence": "ISC",
+    "url": "https://github.com/lucide-icons/lucide",
+    "trademark": false
+  },
+  {
+    "file": "ui-braces.svg",
+    "icon": "ui:braces",
+    "name": "Braces",
+    "kind": "line",
+    "source": "@iconify-json/lucide@1.2.100",
+    "author": "Lucide Contributors",
+    "licence": "ISC",
+    "url": "https://github.com/lucide-icons/lucide",
+    "trademark": false
+  },
+  {
+    "file": "ui-rocket.svg",
+    "icon": "ui:rocket",
+    "name": "Rocket",
+    "kind": "line",
+    "source": "@iconify-json/lucide@1.2.100",
+    "author": "Lucide Contributors",
+    "licence": "ISC",
+    "url": "https://github.com/lucide-icons/lucide",
+    "trademark": false
+  },
+  {
+    "file": "vault.svg",
+    "icon": "logos:vault-icon",
+    "name": "Vault",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://www.vaultproject.io/"
   }
 ]

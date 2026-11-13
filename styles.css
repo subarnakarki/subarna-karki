@@ -281,6 +281,38 @@ body {
 }
 .tool-tile img { width: 22px; height: 22px; object-fit: contain; }
 
+/* secondary tools: one small chip style for every other product, logo when one exists */
+.mini-tools { display: flex; flex-wrap: wrap; gap: .45rem; }
+.mini-tool {
+  display: inline-flex; align-items: center; gap: .4rem;
+  min-height: 28px;
+  padding: .2rem .65rem;
+  border-radius: 9999px;
+  border: 1px solid var(--line);
+  font-size: .8rem;
+  color: var(--ink-2);
+}
+.mini-tool:has(.mini-tile) { padding-left: .25rem; }
+.mini-tile {
+  display: grid; place-items: center;
+  width: 20px; height: 20px;
+  border-radius: 9999px;
+  background: #f3f3f0;
+}
+.mini-tile img { width: 13px; height: 13px; object-fit: contain; }
+.mini-glyph { color: #0f1115; }
+
+/* practices: plain text, not chips */
+.practices { line-height: 1.7; }
+.practices-label {
+  display: block;
+  margin-bottom: .25rem;
+  font: 500 11px "JetBrains Mono", monospace;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 /* ---------- Photography grid ---------- */
 .photo-grid {
   display: grid;
