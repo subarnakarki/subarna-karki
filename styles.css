@@ -132,8 +132,9 @@ body {
 .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
 .nav-link.active { color: var(--accent); }
 
-#mobile-menu { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
-#mobile-menu.open { max-height: 420px; }
+/* closed: no border line under the header, and its links leave the tab order */
+#mobile-menu { max-height: 0; overflow: hidden; visibility: hidden; border-color: transparent; box-shadow: none; transition: max-height .35s ease, visibility 0s linear .35s; }
+#mobile-menu.open { max-height: 420px; visibility: visible; border-color: var(--line); transition: max-height .35s ease; }
 
 /* ---------- Surfaces ---------- */
 .card, .glass {
